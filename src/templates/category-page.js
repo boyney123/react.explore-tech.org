@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 import ActionHeader from '../components/ActionHeader'
 import ActionCard from '../components/Action-Card'
 
-import './material-page.css'
+import './category-page.css'
 
 export default function Template({ data, pageContext }) {
   const { category } = pageContext
@@ -23,7 +23,18 @@ export default function Template({ data, pageContext }) {
     }
   })
 
-  console.log(items)
+  const allMaterialTagCount = {}
+  items.forEach(({ tags = [] }) => {
+    tags.forEach(tag => {
+      if (allMaterialTagCount[tag]) {
+        allMaterialTagCount[tag] = allMaterialTagCount[tag] + 1
+      } else {
+        allMaterialTagCount[tag] = 1
+      }
+    })
+  })
+
+  console.log(allMaterialTagCount)
 
   return (
     <Layout
@@ -49,40 +60,57 @@ export default function Template({ data, pageContext }) {
         <html lang="en" />
       </Helmet>
       <div className="container is-fluid">
-        <div className="columns is-multiline">
-          {items.map(item => {
-            const {
-              path,
-              title,
-              subtitle,
-              author,
-              github_url,
-              tags = [],
-              img,
-              slug,
-            } = item
+        <div className="columns">
+          <div className="column is-one-quarter category-side-bar">
+            <input placeHolder="Filter by name, tags, etc..." />
+            <h5 className="mt20">Tags</h5>
+            <ul className="category-side-bar__tags">
+              {Object.keys(allMaterialTagCount).map(key => {
+                return (
+                  <li>
+                    {key} <span>{allMaterialTagCount[key]}</span>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+          <div className="column pt0">
+            <div className="columns is-multiline">
+              {items.map(item => {
+                const {
+                  path,
+                  title,
+                  subtitle,
+                  author,
+                  github_url,
+                  tags = [],
+                  img,
+                  slug,
+                } = item
 
-            console.log(item)
+                console.log(item)
 
-            const urlParts = github_url.split('github.com')
-            const repoPath = urlParts[urlParts.length - 1]
+                const urlParts = github_url.split('github.com')
+                const repoPath = urlParts[urlParts.length - 1]
 
-            const starBadgeUrl = `${urljoin(
-              'https://img.shields.io/github/stars',
-              repoPath
-            )}.svg?style=social`
+                const starBadgeUrl = `${urljoin(
+                  'https://img.shields.io/github/stars',
+                  repoPath
+                )}.svg?style=social`
 
-            return (
-              <ActionCard
-                path={slug}
-                title={title}
-                author={author}
-                subtitle={subtitle}
-                github_url={github_url}
-                image={img.publicURL}
-              />
-            )
-          })}
+                return (
+                  <ActionCard
+                    path={slug}
+                    title={title}
+                    author={author}
+                    subtitle={subtitle}
+                    github_url={github_url}
+                    image={img.publicURL}
+                  />
+                )
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </Layout>

@@ -52,33 +52,36 @@ export default function Template({ data, ...test }) {
         <html lang="en" />
       </Helmet>
       <div className="blog-post container">
-        <a className="back-button button" href="/">
-          <i class="fas fa-arrow-left" /> Back
-        </a>
-        <hr />
-        <h1>{title}</h1>
-        <p className="is-size-6">{tags.join(', ')}</p>
-        <img className="github-stars" src={starBadgeUrl} />
-        <p>{subtitle}</p>
+        <div className="columns">
+          <div className="column is-one-quarter side-bar">
+            <h5>Repository </h5>
+            <p>
+              <a href={url} target="_blank">
+                {url}
+              </a>
+            </p>
+            <p>Stars: 200</p>
+            <p>Latest Release: 1.5</p>
+            <hr />
+            <hr />
+            <h5>Keywords </h5>
+            <p className="is-size-6 tags">
+              {tags.map(tag => (
+                <span className="tags__tag">{tag}</span>
+              ))}
+            </p>
+          </div>
+          <div className="column pt0">
+            <h1 className="is-size-1">{title}</h1>
 
-        <a href={`${url}`} target="_blank">
-          {url}
-        </a>
+            <p className="is-size-4">{subtitle}</p>
 
-        <div className="mt20">
-          <a
-            className="button twitter-button"
-            href={`https://twitter.com/intent/tweet?text=${tweet}`}
-          >
-            <i class="fab fa-twitter" /> Share this content
-          </a>
+            <div
+              className="material-screenshot"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
+          </div>
         </div>
-
-        <hr />
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
       </div>
     </Layout>
   )

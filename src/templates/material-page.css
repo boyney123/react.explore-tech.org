@@ -28,10 +28,29 @@
 }
 
 .button.twitter-button {
-  background: #0096e7;
+  background: #b1e0e8;
   color: white;
 }
 
 .button.twitter-button i {
   margin-right: 10px;
+}
+
+/* Tags */
+
+.column.side-bar {
+  padding-right: 40px;
+}
+
+.side-bar .tags__tag {
+  background: #d5eff6;
+  margin-right: 5px;
+  padding: 0 5px;
+}
+.material-screenshot {
+  border: 1px solid #d1d9db;
+  border-radius: 5px;
+  box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.28);
+  margin-bottom: 32px;
+  padding: 5mt0px;
 }

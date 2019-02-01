@@ -1,0 +1,23 @@
+.category-side-bar input {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  color: #2b2e3c;
+}
+
+.content .category-side-bar__tags {
+  margin: 0;
+}
+
+.category-side-bar__tags li {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.category-side-bar__tags span {
+  float: right;
+  font-weight: bold;
+}

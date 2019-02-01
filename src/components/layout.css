@@ -688,6 +688,11 @@ pre tt:after {
 }
 
 /* HELPERS */
+
+.pt0 {
+  padding-top: 0px !important;
+}
+
 .mt10 {
   margin-top: 10px;
 }
