@@ -1,0 +1,37 @@
+.container {
+  padding: 50px 0;
+}
+
+.container.blog-post {
+  margin-top: 80px;
+}
+
+.blog-post {
+  padding: 0 60px;
+}
+
+.blog-post .github-stars {
+  width: 100px;
+}
+
+.blog-post .back-button i {
+  margin-right: 10px;
+}
+
+.blog-post a {
+  color: #926cb9;
+  margin-right: 10px;
+}
+
+.blog-post hr {
+  margin: 40px 0;
+}
+
+.button.twitter-button {
+  background: #0096e7;
+  color: white;
+}
+
+.button.twitter-button i {
+  margin-right: 10px;
+}

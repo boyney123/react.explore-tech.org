@@ -1,0 +1,14 @@
+nav.navbar {
+  color: white;
+  padding: 0 70px;
+
+  background-color: #2f3241;
+  border-bottom: 1px solid #e8e8e8;
+  border-bottom-color: #1a1b23;
+}
+
+nav.navbar h1,
+nav.navbar a {
+  color: white;
+  float: right;
+}

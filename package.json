@@ -1,0 +1,52 @@
+{
+  "name": "react.openlist.io",
+  "description": "List of React stuff",
+  "version": "1.0.0",
+  "author": "David Boyne",
+  "dependencies": {
+    "chrome-aws-lambda": "^1.11.2",
+    "front-matter": "^3.0.1",
+    "fuse.js": "^3.3.0",
+    "gatsby": "^2.0.53",
+    "gatsby-image": "^2.0.20",
+    "gatsby-plugin-google-analytics": "^2.0.8",
+    "gatsby-plugin-manifest": "^2.0.9",
+    "gatsby-plugin-offline": "^2.0.16",
+    "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-sharp": "^2.0.14",
+    "gatsby-remark-copy-linked-files": "^2.0.8",
+    "gatsby-remark-images": "^3.0.1",
+    "gatsby-source-filesystem": "^2.0.11",
+    "gatsby-transformer-remark": "^2.1.15",
+    "gatsby-transformer-sharp": "^2.1.8",
+    "json-to-frontmatter-markdown": "^1.0.0",
+    "node-dir": "^0.1.17",
+    "puppeteer": "^1.11.0",
+    "puppeteer-core": "^1.11.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-helmet": "^5.2.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "url-join": "^4.0.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "node ./src/scripts/screen-shot.js && npm run develop",
+    "dev": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.15.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  }
+}
