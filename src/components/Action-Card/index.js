@@ -31,9 +31,9 @@ const ActionCard = ({
             <span class="dot" />
             <span class="dot" />
           </div>
-          <div class="address-bar">
+          {/* <div class="address-bar">
             <input type="text" value={github_url} />
-          </div>
+          </div> */}
         </div>
         <div className="body">
           <img src={image} />

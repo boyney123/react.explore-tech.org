@@ -1,24 +1,10 @@
 import React from 'react'
 import { navigate } from 'gatsby'
-import map from './map'
+import siteConfig from '../../../siteConfig'
 import './styles.css'
 
-// const Category = ({ name } = {}) => {
-//   const { icon, subtitle } = map[name]
-
-//   return (
-//     <div className="category-container column is-one-third">
-//       <div className="category" onClick={() => navigate(name)}>
-//         {/* <i className={`fab ${icon}`} /> */}
-//         <img src={icon} />
-//         <h4>{name}</h4>
-//         {/* <p>{subtitle}</p> */}
-//       </div>
-//     </div>
-//   )
-// }
 const Category = ({ name } = {}) => {
-  const { icon, subtitle } = map[name]
+  const { icon, subtitle } = siteConfig.categories[name]
 
   return (
     <div className="card-container column is-one-third">

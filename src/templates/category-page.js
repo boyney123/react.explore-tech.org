@@ -9,6 +9,9 @@ import ActionCard from '../components/Action-Card'
 
 import './category-page.css'
 
+// Tidy this UP!
+import './material-page.css'
+
 export default function Template({ data, pageContext }) {
   const { category } = pageContext
 
@@ -59,7 +62,7 @@ export default function Template({ data, pageContext }) {
         />
         <html lang="en" />
       </Helmet>
-      <div className="container is-fluid">
+      <div className="container">
         <div className="columns">
           <div className="column is-one-quarter category-side-bar">
             <input placeHolder="Filter by name, tags, etc..." />

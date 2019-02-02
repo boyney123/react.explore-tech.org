@@ -44,13 +44,24 @@
 
 .side-bar .tags__tag {
   background: #d5eff6;
-  margin-right: 5px;
+  margin: 10px 5px 10px 0;
   padding: 0 5px;
+  display: block;
 }
 .material-screenshot {
   border: 1px solid #d1d9db;
   border-radius: 5px;
   box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.28);
   margin-bottom: 32px;
-  padding: 5mt0px;
+  padding: 20px;
+}
+
+.material__content {
+  max-width: 80%;
+}
+
+.side-bar .side-bar-item {
+  margin-bottom: 29px;
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 20px;
 }

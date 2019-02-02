@@ -1,34 +1,23 @@
 import React from 'react'
-
-import logo from '../../icons/react.svg'
+import siteConfig from '../../../siteConfig'
 
 const SiteHeader = ({ handleFilter, count }) => {
   return (
     <section className="main hero ">
       <div className="hero-body">
         <div className="container has-text-centered">
-          <img src={logo} />
+          <img src={siteConfig.logo} />
 
-          <h1 className="title">react.openlist.io</h1>
+          <h1 className="title">{siteConfig.title}</h1>
 
-          <h2 className="subtitle">
-            An open source list to help developers learn, explore and create
-            React applications.
-          </h2>
-          {/* <div>
-            <input
-              id="search-action"
-              className="input is-large"
-              onChange={handleFilter}
-              placeholder="Find (e.g Tutorial, Hooks, Redux)"
-            />
-          </div> */}
+          <h2 className="subtitle">{siteConfig.description}</h2>
+
           <a className="button is-large add-action" href="#" target="_blank">
             <i class="fab fa-github" />
             Contribute Material
           </a>
           <p className="mt20">
-            Currently listing {count} React learning materials...
+            Currently listing {count} {siteConfig.content} learning materials...
           </p>
           <div className="badges">
             <a

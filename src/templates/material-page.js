@@ -13,7 +13,28 @@ export default function Template({ data, ...test }) {
 
   const { markdownRemark: post } = data
   const { frontmatter } = post
-  const { title, subtitle, url, twitter, path, author, tags = [] } = frontmatter
+  const {
+    title,
+    subtitle,
+    url,
+    twitter,
+    path,
+    author,
+    tags = [],
+    github_url = '',
+    stargazers_count,
+    watchers_count,
+    latestRelease = {},
+  } = frontmatter
+
+  const {
+    tag_name,
+    url: release_url,
+    name: release_name,
+    created_at: release_creation_date,
+  } = latestRelease
+
+  console.log('latestRelease', latestRelease)
 
   const creator = twitter ? twitter : author
 
@@ -54,16 +75,37 @@ export default function Template({ data, ...test }) {
       <div className="blog-post container">
         <div className="columns">
           <div className="column is-one-quarter side-bar">
-            <h5>Repository </h5>
-            <p>
-              <a href={url} target="_blank">
-                {url}
-              </a>
-            </p>
-            <p>Stars: 200</p>
-            <p>Latest Release: 1.5</p>
-            <hr />
-            <hr />
+            <div className="side-bar-item">
+              <h5>Url</h5>
+              <p>
+                <a href={url} target="_blank">
+                  {url}
+                </a>
+              </p>
+            </div>
+
+            <div className="side-bar-item">
+              <h5>Repository</h5>
+              <p>
+                <a href={github_url} target="_blank">
+                  {github_url}
+                </a>
+              </p>
+
+              {stargazers_count && <p>Stars: {stargazers_count}</p>}
+              {watchers_count && <p>Watchers: {watchers_count}</p>}
+            </div>
+
+            <div className="side-bar-item">
+              <h5>Latest Release</h5>
+              <p>
+                <a href={release_url} target="_blank">
+                  {release_name || tag_name}
+                </a>
+              </p>
+              <p>Created on {release_creation_date}</p>
+            </div>
+
             <h5>Keywords </h5>
             <p className="is-size-6 tags">
               {tags.map(tag => (
@@ -71,7 +113,7 @@ export default function Template({ data, ...test }) {
               ))}
             </p>
           </div>
-          <div className="column pt0">
+          <div className="column pt0 material__content">
             <h1 className="is-size-1">{title}</h1>
 
             <p className="is-size-4">{subtitle}</p>
@@ -97,7 +139,16 @@ export const pageQuery = graphql`
         title
         subtitle
         url
+        github_url
+        stargazers_count
+        watchers_count
         tags
+        latestRelease {
+          tag_name
+          name
+          url
+          created_at(formatString: "DD-MM-YYYY")
+        }
       }
     }
   }
