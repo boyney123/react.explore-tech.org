@@ -706,6 +706,8 @@ pre tt:after {
   padding: 0 !important;
 }
 
+/* END-HELPERS */
+
 .main.hero {
   background-color: #2b2e3b; /* fallback for old browsers */
   color: #74b1be;
@@ -735,4 +737,8 @@ pre tt:after {
 
 .content .no-results h1 {
   color: #b7b7b7;
+}
+
+.container {
+  padding: 50px 0;
 }

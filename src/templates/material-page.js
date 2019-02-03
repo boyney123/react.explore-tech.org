@@ -1,10 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import urljoin from 'url-join'
 
 import Layout from '../components/layout'
-import ActionHeader from '../components/ActionHeader'
+import Header from '../components/Header'
 
 import './material-page.css'
 
@@ -19,7 +19,7 @@ export default function Template({ data, ...test }) {
     url,
     twitter,
     path,
-    author,
+    author: { name, avatar, github_url: author_github_url } = {},
     tags = [],
     github_url = '',
     stargazers_count,
@@ -36,7 +36,7 @@ export default function Template({ data, ...test }) {
 
   console.log('latestRelease', latestRelease)
 
-  const creator = twitter ? twitter : author
+  const creator = twitter ? twitter : name
 
   const urlParts = url.split('github.com')
   const repoPath = urlParts[urlParts.length - 1]
@@ -49,11 +49,14 @@ export default function Template({ data, ...test }) {
     `Check out this GitHub action: ${title} from ${creator}: https://react-openlist.netlify.com/${path} 👍 #github`
   )
 
+  // FIX THIS!
+  const HeaderProps = {
+    ...frontmatter,
+    subtitle: `by ${name}`,
+  }
+
   return (
-    <Layout
-      className="blog-post-container"
-      header={<ActionHeader {...frontmatter} />}
-    >
+    <Layout header={<Header {...HeaderProps} />}>
       <Helmet title={`react.openlist.io - ${frontmatter.title}`}>
         <script
           async
@@ -72,56 +75,81 @@ export default function Template({ data, ...test }) {
         />
         <html lang="en" />
       </Helmet>
-      <div className="blog-post container">
-        <div className="columns">
-          <div className="column is-one-quarter side-bar">
-            <div className="side-bar-item">
-              <h5>Url</h5>
-              <p>
-                <a href={url} target="_blank">
-                  {url}
-                </a>
-              </p>
+      <div className="container">
+        <div className="material">
+          <div className="columns">
+            <div className="column is-one-quarter">
+              <div className="side-bar">
+                <div className="side-bar-item">
+                  <img src={avatar} />
+                  <p>
+                    Developed by{' '}
+                    <a href={author_github_url} target="_blank">
+                      {name}
+                    </a>
+                  </p>
+                </div>
+
+                <div className="side-bar-item">
+                  <h5>Website</h5>
+                  <p>
+                    <a href={url} target="_blank">
+                      {url}
+                    </a>
+                  </p>
+                </div>
+
+                <div className="side-bar-item">
+                  <h5>Repository</h5>
+                  <p>
+                    <a href={github_url} target="_blank">
+                      {github_url}
+                    </a>
+                  </p>
+
+                  {stargazers_count && (
+                    <p>
+                      <i className="far fa-star" /> Star: {stargazers_count}
+                    </p>
+                  )}
+                  {watchers_count && (
+                    <p>
+                      <i class="far fa-eye" /> Watchers: {watchers_count}
+                    </p>
+                  )}
+                </div>
+
+                <div className="side-bar-item">
+                  <h5>Latest Release</h5>
+                  <p>
+                    <a href={release_url} target="_blank">
+                      <i class="fas fa-tag" /> {release_name || tag_name}
+                    </a>
+                  </p>
+                  <p>
+                    <i class="far fa-calendar" /> Created on{' '}
+                    {release_creation_date}
+                  </p>
+                </div>
+
+                <h5>Keywords </h5>
+                <p className="is-size-6 tags">
+                  {tags.map(tag => (
+                    <span className="side-bar-item__tag">{tag}</span>
+                  ))}
+                </p>
+              </div>
             </div>
+            <div className="column pt0 material__content">
+              <h1 className="is-size-1">{title}</h1>
 
-            <div className="side-bar-item">
-              <h5>Repository</h5>
-              <p>
-                <a href={github_url} target="_blank">
-                  {github_url}
-                </a>
-              </p>
+              <p className="is-size-4">{subtitle}</p>
 
-              {stargazers_count && <p>Stars: {stargazers_count}</p>}
-              {watchers_count && <p>Watchers: {watchers_count}</p>}
+              <div
+                className="material__screenshot"
+                dangerouslySetInnerHTML={{ __html: post.html }}
+              />
             </div>
-
-            <div className="side-bar-item">
-              <h5>Latest Release</h5>
-              <p>
-                <a href={release_url} target="_blank">
-                  {release_name || tag_name}
-                </a>
-              </p>
-              <p>Created on {release_creation_date}</p>
-            </div>
-
-            <h5>Keywords </h5>
-            <p className="is-size-6 tags">
-              {tags.map(tag => (
-                <span className="tags__tag">{tag}</span>
-              ))}
-            </p>
-          </div>
-          <div className="column pt0 material__content">
-            <h1 className="is-size-1">{title}</h1>
-
-            <p className="is-size-4">{subtitle}</p>
-
-            <div
-              className="material-screenshot"
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            />
           </div>
         </div>
       </div>
@@ -135,7 +163,11 @@ export const pageQuery = graphql`
       html
       frontmatter {
         path
-        author
+        author {
+          name
+          avatar
+          github_url
+        }
         title
         subtitle
         url
@@ -147,7 +179,7 @@ export const pageQuery = graphql`
           tag_name
           name
           url
-          created_at(formatString: "DD-MM-YYYY")
+          created_at(formatString: "MMMM Do YYYY")
         }
       }
     }

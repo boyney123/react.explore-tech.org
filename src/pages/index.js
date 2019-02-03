@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
-import { navigate, graphql } from 'gatsby'
-import urljoin from 'url-join'
-
-import Fuse from 'fuse.js'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import ActionCard from '../components/Action-Card'
 import Category from '../components/Category'
 import SiteHeader from '../components/SiteHeader'
 
@@ -38,21 +34,8 @@ class IndexPage extends Component {
       })
 
     return (
-      <Layout
-        header={
-          <SiteHeader
-            // handleFilter={this.handleFilter.bind(this)}
-            count={edges.length}
-          />
-        }
-      >
+      <Layout header={<SiteHeader count={edges.length} />}>
         <div className="container is-fluid">
-          {/* <div className="has-text-centered">
-          <h1 >All things React</h1>
-          <p className="is-size-4">If you are looking for some awesome React content you have come to the right place. Here we collect and share React content to help developers learn & explore React.</p>
-          <hr/>
-        </div> */}
-
           <div className="columns is-multiline">
             {categories.map(item => {
               return <Category name={item} />

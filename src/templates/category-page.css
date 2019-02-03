@@ -1,4 +1,4 @@
-.category-side-bar input {
+.category-side-bar .category-side-bar__search {
   width: 100%;
   height: 50px;
   padding: 10px;
@@ -7,17 +7,17 @@
   color: #2b2e3c;
 }
 
-.content .category-side-bar__tags {
+.category-side-bar .category-side-bar__tags {
   margin: 0;
 }
 
-.category-side-bar__tags li {
+.category-side-bar__tags .category-side-bar__tag {
   list-style-type: none;
   margin: 0;
   padding: 10px 0;
 }
 
-.category-side-bar__tags span {
+.category-side-bar__tags .category-side-bar__tag span {
   float: right;
   font-weight: bold;
 }

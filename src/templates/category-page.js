@@ -4,8 +4,8 @@ import { graphql } from 'gatsby'
 import urljoin from 'url-join'
 
 import Layout from '../components/layout'
-import ActionHeader from '../components/ActionHeader'
-import ActionCard from '../components/Action-Card'
+import Header from '../components/Header'
+import Browser from '../components/browser'
 
 import './category-page.css'
 
@@ -37,12 +37,10 @@ export default function Template({ data, pageContext }) {
     })
   })
 
-  console.log(allMaterialTagCount)
-
   return (
     <Layout
       className="blog-post-container"
-      header={<ActionHeader title={category} author="react.openlist.io" />}
+      header={<Header title={category} subtitle="react.openlist.io" />}
     >
       <Helmet title={`react.openlist.io`}>
         <script
@@ -65,12 +63,15 @@ export default function Template({ data, pageContext }) {
       <div className="container">
         <div className="columns">
           <div className="column is-one-quarter category-side-bar">
-            <input placeHolder="Filter by name, tags, etc..." />
+            <input
+              className="category-side-bar__search"
+              placeHolder="Filter by name, tags, etc..."
+            />
             <h5 className="mt20">Tags</h5>
             <ul className="category-side-bar__tags">
               {Object.keys(allMaterialTagCount).map(key => {
                 return (
-                  <li>
+                  <li className="category-side-bar__tag">
                     {key} <span>{allMaterialTagCount[key]}</span>
                   </li>
                 )
@@ -84,14 +85,12 @@ export default function Template({ data, pageContext }) {
                   path,
                   title,
                   subtitle,
-                  author,
+                  author: { name } = {},
                   github_url,
                   tags = [],
                   img,
                   slug,
                 } = item
-
-                console.log(item)
 
                 const urlParts = github_url.split('github.com')
                 const repoPath = urlParts[urlParts.length - 1]
@@ -102,10 +101,10 @@ export default function Template({ data, pageContext }) {
                 )}.svg?style=social`
 
                 return (
-                  <ActionCard
+                  <Browser
                     path={slug}
                     title={title}
-                    author={author}
+                    author={name}
                     subtitle={subtitle}
                     github_url={github_url}
                     image={img.publicURL}
@@ -130,7 +129,9 @@ export const pageQuery = graphql`
           }
           frontmatter {
             path
-            author
+            author {
+              name
+            }
             title
             subtitle
             url

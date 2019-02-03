@@ -97,7 +97,7 @@ const script = async () => {
       watchers_count,
       license,
       topics = [],
-      owner: { login } = {},
+      owner: { login, avatar_url, html_url: author_github_url } = {},
     } = data
 
     const newFilePath = path.resolve(__dirname, '../materials/', category, name)
@@ -110,7 +110,11 @@ const script = async () => {
             title: name,
             url: homepage || html_url,
             github_url: html_url,
-            author: login,
+            author: {
+              name: login,
+              avatar: avatar_url,
+              github_url: author_github_url,
+            },
             watchers_count,
             stargazers_count,
             img: './screenshot.png',
