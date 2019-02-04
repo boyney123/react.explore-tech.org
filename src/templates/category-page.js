@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import urljoin from 'url-join'
+import Fuse from 'fuse.js'
 
 import Layout from '../components/layout'
 import Header from '../components/Header'
@@ -37,6 +38,31 @@ export default function Template({ data, pageContext }) {
     })
   })
 
+  const fuse = new Fuse(items, {
+    keys: ['title', 'tags'],
+    shouldSort: true,
+    threshold: 0.3,
+  })
+
+  const [materials, setMaterials] = useState(items)
+  const [test, setTest] = useState('test')
+
+  const handleOrder = event => {
+    const { target: { value } = {} } = event
+    const orderedRepos = materials.sort((item1, item2) => {
+      if (item1[value] < item2[value]) return -1
+      if (item1[value] > item2[value]) return 1
+      return 0
+    })
+    setMaterials(orderedRepos)
+  }
+
+  const handleFilter = event => {
+    const { target: { value } = {} } = event
+    const results = value !== '' ? fuse.search(value) : items
+    setMaterials(results)
+  }
+
   return (
     <Layout
       className="blog-post-container"
@@ -66,7 +92,9 @@ export default function Template({ data, pageContext }) {
             <input
               className="category-side-bar__search"
               placeHolder="Filter by name, tags, etc..."
+              onChange={handleFilter}
             />
+            <h1>{test}</h1>
             <h5 className="mt20">Tags</h5>
             <ul className="category-side-bar__tags">
               {Object.keys(allMaterialTagCount).map(key => {
@@ -79,8 +107,14 @@ export default function Template({ data, pageContext }) {
             </ul>
           </div>
           <div className="column pt0">
+            <label>Order by: </label>
+            <select className="select is-small" onChange={handleOrder}>
+              <option value="title">title</option>
+              <option value="stargazers_count">Stars (High to low)</option>
+              <option value="subscribers_count">Watchers (High to low)</option>
+            </select>
             <div className="columns is-multiline">
-              {items.map(item => {
+              {materials.map(item => {
                 const {
                   path,
                   title,
@@ -99,6 +133,8 @@ export default function Template({ data, pageContext }) {
                   'https://img.shields.io/github/stars',
                   repoPath
                 )}.svg?style=social`
+
+                console.log(item)
 
                 return (
                   <Browser
@@ -136,6 +172,8 @@ export const pageQuery = graphql`
             subtitle
             url
             tags
+            stargazers_count
+            subscribers_count
             img {
               publicURL
             }

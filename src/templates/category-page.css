@@ -21,3 +21,7 @@
   float: right;
   font-weight: bold;
 }
+
+.category__filter {
+  padding: 20px;
+}

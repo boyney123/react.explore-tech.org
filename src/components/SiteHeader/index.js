@@ -13,7 +13,7 @@ const SiteHeader = ({ handleFilter, count }) => {
           <h2 className="subtitle">{siteConfig.description}</h2>
 
           <a className="button is-large add-action" href="#" target="_blank">
-            <i class="fab fa-github" />
+            <i className="fab fa-github" />
             Contribute Material
           </a>
           <p className="mt20">

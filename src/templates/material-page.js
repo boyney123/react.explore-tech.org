@@ -9,8 +9,6 @@ import Header from '../components/Header'
 import './material-page.css'
 
 export default function Template({ data, ...test }) {
-  console.log('DATA', data, test)
-
   const { markdownRemark: post } = data
   const { frontmatter } = post
   const {
@@ -114,7 +112,7 @@ export default function Template({ data, ...test }) {
                   )}
                   {subscribers_count && (
                     <p>
-                      <i class="far fa-eye" /> Watchers: {subscribers_count}
+                      <i className="far fa-eye" /> Watchers: {subscribers_count}
                     </p>
                   )}
                 </div>
@@ -123,11 +121,11 @@ export default function Template({ data, ...test }) {
                   <h5>Latest Release</h5>
                   <p>
                     <a href={release_url} target="_blank">
-                      <i class="fas fa-tag" /> {release_name || tag_name}
+                      <i className="fas fa-tag" /> {release_name || tag_name}
                     </a>
                   </p>
                   <p>
-                    <i class="far fa-calendar" /> Created on{' '}
+                    <i className="far fa-calendar" /> Created on{' '}
                     {release_creation_date}
                   </p>
                 </div>

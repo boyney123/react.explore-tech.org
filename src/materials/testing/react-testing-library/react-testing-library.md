@@ -8,7 +8,7 @@ author:
   avatar: 'https://avatars0.githubusercontent.com/u/1500684?v=4'
   github_url: 'https://github.com/kentcdodds'
 subscribers_count: '77'
-stargazers_count: '4941'
+stargazers_count: '4953'
 img: './screenshot.png'
 tags: ['javascript','reactjs','testing']
 subtitle: '🐐 Simple and complete React DOM testing utilities that encourage good testing practices.'

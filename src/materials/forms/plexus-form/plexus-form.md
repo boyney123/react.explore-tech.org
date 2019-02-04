@@ -7,8 +7,8 @@ author:
   name: 'AppliedMathematicsANU'
   avatar: 'https://avatars3.githubusercontent.com/u/4495806?v=4'
   github_url: 'https://github.com/AppliedMathematicsANU'
-subscribers_count: '129'
-stargazers_count: '129'
+subscribers_count: '100000'
+stargazers_count: '100000'
 img: './screenshot.png'
 tags: []
 subtitle: 'A dynamic form component for react using JSON-Schema.'
@@ -38,10 +38,9 @@ The full code for the demo can be found at
 https://github.com/AppliedMathematicsANU/plexus-form/blob/master/demos/demo.jsx.
 
 Plexus-form takes a JavaScript object describing the shape of the data we want
-a user to provide - a *schema* - and automatically creates a form based on
+a user to provide - a _schema_ - and automatically creates a form based on
 that schema. It also validates user inputs by calling a pluggable validator
 which uses the same schema.
-
 
 ## Minimal example:
 
@@ -75,7 +74,6 @@ which uses the same schema.
                    onSubmit = {onSubmit} />,
                  document.body);
 
-
 ## Differences between JSON-Schema and plexus-form schemas:
 
 Plexus-form and
@@ -85,15 +83,15 @@ string.
 
 The following JSON-Schema properties are supported:
 
-  - `description`
-  - `enum`
-  - `enumNames`
-  - `items`
-  - `oneOf`
-  - `properties`
-  - `title`
-  - `type`
-  - `$ref`
+- `description`
+- `enum`
+- `enumNames`
+- `items`
+- `oneOf`
+- `properties`
+- `title`
+- `type`
+- `$ref`
 
 Additional properties relevant to data validation are implemented by
 plexus-validate.
@@ -109,7 +107,6 @@ handled or displayed. The relevant pieces of information for plexus-form are
 found under `schema['x-hints'].form`. We'll explore these extension in more
 detail in the following sections.
 
-
 ## Enforced display order example:
 
     var schema = {
@@ -121,7 +118,6 @@ detail in the following sections.
       },
       'x-ordering': ['name', 'email', 'comment']
     };
-
 
 ## Custom CSS classes example:
 
@@ -160,7 +156,6 @@ Additional CSS classes can be specified via `x-hints` like so:
         }
       }
     };
-
 
 ## Alternatives selection example:
 
@@ -204,7 +199,6 @@ Additional CSS classes can be specified via `x-hints` like so:
         }
       }
     };
-
 
 ## User-defined input component example:
 
@@ -319,5 +313,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-        

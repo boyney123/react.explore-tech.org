@@ -21,9 +21,9 @@ const Browser = ({ path, title, author, subtitle, github_url, image } = {}) => {
       <div className="browser" onClick={() => navigate(path)}>
         <div className="browser__header">
           <div className="browser__header__dots">
-            <span class="browser__header__dots__dot" />
-            <span class="browser__header__dots__dot" />
-            <span class="browser__header__dots__dot" />
+            <span className="browser__header__dots__dot" />
+            <span className="browser__header__dots__dot" />
+            <span className="browser__header__dots__dot" />
           </div>
         </div>
         <div className="browser__body">
