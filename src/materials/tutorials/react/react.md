@@ -7,7 +7,7 @@ author:
   name: 'facebook'
   avatar: 'https://avatars3.githubusercontent.com/u/69631?v=4'
   github_url: 'https://github.com/facebook'
-watchers_count: '121354'
+subscribers_count: '121354'
 stargazers_count: '121354'
 img: './screenshot.png'
 tags: ['declarative','frontend','javascript','library','react','ui']

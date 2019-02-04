@@ -3,6 +3,7 @@
   padding: 30px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .category:hover {

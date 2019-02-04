@@ -7,7 +7,7 @@ author:
   name: 'jaredpalmer'
   avatar: 'https://avatars2.githubusercontent.com/u/4060187?v=4'
   github_url: 'https://github.com/jaredpalmer'
-watchers_count: '12789'
+subscribers_count: '173'
 stargazers_count: '12789'
 img: './screenshot.png'
 tags: ['form','forms','higher-order-component','react','render-prop']

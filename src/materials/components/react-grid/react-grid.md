@@ -7,7 +7,7 @@ author:
   name: 'prometheusresearch'
   avatar: 'https://avatars3.githubusercontent.com/u/527500?v=4'
   github_url: 'https://github.com/prometheusresearch'
-watchers_count: '73'
+subscribers_count: '73'
 stargazers_count: '73'
 img: './screenshot.png'
 tags: []

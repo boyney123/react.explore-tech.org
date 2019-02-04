@@ -23,7 +23,7 @@ export default function Template({ data, ...test }) {
     tags = [],
     github_url = '',
     stargazers_count,
-    watchers_count,
+    subscribers_count,
     latestRelease = {},
   } = frontmatter
 
@@ -112,9 +112,9 @@ export default function Template({ data, ...test }) {
                       <i className="far fa-star" /> Star: {stargazers_count}
                     </p>
                   )}
-                  {watchers_count && (
+                  {subscribers_count && (
                     <p>
-                      <i class="far fa-eye" /> Watchers: {watchers_count}
+                      <i class="far fa-eye" /> Watchers: {subscribers_count}
                     </p>
                   )}
                 </div>
@@ -173,7 +173,7 @@ export const pageQuery = graphql`
         url
         github_url
         stargazers_count
-        watchers_count
+        subscribers_count
         tags
         latestRelease {
           tag_name

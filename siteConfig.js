@@ -4,6 +4,7 @@ import form from './src/icons/form.svg'
 import page from './src/icons/page.svg'
 import bricks from './src/icons/bricks.svg'
 import hammer from './src/icons/hammer.svg'
+import testing from './src/icons/testing.svg'
 
 export default {
   /***
@@ -53,6 +54,10 @@ export default {
       icon: hammer,
       subtitle:
         'Get up and running as fast as possible. Checkout these boilerplates.',
+    },
+    Testing: {
+      icon: testing,
+      subtitle: 'Checkout how to test React, all the resources listed.',
     },
   },
 }

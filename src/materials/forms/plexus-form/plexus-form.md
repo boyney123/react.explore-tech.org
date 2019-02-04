@@ -7,7 +7,7 @@ author:
   name: 'AppliedMathematicsANU'
   avatar: 'https://avatars3.githubusercontent.com/u/4495806?v=4'
   github_url: 'https://github.com/AppliedMathematicsANU'
-watchers_count: '129'
+subscribers_count: '129'
 stargazers_count: '129'
 img: './screenshot.png'
 tags: []

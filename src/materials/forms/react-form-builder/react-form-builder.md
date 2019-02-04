@@ -7,7 +7,7 @@ author:
   name: 'quri'
   avatar: 'https://avatars2.githubusercontent.com/u/493869?v=4'
   github_url: 'https://github.com/quri'
-watchers_count: '52'
+subscribers_count: '52'
 stargazers_count: '52'
 img: './screenshot.png'
 tags: []
