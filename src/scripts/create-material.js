@@ -6,6 +6,17 @@ const fs = require('fs')
 
 const transformAndWriteToFile = require('json-to-frontmatter-markdown')
 
+const getHeaders = () => {
+  const headers = {
+    'user-agent': 'All-things',
+    Accept: 'application/vnd.github.mercy-preview+json',
+  }
+  if (process.env.GITHUB_TOKEN) {
+    headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`
+  }
+  return headers
+}
+
 const screenshot = async (url, dir) => {
   const browser = await puppeteer.launch({
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -32,10 +43,7 @@ const screenshot = async (url, dir) => {
 const getReadme = async url => {
   const readme = await request({
     url: urljoin('https://api.github.com/repos', url, 'readme'),
-    headers: {
-      'user-agent': 'All-things',
-      Authorization: `token ${process.env.GITHUB_TOKEN}`,
-    },
+    headers: getHeaders(),
     json: true,
   })
 
@@ -47,10 +55,7 @@ const getRelease = async url => {
   try {
     const release = await request({
       url: urljoin('https://api.github.com/repos', url, 'releases/latest'),
-      headers: {
-        'user-agent': 'All-things',
-        Authorization: `token ${process.env.GITHUB_TOKEN}`,
-      },
+      headers: getHeaders(),
       json: true,
     })
 
@@ -71,11 +76,7 @@ const script = async () => {
 
     const data = await request({
       url: urljoin('https://api.github.com/repos', repoName),
-      headers: {
-        'user-agent': 'All-things',
-        Accept: 'application/vnd.github.mercy-preview+json',
-        Authorization: `token ${process.env.GITHUB_TOKEN}`,
-      },
+      headers: getHeaders(),
       json: true,
     })
 
