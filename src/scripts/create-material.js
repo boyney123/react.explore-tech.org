@@ -96,6 +96,8 @@ const script = async () => {
       stargazers_count,
       subscribers_count,
       license,
+      clone_url,
+      ssh_url,
       topics = [],
       owner: { login, avatar_url, html_url: author_github_url } = {},
     } = data
@@ -110,16 +112,18 @@ const script = async () => {
             title: name,
             url: homepage || html_url,
             github_url: html_url,
-            author: {
-              name: login,
-              avatar: avatar_url,
-              github_url: author_github_url,
-            },
             subscribers_count,
             stargazers_count,
             img: './screenshot.png',
             tags: topics,
             subtitle: description,
+            clone_url,
+            ssh_url,
+            author: {
+              name: login,
+              avatar: avatar_url,
+              github_url: author_github_url,
+            },
             latestRelease: {
               tag_name,
               name: release_name,

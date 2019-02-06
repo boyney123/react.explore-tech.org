@@ -6,6 +6,10 @@ import urljoin from 'url-join'
 import Layout from '../components/layout'
 import Header from '../components/Header'
 
+import Clipboard from 'clipboard'
+
+import copy from '../icons/copy.svg'
+
 import './material-page.css'
 
 export default function Template({ data, ...test }) {
@@ -22,6 +26,7 @@ export default function Template({ data, ...test }) {
     github_url = '',
     stargazers_count,
     subscribers_count,
+    ssh_url,
     latestRelease = {},
   } = frontmatter
 
@@ -53,6 +58,8 @@ export default function Template({ data, ...test }) {
     subtitle: `by ${name}`,
   }
 
+  new Clipboard('.copy-to-clipboard__button')
+
   return (
     <Layout header={<Header {...HeaderProps} />}>
       <Helmet title={`react.openlist.io - ${frontmatter.title}`}>
@@ -61,6 +68,7 @@ export default function Template({ data, ...test }) {
           src="https://platform.twitter.com/widgets.js"
           charset="utf-8"
         />
+        <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js" />
         <link
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
@@ -99,6 +107,7 @@ export default function Template({ data, ...test }) {
 
                 <div className="side-bar-item">
                   <h5>Repository</h5>
+
                   <p>
                     <a href={github_url} target="_blank">
                       {github_url}
@@ -143,6 +152,32 @@ export default function Template({ data, ...test }) {
 
               <p className="is-size-4">{subtitle}</p>
 
+              <div className="field has-addons copy-to-clipboard">
+                <span className="copy-to-clipboard__info">
+                  Clone with SSH:{' '}
+                </span>
+                <div className="control">
+                  <input
+                    className="input"
+                    type="text"
+                    value={ssh_url}
+                    placeholder="Find a repository"
+                    id="github_url"
+                    readonly
+                  />
+                </div>
+                <div>
+                  <button
+                    className="button copy-to-clipboard__button"
+                    data-clipboard-target="#github_url"
+                  >
+                    <span class="icon is-small">
+                      <i class="far fa-copy" />
+                    </span>
+                  </button>
+                </div>
+              </div>
+
               <div
                 className="material__screenshot"
                 dangerouslySetInnerHTML={{ __html: post.html }}
@@ -173,6 +208,8 @@ export const pageQuery = graphql`
         stargazers_count
         subscribers_count
         tags
+        clone_url
+        ssh_url
         latestRelease {
           tag_name
           name

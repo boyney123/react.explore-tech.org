@@ -3,15 +3,17 @@ path: '/materials/react-slingshot'
 title: 'react-slingshot'
 url: 'https://github.com/coryhouse/react-slingshot'
 github_url: 'https://github.com/coryhouse/react-slingshot'
+subscribers_count: '293'
+stargazers_count: '9153'
+img: './screenshot.png'
+tags: ['boilerplate','react','redux','starter-kit']
+subtitle: 'React + Redux starter kit / boilerplate with Babel, hot reloading, testing, linting and a working example app built in'
+clone_url: 'https://github.com/coryhouse/react-slingshot.git'
+ssh_url: 'git@github.com:coryhouse/react-slingshot.git'
 author:
   name: 'coryhouse'
   avatar: 'https://avatars2.githubusercontent.com/u/1688997?v=4'
   github_url: 'https://github.com/coryhouse'
-subscribers_count: '292'
-stargazers_count: '9151'
-img: './screenshot.png'
-tags: ['boilerplate','react','redux','starter-kit']
-subtitle: 'React + Redux starter kit / boilerplate with Babel, hot reloading, testing, linting and a working example app built in'
 latestRelease:
   tag_name: '7.0'
   name: '7.0'
