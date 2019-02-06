@@ -6,7 +6,7 @@ const fs = require('fs')
 
 const transformAndWriteToFile = require('json-to-frontmatter-markdown')
 
-const getHeaders = () => {
+const buildGitHubRequest = (repo, path = '') => {
   const headers = {
     'user-agent': 'All-things',
     Accept: 'application/vnd.github.mercy-preview+json',
@@ -14,7 +14,11 @@ const getHeaders = () => {
   if (process.env.GITHUB_TOKEN) {
     headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`
   }
-  return headers
+  return {
+    url: urljoin('https://api.github.com/repos', repo, path),
+    headers,
+    json: true,
+  }
 }
 
 const screenshot = async (url, dir) => {
@@ -40,24 +44,16 @@ const screenshot = async (url, dir) => {
   await browser.close()
 }
 
-const getReadme = async url => {
-  const readme = await request({
-    url: urljoin('https://api.github.com/repos', url, 'readme'),
-    headers: getHeaders(),
-    json: true,
-  })
+const getReadme = async repo => {
+  const readme = await request(buildGitHubRequest(repo, 'readme'))
 
   const { content = '' } = readme
   return Buffer.from(content, 'base64')
 }
 
-const getRelease = async url => {
+const getRelease = async repo => {
   try {
-    const release = await request({
-      url: urljoin('https://api.github.com/repos', url, 'releases/latest'),
-      headers: getHeaders(),
-      json: true,
-    })
+    const release = await request(buildGitHubRequest(repo, 'releases/latest'))
 
     const { tag_name, name, created_at, html_url } = release
     return Promise.resolve({ tag_name, name, created_at, html_url })
@@ -74,11 +70,7 @@ const script = async () => {
     const urlParts = repo.split('github.com')
     const repoName = urlParts[1]
 
-    const data = await request({
-      url: urljoin('https://api.github.com/repos', repoName),
-      headers: getHeaders(),
-      json: true,
-    })
+    const data = await request(buildGitHubRequest(repoName))
 
     const readmeData = await getReadme(repoName)
     const {
