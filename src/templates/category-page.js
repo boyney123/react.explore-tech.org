@@ -6,7 +6,6 @@ import Fuse from 'fuse.js'
 import Layout from '../components/layout'
 import Header from '../components/Header'
 import Browser from '../components/Browser'
-import ImageTest from '../components/ImageTest'
 
 import './category-page.css'
 
