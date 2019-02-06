@@ -25,6 +25,7 @@ export default function Template({ data, ...test }) {
     stargazers_count,
     subscribers_count,
     ssh_url,
+    pushed_at,
     latestRelease = {},
   } = frontmatter
 
@@ -119,6 +120,11 @@ export default function Template({ data, ...test }) {
                       <i className="far fa-eye" /> Watchers: {subscribers_count}
                     </p>
                   )}
+                  {pushed_at && (
+                    <div>
+                      <strong>Last Commit</strong> <p>{pushed_at}</p>
+                    </div>
+                  )}
                 </div>
 
                 {release_creation_date && (
@@ -184,6 +190,7 @@ export const pageQuery = graphql`
         tags
         clone_url
         ssh_url
+        pushed_at(formatString: "MMMM Do YYYY")
         latestRelease {
           tag_name
           name

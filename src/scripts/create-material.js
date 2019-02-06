@@ -91,6 +91,8 @@ const script = async () => {
       license,
       clone_url,
       ssh_url,
+      pushed_at = null,
+      updated_at = null,
       topics = [],
       owner: { login, avatar_url, html_url: author_github_url } = {},
     } = data
@@ -112,6 +114,8 @@ const script = async () => {
             subtitle: description,
             clone_url,
             ssh_url,
+            pushed_at,
+            updated_at,
             author: {
               name: login,
               avatar: avatar_url,
