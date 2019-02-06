@@ -1,12 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import urljoin from 'url-join'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Header from '../components/Header'
-
-import copy from '../icons/copy.svg'
 
 import './material-page.css'
 
@@ -17,14 +14,11 @@ export default function Template({ data, ...test }) {
     title,
     subtitle,
     url,
-    twitter,
-    path,
     author: { name, avatar, github_url: author_github_url } = {},
     tags = [],
     github_url = '',
     stargazers_count,
     subscribers_count,
-    ssh_url,
     pushed_at,
     latestRelease = {},
   } = frontmatter
@@ -36,21 +30,6 @@ export default function Template({ data, ...test }) {
     created_at: release_creation_date,
   } = latestRelease
 
-  console.log('latestRelease', latestRelease)
-
-  const creator = twitter ? twitter : name
-
-  const urlParts = url.split('github.com')
-  const repoPath = urlParts[urlParts.length - 1]
-  const starBadgeUrl = `${urljoin(
-    'https://img.shields.io/github/stars',
-    repoPath
-  )}.svg?style=social`
-
-  const tweet = encodeURIComponent(
-    `Check out this GitHub action: ${title} from ${creator}: https://react-openlist.netlify.com/${path} 👍 #github`
-  )
-
   // FIX THIS!
   const HeaderProps = {
     ...frontmatter,
@@ -60,11 +39,6 @@ export default function Template({ data, ...test }) {
   return (
     <Layout header={<Header {...HeaderProps} />}>
       <Helmet title={`react.openlist.io - ${frontmatter.title}`}>
-        <script
-          async
-          src="https://platform.twitter.com/widgets.js"
-          charset="utf-8"
-        />
         <link
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
@@ -83,10 +57,14 @@ export default function Template({ data, ...test }) {
             <div className="column is-one-quarter">
               <div className="side-bar">
                 <div className="side-bar-item">
-                  <img src={avatar} />
+                  <img src={avatar} alt="avatar" />
                   <p>
                     Developed by{' '}
-                    <a href={author_github_url} target="_blank">
+                    <a
+                      href={author_github_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {name}
                     </a>
                   </p>
@@ -95,7 +73,7 @@ export default function Template({ data, ...test }) {
                 <div className="side-bar-item">
                   <h5>Website</h5>
                   <p>
-                    <a href={url} target="_blank">
+                    <a href={url} target="_blank" rel="noopener noreferrer">
                       {url}
                     </a>
                   </p>
@@ -105,7 +83,11 @@ export default function Template({ data, ...test }) {
                   <h5>Repository</h5>
 
                   <p>
-                    <a href={github_url} target="_blank">
+                    <a
+                      href={github_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {github_url}
                     </a>
                   </p>
@@ -131,7 +113,11 @@ export default function Template({ data, ...test }) {
                   <div className="side-bar-item">
                     <h5>Latest Release</h5>
                     <p>
-                      <a href={release_url} target="_blank">
+                      <a
+                        href={release_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <i className="fas fa-tag" /> {release_name || tag_name}
                       </a>
                     </p>

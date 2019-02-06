@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import urljoin from 'url-join'
 import Fuse from 'fuse.js'
 
 import Layout from '../components/layout'
 import Header from '../components/Header'
 import Browser from '../components/Browser'
+import ImageTest from '../components/ImageTest'
 
 import './category-page.css'
 
@@ -26,12 +26,6 @@ export default function Template({ data, pageContext }) {
       ...fields,
     }
   })
-
-  /**
-   * All tags, into an array of every tag?
-   * { react: 1 }
-   * { test: 2 }
-   */
 
   const allMaterialTagCount = {}
   items.forEach(({ tags = [] }) => {
@@ -61,7 +55,6 @@ export default function Template({ data, pageContext }) {
   })
 
   const [materials, setMaterials] = useState(items)
-  const [test, setTest] = useState('test')
 
   const handleOrder = event => {
     const { target: { value } = {} } = event
@@ -141,25 +134,15 @@ export default function Template({ data, pageContext }) {
             <div className="columns is-multiline">
               {materials.map(item => {
                 const {
-                  path,
                   title,
                   subtitle,
                   author: { name } = {},
                   github_url,
-                  tags = [],
                   img,
                   slug,
                 } = item
 
-                const urlParts = github_url.split('github.com')
-                const repoPath = urlParts[urlParts.length - 1]
-
-                const starBadgeUrl = `${urljoin(
-                  'https://img.shields.io/github/stars',
-                  repoPath
-                )}.svg?style=social`
-
-                console.log(item)
+                console.log('IMg', img)
 
                 return (
                   <Browser
@@ -168,7 +151,7 @@ export default function Template({ data, pageContext }) {
                     author={name}
                     subtitle={subtitle}
                     github_url={github_url}
-                    image={img.publicURL}
+                    image={img}
                   />
                 )
               })}
@@ -201,6 +184,11 @@ export const pageQuery = graphql`
             subscribers_count
             img {
               publicURL
+              childImageSharp {
+                fluid(maxWidth: 2000, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
             github_url
           }

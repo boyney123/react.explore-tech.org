@@ -16,10 +16,7 @@ class IndexPage extends Component {
   }
 
   render() {
-    const {
-      data: { allMarkdownRemark: { edges = [] } = {} } = {},
-      test,
-    } = this.props
+    const { data: { allMarkdownRemark: { edges = [] } = {} } = {} } = this.props
 
     const categories = edges
       .map(item => {

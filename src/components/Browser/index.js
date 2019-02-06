@@ -1,21 +1,10 @@
 import React from 'react'
-import urljoin from 'url-join'
 import { navigate } from 'gatsby'
 import Img from 'gatsby-image'
 
 import './styles.css'
 
 const Browser = ({ path, title, author, subtitle, github_url, image } = {}) => {
-  const urlParts = github_url.split('github.com')
-  const repoPath = urlParts[urlParts.length - 1]
-
-  console.log(image)
-
-  const starBadgeUrl = `${urljoin(
-    'https://img.shields.io/github/stars',
-    repoPath
-  )}.svg?style=social`
-
   return (
     <div className="column is-one-third">
       <div className="browser" onClick={() => navigate(path)}>
@@ -27,7 +16,7 @@ const Browser = ({ path, title, author, subtitle, github_url, image } = {}) => {
           </div>
         </div>
         <div className="browser__body">
-          <img src={image} />
+          <Img fluid={image.childImageSharp.fluid} />
         </div>
         <div className="browser__footer">
           <h4 className="mp0">{title}</h4>

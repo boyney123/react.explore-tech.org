@@ -12,7 +12,7 @@ const Category = ({ name } = {}) => {
         <h2 className="title  has-text-centered">{name}</h2>
         <div className="category-image">
           <figure>
-            <img src={icon} />
+            <img src={icon} alt="icon" />
           </figure>
         </div>
         <div className="category-content">

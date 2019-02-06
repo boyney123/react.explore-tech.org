@@ -1,5 +1,4 @@
 import React from 'react'
-import urljoin from 'url-join'
 
 const Header = ({ title, subtitle }) => {
   return (
