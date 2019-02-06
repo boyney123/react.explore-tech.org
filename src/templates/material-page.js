@@ -6,8 +6,6 @@ import urljoin from 'url-join'
 import Layout from '../components/layout'
 import Header from '../components/Header'
 
-import Clipboard from 'clipboard'
-
 import copy from '../icons/copy.svg'
 
 import './material-page.css'
@@ -58,8 +56,6 @@ export default function Template({ data, ...test }) {
     subtitle: `by ${name}`,
   }
 
-  new Clipboard('.copy-to-clipboard__button')
-
   return (
     <Layout header={<Header {...HeaderProps} />}>
       <Helmet title={`react.openlist.io - ${frontmatter.title}`}>
@@ -68,7 +64,6 @@ export default function Template({ data, ...test }) {
           src="https://platform.twitter.com/widgets.js"
           charset="utf-8"
         />
-        <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js" />
         <link
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
@@ -126,57 +121,36 @@ export default function Template({ data, ...test }) {
                   )}
                 </div>
 
-                <div className="side-bar-item">
-                  <h5>Latest Release</h5>
-                  <p>
-                    <a href={release_url} target="_blank">
-                      <i className="fas fa-tag" /> {release_name || tag_name}
-                    </a>
-                  </p>
-                  <p>
-                    <i className="far fa-calendar" /> Created on{' '}
-                    {release_creation_date}
-                  </p>
-                </div>
-
-                <h5>Keywords </h5>
-                <p className="is-size-6 tags">
-                  {tags.map(tag => (
-                    <span className="side-bar-item__tag">{tag}</span>
-                  ))}
-                </p>
+                {release_creation_date && (
+                  <div className="side-bar-item">
+                    <h5>Latest Release</h5>
+                    <p>
+                      <a href={release_url} target="_blank">
+                        <i className="fas fa-tag" /> {release_name || tag_name}
+                      </a>
+                    </p>
+                    <p>
+                      <i className="far fa-calendar" /> Created on{' '}
+                      {release_creation_date}
+                    </p>
+                  </div>
+                )}
+                {tags.length > 0 && (
+                  <div>
+                    <h5>Keywords </h5>
+                    <p className="is-size-6 tags">
+                      {tags.map(tag => (
+                        <span className="side-bar-item__tag">{tag}</span>
+                      ))}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
             <div className="column pt0 material__content">
               <h1 className="is-size-1">{title}</h1>
 
               <p className="is-size-4">{subtitle}</p>
-
-              <div className="field has-addons copy-to-clipboard">
-                <span className="copy-to-clipboard__info">
-                  Clone with SSH:{' '}
-                </span>
-                <div className="control">
-                  <input
-                    className="input"
-                    type="text"
-                    value={ssh_url}
-                    placeholder="Find a repository"
-                    id="github_url"
-                    readonly
-                  />
-                </div>
-                <div>
-                  <button
-                    className="button copy-to-clipboard__button"
-                    data-clipboard-target="#github_url"
-                  >
-                    <span class="icon is-small">
-                      <i class="far fa-copy" />
-                    </span>
-                  </button>
-                </div>
-              </div>
 
               <div
                 className="material__screenshot"

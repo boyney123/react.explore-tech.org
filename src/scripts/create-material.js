@@ -81,10 +81,10 @@ const script = async () => {
 
     const readmeData = await getReadme(repoName)
     const {
-      tag_name,
-      name: release_name,
-      created_at,
-      html_url: release_url,
+      tag_name = null,
+      name: release_name = null,
+      created_at = null,
+      html_url: release_url = null,
     } = await getRelease(repoName)
 
     const {

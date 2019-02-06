@@ -6,7 +6,19 @@ github_url: 'https://github.com/ghondar/crassa'
 subscribers_count: '2'
 stargazers_count: '6'
 img: './screenshot.png'
-tags: ['cli','crassa','create-react-app','react','reactjs','redux','redux-duck','redux-saga','server-side-application','universal']
+tags:
+  [
+    'cli',
+    'crassa',
+    'create-react-app',
+    'react',
+    'reactjs',
+    'redux',
+    'redux-duck',
+    'redux-saga',
+    'server-side-application',
+    'universal',
+  ]
 subtitle: 'Create React App Server Side Application'
 clone_url: 'https://github.com/ghondar/crassa.git'
 ssh_url: 'git@github.com:ghondar/crassa.git'
@@ -18,13 +30,14 @@ latestRelease:
   tag_name: 'undefined'
   name: 'undefined'
   url: 'undefined'
-  created_at: 'undefined'
+  created_at: null
 ---
 
 ![alt text](screenshot.png)
 
 # :sparkles: Create React App Server Side Application
-## :battery: A CLI tool to create React + Server Side with one command 
+
+## :battery: A CLI tool to create React + Server Side with one command
 
 #### **This project is a fork of [Crana](https://github.com/scriptify/crana)**
 
@@ -37,29 +50,37 @@ crassa init <projectName> [projectFolder]
 
 ...and you are ready to go!
 
-This will equip you with all important tools you're going to need to develop powerful applications, for example __Live reaload__ for the server and the frontend out of the box.
+This will equip you with all important tools you're going to need to develop powerful applications, for example **Live reaload** for the server and the frontend out of the box.
 Webpack, Babel, ESLint, StyleLint, Nodemon etc. etc., all preconfigured out of the box, so that you can focus on the important stuff!
 
-:computer: __Now start developing!__
+:computer: **Now start developing!**
+
 ```bash
 yarn dev
 ```
-This will fire up the backend and the frontend development server. Just edit files under __src__ and see what happens!
+
+This will fire up the backend and the frontend development server. Just edit files under **src** and see what happens!
 
 :warning: Crassa is in early stage of development and may not meet all your requirements. That's why contributions of any kind are highly appreciated, as the best tools are built by communities!
 
 ## Usage
+
 :star: Create a new crassa project.
+
 ```bash
 crassa init <projectName> [projectFolderName]
 ```
+
 :dizzy: Concurrently starts the frontend and the backend in development mode.
+
 ```bash
-yarn dev                                     
+yarn dev
 ```
+
 :books: See how many LOC you've already written.
+
 ```bash
-yarn count                            
+yarn count
 ```
 
 :mag: Executes eslint and styleling in autofix mode.
@@ -67,23 +88,30 @@ yarn count
 ```bash
 yarn lint
 ```
+
 :car: Starts the project for production with server side.
+
 ```bash
-yarn start                                   
+yarn start
 ```
+
 :blue_car: Creates a production build for the frontend application.
+
 ```bash
-yarn build                         
+yarn build
 ```
 
 ## Project structure
-The interesting files for you are all located in the __src__ folder. The src folder has three subfolders:
+
+The interesting files for you are all located in the **src** folder. The src folder has three subfolders:
+
 - src
 - server
 
-As you can imagine, the __src__ folder contains all files for the React frontend application and the __server__ folder contains all files for the node.js backend.
+As you can imagine, the **src** folder contains all files for the React frontend application and the **server** folder contains all files for the node.js backend.
 
 ## Custom Template
+
 You'll be able create custom template from github to generate your initial project:
 Github repository structure [like](https://github.com/ghondar/counter-with-redux-ducks-and-sagas-template):
 
@@ -163,50 +191,53 @@ You can put your git when crassa cli ask you to choose betwee custom or default 
 ghondar/counter-with-redux-ducks-and-sagas-template
 ```
 
-
 ## Extensions
 
-Here (__server__ folder) you can extend universal middleware creating __preLoadState.js__ file to dispatch action from server to load initial state into redux store.
+Here (**server** folder) you can extend universal middleware creating **preLoadState.js** file to dispatch action from server to load initial state into redux store.
 
-Example: (__/server/preLoadState.js__)
+Example: (**/server/preLoadState.js**)
 
 ```javascript
 import counterDuck from 'reducers/counter'
 
 export default function(req, res, next) {
-    if(req.baseUrl.indexOf('.') !== -1 || req.baseUrl.indexOf('api') !== -1 || req.baseUrl.indexOf('static') !== -1) {
+  if (
+    req.baseUrl.indexOf('.') !== -1 ||
+    req.baseUrl.indexOf('api') !== -1 ||
+    req.baseUrl.indexOf('static') !== -1
+  ) {
     next()
-  	} else {
-         // Get store from locals
-         const { store } = res.locals
-         // Show local resources
-         console.log(res.locals)
-         // Dispatch a action to change initial state
-         store.dispatch(counterDuck.creators.addCount())
-         // Resave new store
-         res.locals.store = store
-         // Pass middlerware
-         next()
-    }
+  } else {
+    // Get store from locals
+    const { store } = res.locals
+    // Show local resources
+    console.log(res.locals)
+    // Dispatch a action to change initial state
+    store.dispatch(counterDuck.creators.addCount())
+    // Resave new store
+    res.locals.store = store
+    // Pass middlerware
+    next()
+  }
 }
 ```
 
-Here (__server__ folder) you can get the html created in __universal.js__  to modify the initial load of DOM or wrapping your app src react project.
+Here (**server** folder) you can get the html created in **universal.js** to modify the initial load of DOM or wrapping your app src react project.
 
-Example: (__/server/universal.js__)
+Example: (**/server/universal.js**)
 
 ```javascript
 import { renderToString } from 'react-dom/server'
 
 export const setRenderUniversal = (locals, app) => {
-    const { htmlData } = locals
-    console.log(locals) // htmlData, store, history
-    
-    // store => access to store ( redux )
+  const { htmlData } = locals
+  console.log(locals) // htmlData, store, history
 
-    const renderString = renderToString(app) // wrapping optional
+  // store => access to store ( redux )
 
-    const materialStyle = `
+  const renderString = renderToString(app) // wrapping optional
+
+  const materialStyle = `
       <style id='css-server-side' type='text/css'>
         html { margin:0px; padding:0px }
       </style>
@@ -214,14 +245,14 @@ export const setRenderUniversal = (locals, app) => {
 
   return {
     prevHtml: html.replace('<head>', `<head>${materialStyle}`),
-    renderString // optional
+    renderString, // optional
   }
 }
 ```
 
-We handle initial configuration [here](https://github.com/ghondar/crassa/blob/master/config-overrides.js) adding babel plugins ([transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports), [loadable-components](https://github.com/smooth-code/loadable-components) and [transform-react-remove-prop-types](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types)) and webpack alias (basic alias from __package.json__) but you can extend this initial configuration adding to your root project __config-overrides.js__ file.
+We handle initial configuration [here](https://github.com/ghondar/crassa/blob/master/config-overrides.js) adding babel plugins ([transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports), [loadable-components](https://github.com/smooth-code/loadable-components) and [transform-react-remove-prop-types](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types)) and webpack alias (basic alias from **package.json**) but you can extend this initial configuration adding to your root project **config-overrides.js** file.
 
-Example: (__/configExpress.js__)
+Example: (**/configExpress.js**)
 
 ```javascript
 import express from 'express'
@@ -231,27 +262,31 @@ import { resolve } from 'path'
 export default function(app) {
   app.use(
     session({
-      secret           : 'Cr4ss4',
-      resave           : true,
-      saveUninitialized: true
+      secret: 'Cr4ss4',
+      resave: true,
+      saveUninitialized: true,
     })
   )
 
   app.use('/src', express.static(resolve(__dirname, './static')))
-   
+
   return app
 }
 ```
 
-With __configExpress.js__ you can add configurations to express, like statics, uses or add web sockets too.
+With **configExpress.js** you can add configurations to express, like statics, uses or add web sockets too.
 
-Example: (__/config-overrides.js__)
+Example: (**/config-overrides.js**)
 
 ```javascript
-const { override, addWebpackAlias, addBundleVisualizer } = require('customize-cra')
+const {
+  override,
+  addWebpackAlias,
+  addBundleVisualizer,
+} = require('customize-cra')
 
 module.exports = override(
-	process.env.BUNDLE_VISUALIZE == 1 && addBundleVisualizer()
+  process.env.BUNDLE_VISUALIZE == 1 && addBundleVisualizer()
 )
 ```
 
@@ -268,13 +303,14 @@ Under the hood it uses Webpack, Babel, ESLint with a few other plugins enabling 
 ## Known constraints/issues
 
 ### Windows Linux Subsystem
+
 If you're using Windows Linux Subsystem, eslint will not immediatly work. You need to edit the path under `.vscode/settings.json`.
 Replace `C:/mnt/c` with `C:` and it should work.
 
 ## Contributing
+
 Have a look at [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Code of conduct
-Have a look at [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 
-        
+Have a look at [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)

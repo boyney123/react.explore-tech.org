@@ -15,10 +15,10 @@ author:
   avatar: 'https://avatars3.githubusercontent.com/u/527500?v=4'
   github_url: 'https://github.com/prometheusresearch'
 latestRelease:
-  tag_name: 'undefined'
-  name: 'undefined'
-  url: 'undefined'
-  created_at: 'undefined'
+  tag_name: null
+  name: null
+  url: null
+  created_at: null
 ---
 
 ![alt text](screenshot.png)
@@ -32,7 +32,5 @@ Data grid for [React][].
 React Grid is free software created by [Prometheus Research][] and is released
 under the MIT.
 
-[React]: http://facebook.github.io/react/
-[Prometheus Research, LLC]: http://prometheusresearch.com
-
-        
+[react]: http://facebook.github.io/react/
+[prometheus research, llc]: http://prometheusresearch.com

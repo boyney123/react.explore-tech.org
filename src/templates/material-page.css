@@ -40,14 +40,3 @@
 .side-bar-item i {
   color: #6a696b;
 }
-
-.copy-to-clipboard .control {
-  width: 100%;
-}
-
-.copy-to-clipboard__info {
-  display: inline-block;
-  width: 160px;
-  padding-top: 5px;
-  text-decoration: underline;
-}
