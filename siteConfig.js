@@ -5,6 +5,7 @@ import page from './src/icons/page.svg'
 import bricks from './src/icons/bricks.svg'
 import hammer from './src/icons/hammer.svg'
 import testing from './src/icons/testing.svg'
+import tools from './src/icons/tools.svg'
 
 export default {
   /***
@@ -58,6 +59,11 @@ export default {
     Testing: {
       icon: testing,
       subtitle: 'Checkout how to test React, all the resources listed.',
+    },
+    Tools: {
+      icon: tools,
+      subtitle:
+        'You might want to checkout some React tools to help your development workflows',
     },
   },
 }

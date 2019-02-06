@@ -27,6 +27,12 @@ export default function Template({ data, pageContext }) {
     }
   })
 
+  /**
+   * All tags, into an array of every tag?
+   * { react: 1 }
+   * { test: 2 }
+   */
+
   const allMaterialTagCount = {}
   items.forEach(({ tags = [] }) => {
     tags.forEach(tag => {
@@ -36,6 +42,16 @@ export default function Template({ data, pageContext }) {
         allMaterialTagCount[tag] = 1
       }
     })
+  })
+
+  // TODO: Tidy up sorted tags....
+  const sortedTags = []
+  for (var item in allMaterialTagCount) {
+    sortedTags.push([item, allMaterialTagCount[item]])
+  }
+
+  sortedTags.sort(function(a, b) {
+    return b[1] - a[1]
   })
 
   const fuse = new Fuse(items, {
@@ -49,11 +65,22 @@ export default function Template({ data, pageContext }) {
 
   const handleOrder = event => {
     const { target: { value } = {} } = event
-    const orderedRepos = materials.sort((item1, item2) => {
-      if (item1[value] < item2[value]) return -1
-      if (item1[value] > item2[value]) return 1
-      return 0
-    })
+    let orderedRepos = []
+
+    if (value === 'stargazers_count') {
+      orderedRepos = materials.sort((item1, item2) => {
+        if (item1[value] > item2[value]) return -1
+        if (item1[value] < item2[value]) return 1
+        return 0
+      })
+    } else {
+      orderedRepos = materials.sort((item1, item2) => {
+        if (item1[value] < item2[value]) return -1
+        if (item1[value] > item2[value]) return 1
+        return 0
+      })
+    }
+
     setMaterials(orderedRepos)
   }
 
@@ -94,13 +121,12 @@ export default function Template({ data, pageContext }) {
               placeHolder="Filter by name, tags, etc..."
               onChange={handleFilter}
             />
-            <h1>{test}</h1>
             <h5 className="mt20">Tags</h5>
             <ul className="category-side-bar__tags">
-              {Object.keys(allMaterialTagCount).map(key => {
+              {sortedTags.map(tag => {
                 return (
                   <li className="category-side-bar__tag">
-                    {key} <span>{allMaterialTagCount[key]}</span>
+                    {tag[0]} <span>{tag[1]}</span>
                   </li>
                 )
               })}
@@ -111,7 +137,6 @@ export default function Template({ data, pageContext }) {
             <select className="select is-small" onChange={handleOrder}>
               <option value="title">title</option>
               <option value="stargazers_count">Stars (High to low)</option>
-              <option value="subscribers_count">Watchers (High to low)</option>
             </select>
             <div className="columns is-multiline">
               {materials.map(item => {
