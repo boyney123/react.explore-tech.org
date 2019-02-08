@@ -182,7 +182,6 @@ export const pageQuery = graphql`
             stargazers_count
             subscribers_count
             img {
-              publicURL
               childImageSharp {
                 fluid(maxWidth: 2000, quality: 100) {
                   ...GatsbyImageSharpFluid

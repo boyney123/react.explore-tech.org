@@ -12,6 +12,7 @@
   height: auto;
   transition: box-shadow 0.2s ease;
   width: 100%;
+  padding: 2px;
 }
 
 .browser__body img:hover {

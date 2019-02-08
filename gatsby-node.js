@@ -1,6 +1,9 @@
 const path = require('path')
 
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const {
+  createFilePath,
+  createRemoteFileNode,
+} = require(`gatsby-source-filesystem`)
 
 const getSlugParents = slug => {
   const slugParentString = slug.substring(1, slug.length - 1)
@@ -17,8 +20,15 @@ const toTitleCase = str => {
     .join(' ')
 }
 
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators
+exports.onCreateNode = async ({
+  node,
+  getNode,
+  boundActionCreators,
+  createContentDigest,
+  store,
+  cache,
+}) => {
+  const { createNodeField, createNode } = boundActionCreators
 
   if (node.internal.type === 'MarkdownRemark') {
     const slug = createFilePath({ node, getNode, basePath: 'pages' })
@@ -37,6 +47,21 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
       name: 'slug',
       value: slug,
     })
+
+    if (node.frontmatter) {
+      const fileNode = await createRemoteFileNode({
+        url: node.frontmatter.author.avatar,
+        store,
+        cache,
+        createNode,
+        createNodeId: createContentDigest,
+      })
+
+      if (fileNode) {
+        const fileNodeLink = `author_avatar___NODE`
+        node[fileNodeLink] = fileNode.id
+      }
+    }
   }
 }
 

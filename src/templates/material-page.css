@@ -20,6 +20,10 @@
 }
 
 .material__screenshot {
+  margin-bottom: 30px;
+}
+
+.material__body {
   border: 1px solid #d1d9db;
   border-radius: 5px;
   box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.28);
@@ -27,7 +31,7 @@
   padding: 20px;
 }
 
-.material__content {
+.material__container {
   max-width: 80%;
 }
 

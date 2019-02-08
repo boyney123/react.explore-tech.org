@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import Header from '../components/Header'
@@ -9,7 +10,7 @@ import './material-page.css'
 
 export default function Template({ data, ...test }) {
   const { markdownRemark: post } = data
-  const { frontmatter } = post
+  const { frontmatter, author_avatar } = post
   const {
     title,
     subtitle,
@@ -21,6 +22,7 @@ export default function Template({ data, ...test }) {
     subscribers_count,
     pushed_at,
     latestRelease = {},
+    img,
   } = frontmatter
 
   const {
@@ -57,7 +59,7 @@ export default function Template({ data, ...test }) {
             <div className="column is-one-quarter">
               <div className="side-bar">
                 <div className="side-bar-item">
-                  <img src={avatar} alt="avatar" />
+                  <Img fluid={author_avatar.childImageSharp.fluid} />
                   <p>
                     Developed by{' '}
                     <a
@@ -139,15 +141,15 @@ export default function Template({ data, ...test }) {
                 )}
               </div>
             </div>
-            <div className="column pt0 material__content">
+            <div className="column pt0 material__container">
               <h1 className="is-size-1">{title}</h1>
 
               <p className="is-size-4">{subtitle}</p>
 
-              <div
-                className="material__screenshot"
-                dangerouslySetInnerHTML={{ __html: post.html }}
-              />
+              <div className="material__body">
+                <Img className="material__screenshot" fluid={img.childImageSharp.fluid} />
+                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+              </div>
             </div>
           </div>
         </div>
@@ -159,6 +161,13 @@ export default function Template({ data, ...test }) {
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(fields: { slug: { eq: $path } }) {
+      author_avatar {
+        childImageSharp {
+          fluid(maxWidth: 500, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       html
       frontmatter {
         path
@@ -182,6 +191,13 @@ export const pageQuery = graphql`
           name
           url
           created_at(formatString: "MMMM Do YYYY")
+        }
+        img {
+          childImageSharp {
+            fluid(maxWidth: 2000, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }

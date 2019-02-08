@@ -22,9 +22,6 @@ latestRelease:
   url: 'https://github.com/GriddleGriddle/Griddle/releases/tag/1.8.0'
   created_at: '2017-08-20T09:07:37Z'
 ---
-
-![alt text](screenshot.png)
-
 Griddle
 =======
 
@@ -68,5 +65,3 @@ We would love any help at all but want to call out the following things:
 * Help maintaining 0.x
 * More tests - we have a number of tests in version 1.0 but not quite where we'd like it to be
 * More plugins
-
-        

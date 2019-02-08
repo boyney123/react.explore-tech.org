@@ -129,11 +129,7 @@ const script = async () => {
             },
           },
         ],
-        body: `
-![alt text](screenshot.png)
-
-${readmeData}
-        `,
+        body: readmeData,
       },
       path: newFilePath,
       fileName: `${name}.md`,

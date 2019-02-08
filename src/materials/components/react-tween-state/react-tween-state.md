@@ -22,9 +22,6 @@ latestRelease:
   url: null
   created_at: null
 ---
-
-![alt text](screenshot.png)
-
 # [React](http://facebook.github.io/react/) Tween State
 
 The equivalent of React's `this.setState`, but for animated tweens: `this.tweenState`.
@@ -113,5 +110,3 @@ Get the current tweening value of the state field. Typically used in `render`.
 
 ## License
 BSD.
-
-        
