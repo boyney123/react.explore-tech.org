@@ -1,3 +1,4 @@
+require('dotenv').config()
 const request = require('request-promise')
 const urljoin = require('url-join')
 const path = require('path')
@@ -176,11 +177,11 @@ const script = async _args => {
     const newFile = await fs.readFileSync(path.join(newFilePath, `${name}.md`))
     const converetedIntoSingleQuotes = newFile.toString().replace(/"/g, "'")
     await fs.writeFileSync(
-      path.join(newDirectory, `${name}.md`),
+      path.join(newFilePath, `${name}.md`),
       converetedIntoSingleQuotes
     )
   } catch (error) {
-    fs.removeSync(newDirectory)
+    console.log(error)
     console.log(chalk.red(`Failed to create material for ${category}: ${repo}`))
     return process.exit(1)
   }

@@ -32,18 +32,16 @@
     "dev": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "NODE_ENV=test jest --coverage",
-    "test:watch": "NODE_ENV=test jest --silent --watch --notify --notifyMode=change "
+    "test:watch": "NODE_ENV=test jest --silent --watch --notify --notifyMode=change",
+    "add:tutorial": "node src/scripts/create-material/index.js Tutorials",
+    "add:tool": "node src/scripts/create-material/index.js Tools",
+    "add:style": "node src/scripts/create-material/index.js Styles",
+    "add:component": "node src/scripts/create-material/index.js Components"
   },
   "devDependencies": {
-    "url-join": "^4.0.0",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.2",
     "babel-jest": "^24.1.0",
-    "puppeteer": "^1.11.0",
-    "puppeteer-core": "^1.11.0",
-    "node-dir": "^0.1.17",
-    "json-to-frontmatter-markdown": "^1.0.0",
     "babel-preset-gatsby": "^0.1.7",
+    "dotenv": "^6.2.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "enzyme-to-json": "^3.3.5",
@@ -53,8 +51,15 @@
     "jest": "^24.1.0",
     "jest-environment-enzyme": "^7.0.1",
     "jest-enzyme": "^7.0.1",
+    "json-to-frontmatter-markdown": "^1.0.0",
     "nock": "^10.0.6",
-    "prettier": "^1.15.2"
+    "node-dir": "^0.1.17",
+    "prettier": "^1.15.2",
+    "puppeteer": "^1.11.0",
+    "puppeteer-core": "^1.11.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "url-join": "^4.0.0"
   },
   "repository": {
     "type": "git",

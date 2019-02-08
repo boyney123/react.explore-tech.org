@@ -36,6 +36,7 @@ export default function Template({ data, ...test }) {
   // FIX THIS!
   const HeaderProps = {
     ...frontmatter,
+    ...material,
     subtitle: `by ${name}`,
   }
 

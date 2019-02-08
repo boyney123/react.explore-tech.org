@@ -9,4 +9,6 @@ import tools from '../../icons/tools.svg'
 export default {
   Tutorials: tutorial,
   Components: bricks,
+  Tools: tools,
+  Styles: hammer,
 }
