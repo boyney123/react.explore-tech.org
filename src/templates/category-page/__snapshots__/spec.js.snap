@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Template renders correctly 1`] = `
+<Layout
+  className="blog-post-container"
+  header={
+    <Header
+      subtitle="react.openlist.io"
+    />
+  }
+>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="react.openlist.io"
+  >
+    <script
+      async={true}
+      charset="utf-8"
+      src="https://platform.twitter.com/widgets.js"
+    />
+    <link
+      crossorigin="anonymous"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
+      rel="stylesheet"
+    />
+    <html
+      lang="en"
+    />
+  </HelmetWrapper>
+  <div
+    className="container"
+  >
+    <div
+      className="columns"
+    >
+      <div
+        className="column is-one-quarter category-side-bar"
+      >
+        <input
+          className="category-side-bar__search"
+          onChange={[Function]}
+          placeHolder="Filter by name, tags, etc..."
+        />
+        <h5
+          className="mt20"
+        >
+          Tags
+        </h5>
+        <ul
+          className="category-side-bar__tags"
+        />
+      </div>
+      <div
+        className="column pt0"
+      >
+        <label>
+          Order by: 
+        </label>
+        <select
+          className="select is-small"
+          onChange={[Function]}
+        >
+          <option
+            value="title"
+          >
+            title
+          </option>
+          <option
+            value="stargazers_count"
+          >
+            Stars (High to low)
+          </option>
+        </select>
+        <div
+          className="columns is-multiline"
+        />
+      </div>
+    </div>
+  </div>
+</Layout>
+`;

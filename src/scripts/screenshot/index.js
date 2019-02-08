@@ -5,17 +5,9 @@ const fm = require('front-matter')
 const dir = require('node-dir')
 
 /**
- * - Loop around all the mark down files
- * - Create screen shots for each one
- * - Render them on the main page
- * - Have sub sections?
- *
- * SubSections
- * - Server Side Rendered
- * - CSS
- * - Tutorials
- * - Advacned Tutorials
- *
+ * This is only an idea for now. No tests.
+ * Idea is this script or something like it can loop around files and get the latests screen-shots?
+ * Idea for the future, but leaving it here for now.
  */
 
 const script = async () => {

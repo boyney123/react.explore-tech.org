@@ -1,26 +1,28 @@
 ---
 path: '/materials/reactjs_koans'
-title: 'reactjs_koans'
-url: 'https://github.com/arkency/reactjs_koans'
-github_url: 'https://github.com/arkency/reactjs_koans'
-subscribers_count: '72'
-stargazers_count: '3061'
+type: 'GitHub'
 img: './screenshot.png'
-tags: []
-subtitle: 'Learn basics of React.js making the tests pass'
-clone_url: 'https://github.com/arkency/reactjs_koans.git'
-ssh_url: 'git@github.com:arkency/reactjs_koans.git'
-pushed_at: '2019-01-08T14:28:10Z'
-updated_at: '2019-02-05T20:08:32Z'
-author:
-  name: 'arkency'
-  avatar: 'https://avatars2.githubusercontent.com/u/94726?v=4'
-  github_url: 'https://github.com/arkency'
-latestRelease:
-  tag_name: '1.0.0'
-  name: '1.0.0'
-  url: 'https://github.com/arkency/reactjs_koans/releases/tag/1.0.0'
-  created_at: '2016-01-02T19:55:12Z'
+material:
+  title: 'reactjs_koans'
+  url: 'https://github.com/arkency/reactjs_koans'
+  github_url: 'https://github.com/arkency/reactjs_koans'
+  subscribers_count: '72'
+  stargazers_count: '3061'
+  tags: ['']
+  subtitle: 'Learn basics of React.js making the tests pass'
+  clone_url: 'https://github.com/arkency/reactjs_koans.git'
+  ssh_url: 'git@github.com:arkency/reactjs_koans.git'
+  pushed_at: '2019-01-08T14:28:10Z'
+  updated_at: '2019-02-05T20:08:32Z'
+  author:
+    name: 'arkency'
+    avatar: 'https://avatars2.githubusercontent.com/u/94726?v=4'
+    github_url: 'https://github.com/arkency'
+  latestRelease:
+    tag_name: '1.0.0'
+    name: '1.0.0'
+    url: 'https://github.com/arkency/reactjs_koans/releases/tag/1.0.0'
+    created_at: '2016-01-02T19:55:12Z'
 ---
 # React.js Koans
 

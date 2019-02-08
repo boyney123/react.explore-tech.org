@@ -3,25 +3,27 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Fuse from 'fuse.js'
 
-import Layout from '../components/layout'
-import Header from '../components/Header'
-import Browser from '../components/Browser'
+import Layout from '../../components/layout'
+import Header from '../../components/Header'
+import Browser from '../../components/Browser'
 
-import './category-page.css'
+import './styles.css'
+import '../material-page/styles.css'
 
-// Tidy this UP!
-import './material-page.css'
-
-export default function Template({ data, pageContext }) {
+export default function Template({ data = {}, pageContext = {} }) {
   const { category } = pageContext
 
   const { allMarkdownRemark: { edges = [] } = {} } = data
 
   const items = edges.map(item => {
     const { node } = item
-    const { frontmatter, fields } = node
+    const {
+      frontmatter: { material, ...restOfFrontMatter },
+      fields,
+    } = node
     return {
-      ...frontmatter,
+      ...restOfFrontMatter,
+      ...material,
       ...fields,
     }
   })
@@ -172,15 +174,6 @@ export const pageQuery = graphql`
           }
           frontmatter {
             path
-            author {
-              name
-            }
-            title
-            subtitle
-            url
-            tags
-            stargazers_count
-            subscribers_count
             img {
               childImageSharp {
                 fluid(maxWidth: 2000, quality: 100) {
@@ -188,7 +181,18 @@ export const pageQuery = graphql`
                 }
               }
             }
-            github_url
+            material {
+              author {
+                name
+              }
+              title
+              subtitle
+              url
+              tags
+              stargazers_count
+              subscribers_count
+              github_url
+            }
           }
         }
       }

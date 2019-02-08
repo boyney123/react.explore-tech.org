@@ -1,26 +1,28 @@
 ---
 path: '/materials/react'
-title: 'react'
-url: 'https://reactjs.org'
-github_url: 'https://github.com/facebook/react'
-subscribers_count: '6632'
-stargazers_count: '121813'
+type: 'GitHub'
 img: './screenshot.png'
-tags: ['declarative','frontend','javascript','library','react','ui']
-subtitle: 'A declarative, efficient, and flexible JavaScript library for building user interfaces.'
-clone_url: 'https://github.com/facebook/react.git'
-ssh_url: 'git@github.com:facebook/react.git'
-pushed_at: '2019-02-07T11:39:13Z'
-updated_at: '2019-02-08T10:07:17Z'
-author:
-  name: 'facebook'
-  avatar: 'https://avatars3.githubusercontent.com/u/69631?v=4'
-  github_url: 'https://github.com/facebook'
-latestRelease:
-  tag_name: 'v16.8.0'
-  name: 'v16.8.0'
-  url: 'https://github.com/facebook/react/releases/tag/v16.8.0'
-  created_at: '2019-02-06T08:04:09Z'
+material:
+  title: 'react'
+  url: 'https://reactjs.org'
+  github_url: 'https://github.com/facebook/react'
+  subscribers_count: '6632'
+  stargazers_count: '121842'
+  tags: ['declarative','frontend','javascript','library','react','ui']
+  subtitle: 'A declarative, efficient, and flexible JavaScript library for building user interfaces.'
+  clone_url: 'https://github.com/facebook/react.git'
+  ssh_url: 'git@github.com:facebook/react.git'
+  pushed_at: '2019-02-07T11:39:13Z'
+  updated_at: '2019-02-08T15:09:20Z'
+  author:
+    name: 'facebook'
+    avatar: 'https://avatars3.githubusercontent.com/u/69631?v=4'
+    github_url: 'https://github.com/facebook'
+  latestRelease:
+    tag_name: 'v16.8.0'
+    name: 'v16.8.0'
+    url: 'https://github.com/facebook/react/releases/tag/v16.8.0'
+    created_at: '2019-02-06T08:04:09Z'
 ---
 # [React](https://reactjs.org/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![Coverage Status](https://img.shields.io/coveralls/facebook/react/master.svg?style=flat)](https://coveralls.io/github/facebook/react?branch=master) [![CircleCI Status](https://circleci.com/gh/facebook/react.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/facebook/react) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
 

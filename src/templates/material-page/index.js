@@ -3,16 +3,18 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import Layout from '../components/layout'
-import Header from '../components/Header'
+import Layout from '../../components/layout'
 
-import './material-page.css'
+import Header from '../../components/Header'
+
+import './styles.css'
 
 export default function Template({ data, ...test }) {
   const { markdownRemark: post } = data
   const { frontmatter, author_avatar } = post
+  const { title, material, img } = frontmatter
+
   const {
-    title,
     subtitle,
     url,
     author: { name, avatar, github_url: author_github_url } = {},
@@ -22,8 +24,7 @@ export default function Template({ data, ...test }) {
     subscribers_count,
     pushed_at,
     latestRelease = {},
-    img,
-  } = frontmatter
+  } = material
 
   const {
     tag_name,
@@ -147,7 +148,10 @@ export default function Template({ data, ...test }) {
               <p className="is-size-4">{subtitle}</p>
 
               <div className="material__body">
-                <Img className="material__screenshot" fluid={img.childImageSharp.fluid} />
+                <Img
+                  className="material__screenshot"
+                  fluid={img.childImageSharp.fluid}
+                />
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
               </div>
             </div>
@@ -171,32 +175,34 @@ export const pageQuery = graphql`
       html
       frontmatter {
         path
-        author {
-          name
-          avatar
-          github_url
-        }
-        title
-        subtitle
-        url
-        github_url
-        stargazers_count
-        subscribers_count
-        tags
-        clone_url
-        ssh_url
-        pushed_at(formatString: "MMMM Do YYYY")
-        latestRelease {
-          tag_name
-          name
-          url
-          created_at(formatString: "MMMM Do YYYY")
-        }
         img {
           childImageSharp {
             fluid(maxWidth: 2000, quality: 100) {
               ...GatsbyImageSharpFluid
             }
+          }
+        }
+        material {
+          author {
+            name
+            avatar
+            github_url
+          }
+          title
+          subtitle
+          url
+          github_url
+          stargazers_count
+          subscribers_count
+          tags
+          clone_url
+          ssh_url
+          pushed_at(formatString: "MMMM Do YYYY")
+          latestRelease {
+            tag_name
+            name
+            url
+            created_at(formatString: "MMMM Do YYYY")
           }
         }
       }

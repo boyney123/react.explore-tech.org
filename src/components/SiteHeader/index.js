@@ -1,5 +1,6 @@
 import React from 'react'
 import siteConfig from '../../../siteConfig'
+import logo from '../../../logo.svg'
 
 const SiteHeader = ({ count }) => {
   const { title, description, content } = siteConfig
@@ -8,7 +9,7 @@ const SiteHeader = ({ count }) => {
     <section className="main hero ">
       <div className="hero-body">
         <div className="container has-text-centered">
-          <img src={siteConfig.logo} alt="logo" />
+          <img src={logo} alt="logo" />
 
           <h1 className="title">{title}</h1>
 

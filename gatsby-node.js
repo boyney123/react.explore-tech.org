@@ -34,8 +34,6 @@ exports.onCreateNode = async ({
     const slug = createFilePath({ node, getNode, basePath: 'pages' })
     const slugParentsArr = getSlugParents(slug)
 
-    console.log('slug', slug)
-
     createNodeField({
       node,
       name: 'category',
@@ -48,9 +46,10 @@ exports.onCreateNode = async ({
       value: slug,
     })
 
+    // This code moves the GitHub avatars locally, so we can load better for the web xoxo
     if (node.frontmatter) {
       const fileNode = await createRemoteFileNode({
-        url: node.frontmatter.author.avatar,
+        url: node.frontmatter.material.author.avatar,
         store,
         cache,
         createNode,
@@ -68,8 +67,8 @@ exports.onCreateNode = async ({
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/material-page.js`)
-  const categoryTemplate = path.resolve(`src/templates/category-page.js`)
+  const blogPostTemplate = path.resolve(`src/templates/material-page/index.js`)
+  const categoryTemplate = path.resolve(`src/templates/category-page/index.js`)
 
   return graphql(`
     {
@@ -96,20 +95,12 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      console.log(node)
-
       const {
         fields: { category, slug } = {},
         frontmatter: { path: pathToMaterial } = {},
       } = node
 
-      //styles/markdown name....
-
-      //stypes/{path in markdown}
-
       const url = path.join('/', category.toLowerCase(), pathToMaterial)
-
-      console.log('CAT', category, slug)
 
       createPage({
         path: category,
@@ -124,7 +115,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: blogPostTemplate,
         context: {
           path: slug,
-        }, // additional data can be passed via context
+        },
       })
     })
   })
