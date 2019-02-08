@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly with the given title and subtitle 1`] = `
+<section
+  className="main hero"
+>
+  <div
+    className="hero-body"
+  >
+    <div
+      className="container has-text-centered"
+    >
+      <h1
+        className="title"
+      >
+        Title
+      </h1>
+      <h2
+        className="subtitle"
+      >
+        Subtitle
+      </h2>
+    </div>
+  </div>
+</section>
+`;

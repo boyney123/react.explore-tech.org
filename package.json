@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "David Boyne",
   "dependencies": {
-    "chrome-aws-lambda": "^1.11.2",
     "front-matter": "^3.0.1",
     "fuse.js": "^3.3.0",
     "gatsby": "^2.0.69",
@@ -40,10 +39,21 @@
     "start": "node ./src/scripts/screen-shot.js && npm run develop",
     "dev": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch --notify --notifyMode=change "
   },
   "devDependencies": {
-    "prettier": "^1.15.2"
+    "babel-jest": "^24.1.0",
+    "babel-preset-gatsby": "^0.1.7",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "enzyme-to-json": "^3.3.5",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.1.0",
+    "jest-environment-enzyme": "^7.0.1",
+    "jest-enzyme": "^7.0.1",
+    "prettier": "^1.15.2",
+    "react-test-renderer": "^16.8.1"
   },
   "repository": {
     "type": "git",

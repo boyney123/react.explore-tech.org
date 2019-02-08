@@ -1,16 +1,18 @@
 import React from 'react'
 import siteConfig from '../../../siteConfig'
 
-const SiteHeader = ({ handleFilter, count }) => {
+const SiteHeader = ({ count }) => {
+  const { title, description, content } = siteConfig
+
   return (
     <section className="main hero ">
       <div className="hero-body">
         <div className="container has-text-centered">
           <img src={siteConfig.logo} alt="logo" />
 
-          <h1 className="title">{siteConfig.title}</h1>
+          <h1 className="title">{title}</h1>
 
-          <h2 className="subtitle">{siteConfig.description}</h2>
+          <h2 className="subtitle">{description}</h2>
 
           <a
             className="button is-large add-action"
@@ -22,7 +24,7 @@ const SiteHeader = ({ handleFilter, count }) => {
             Contribute Material
           </a>
           <p className="mt20">
-            Currently listing {count} {siteConfig.content} learning materials...
+            Currently listing {count} {content} learning materials...
           </p>
           <div className="badges">
             <a

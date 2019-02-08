@@ -7,7 +7,7 @@ import Navigation from './Navigation'
 import Footer from './Footer'
 import './layout.css'
 
-const Layout = ({ children, count, handleFilter = () => {}, header }) => (
+const Layout = ({ children, count, header }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {

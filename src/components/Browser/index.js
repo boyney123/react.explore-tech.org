@@ -1,10 +1,20 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { navigate } from 'gatsby'
 import Img from 'gatsby-image'
 
 import './styles.css'
 
-const Browser = ({ path, title, author, subtitle, github_url, image } = {}) => {
+const Browser = ({
+  path,
+  title,
+  author,
+  subtitle,
+  github_url,
+  image = {},
+} = {}) => {
+  const { childImageSharp: { fluid: screenshot } = {} } = image
+
   return (
     <div className="column is-one-third">
       <div className="browser" onClick={() => navigate(path)}>
@@ -16,7 +26,7 @@ const Browser = ({ path, title, author, subtitle, github_url, image } = {}) => {
           </div>
         </div>
         <div className="browser__body">
-          <Img fluid={image.childImageSharp.fluid} />
+          <Img fluid={screenshot} />
         </div>
         <div className="browser__footer">
           <h4 className="mp0">{title}</h4>
@@ -25,6 +35,15 @@ const Browser = ({ path, title, author, subtitle, github_url, image } = {}) => {
       </div>
     </div>
   )
+}
+
+Browser.propTypes = {
+  path: PropTypes.string,
+  title: PropTypes.string,
+  author: PropTypes.string,
+  subtitle: PropTypes.string,
+  github_url: PropTypes.string,
+  image: PropTypes.object,
 }
 
 export default Browser

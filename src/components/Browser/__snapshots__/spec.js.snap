@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Browser renders correctly 1`] = `
+<div
+  className="column is-one-third"
+>
+  <div
+    className="browser"
+    onClick={[Function]}
+  >
+    <div
+      className="browser__header"
+    >
+      <div
+        className="browser__header__dots"
+      >
+        <span
+          className="browser__header__dots__dot"
+        />
+        <span
+          className="browser__header__dots__dot"
+        />
+        <span
+          className="browser__header__dots__dot"
+        />
+      </div>
+    </div>
+    <div
+      className="browser__body"
+    >
+      <Image
+        Tag="div"
+        alt=""
+        critical={false}
+        fadeIn={true}
+      />
+    </div>
+    <div
+      className="browser__footer"
+    >
+      <h4
+        className="mp0"
+      />
+      <p>
+         by 
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Browser renders with the given gatsby childImageSharp fluid image 1`] = `
+<div
+  className="column is-one-third"
+>
+  <div
+    className="browser"
+    onClick={[Function]}
+  >
+    <div
+      className="browser__header"
+    >
+      <div
+        className="browser__header__dots"
+      >
+        <span
+          className="browser__header__dots__dot"
+        />
+        <span
+          className="browser__header__dots__dot"
+        />
+        <span
+          className="browser__header__dots__dot"
+        />
+      </div>
+    </div>
+    <div
+      className="browser__body"
+    >
+      <Image
+        Tag="div"
+        alt=""
+        critical={false}
+        fadeIn={true}
+        fluid={
+          Object {
+            "aspectRatio": 10,
+            "sizes": "1",
+            "src": "test.png",
+            "srcSet": "",
+          }
+        }
+      />
+    </div>
+    <div
+      className="browser__footer"
+    >
+      <h4
+        className="mp0"
+      />
+      <p>
+         by 
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Browser shows the given title and author under the browser 1`] = `
+<div
+  className="column is-one-third"
+>
+  <div
+    className="browser"
+    onClick={[Function]}
+  >
+    <div
+      className="browser__header"
+    >
+      <div
+        className="browser__header__dots"
+      >
+        <span
+          className="browser__header__dots__dot"
+        />
+        <span
+          className="browser__header__dots__dot"
+        />
+        <span
+          className="browser__header__dots__dot"
+        />
+      </div>
+    </div>
+    <div
+      className="browser__body"
+    >
+      <Image
+        Tag="div"
+        alt=""
+        critical={false}
+        fadeIn={true}
+      />
+    </div>
+    <div
+      className="browser__footer"
+    >
+      <h4
+        className="mp0"
+      >
+        My new component
+      </h4>
+      <p>
+         by 
+        David
+      </p>
+    </div>
+  </div>
+</div>
+`;

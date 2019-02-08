@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation renders correctly 1`] = `
+<nav
+  aria-label="main navigation"
+  className="navbar"
+  role="navigation"
+/>
+`;

@@ -1,0 +1,309 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Category when the name prop is set to "Boilerplates is reads the siteConfig and uses the configured icon and subtitle 1`] = `
+<div
+  className="category-container column is-one-third"
+>
+  <div
+    className="category"
+    onClick={[Function]}
+  >
+    <h2
+      className="title  has-text-centered"
+    >
+      Boilerplates
+    </h2>
+    <div
+      className="category-image"
+    >
+      <figure>
+        <img
+          alt="icon"
+          src="test-file-stub"
+        />
+      </figure>
+    </div>
+    <div
+      className="category-content"
+    >
+      <div
+        className="media"
+      >
+        <div
+          className="media-content"
+        >
+          <p
+            className="subtitle is-6"
+          >
+            Get up and running as fast as possible. Checkout these boilerplates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Category when the name prop is set to "Components is reads the siteConfig and uses the configured icon and subtitle 1`] = `
+<div
+  className="category-container column is-one-third"
+>
+  <div
+    className="category"
+    onClick={[Function]}
+  >
+    <h2
+      className="title  has-text-centered"
+    >
+      Components
+    </h2>
+    <div
+      className="category-image"
+    >
+      <figure>
+        <img
+          alt="icon"
+          src="test-file-stub"
+        />
+      </figure>
+    </div>
+    <div
+      className="category-content"
+    >
+      <div
+        className="media"
+      >
+        <div
+          className="media-content"
+        >
+          <p
+            className="subtitle is-6"
+          >
+            List of React components to help you with almost anything, check them out for inspiration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Category when the name prop is set to "Forms is reads the siteConfig and uses the configured icon and subtitle 1`] = `
+<div
+  className="category-container column is-one-third"
+>
+  <div
+    className="category"
+    onClick={[Function]}
+  >
+    <h2
+      className="title  has-text-centered"
+    >
+      Forms
+    </h2>
+    <div
+      className="category-image"
+    >
+      <figure>
+        <img
+          alt="icon"
+          src="test-file-stub"
+        />
+      </figure>
+    </div>
+    <div
+      className="category-content"
+    >
+      <div
+        className="media"
+      >
+        <div
+          className="media-content"
+        >
+          <p
+            className="subtitle is-6"
+          >
+            Checkout what tools, techniques have been developed to handle Forms.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Category when the name prop is set to "Styles is reads the siteConfig and uses the configured icon and subtitle 1`] = `
+<div
+  className="category-container column is-one-third"
+>
+  <div
+    className="category"
+    onClick={[Function]}
+  >
+    <h2
+      className="title  has-text-centered"
+    >
+      Styles
+    </h2>
+    <div
+      className="category-image"
+    >
+      <figure>
+        <img
+          alt="icon"
+          src="test-file-stub"
+        />
+      </figure>
+    </div>
+    <div
+      className="category-content"
+    >
+      <div
+        className="media"
+      >
+        <div
+          className="media-content"
+        >
+          <p
+            className="subtitle is-6"
+          >
+            CSS in JS? JS &gt; CSS, CSS &gt; JS? Who knows? Find out what people are building here!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Category when the name prop is set to "Testing is reads the siteConfig and uses the configured icon and subtitle 1`] = `
+<div
+  className="category-container column is-one-third"
+>
+  <div
+    className="category"
+    onClick={[Function]}
+  >
+    <h2
+      className="title  has-text-centered"
+    >
+      Testing
+    </h2>
+    <div
+      className="category-image"
+    >
+      <figure>
+        <img
+          alt="icon"
+          src="test-file-stub"
+        />
+      </figure>
+    </div>
+    <div
+      className="category-content"
+    >
+      <div
+        className="media"
+      >
+        <div
+          className="media-content"
+        >
+          <p
+            className="subtitle is-6"
+          >
+            Checkout how to test React, all the resources listed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Category when the name prop is set to "Tools is reads the siteConfig and uses the configured icon and subtitle 1`] = `
+<div
+  className="category-container column is-one-third"
+>
+  <div
+    className="category"
+    onClick={[Function]}
+  >
+    <h2
+      className="title  has-text-centered"
+    >
+      Tools
+    </h2>
+    <div
+      className="category-image"
+    >
+      <figure>
+        <img
+          alt="icon"
+          src="test-file-stub"
+        />
+      </figure>
+    </div>
+    <div
+      className="category-content"
+    >
+      <div
+        className="media"
+      >
+        <div
+          className="media-content"
+        >
+          <p
+            className="subtitle is-6"
+          >
+            You might want to checkout some React tools to help your development workflows
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Category when the name prop is set to "Tutorials is reads the siteConfig and uses the configured icon and subtitle 1`] = `
+<div
+  className="category-container column is-one-third"
+>
+  <div
+    className="category"
+    onClick={[Function]}
+  >
+    <h2
+      className="title  has-text-centered"
+    >
+      Tutorials
+    </h2>
+    <div
+      className="category-image"
+    >
+      <figure>
+        <img
+          alt="icon"
+          src="test-file-stub"
+        />
+      </figure>
+    </div>
+    <div
+      className="category-content"
+    >
+      <div
+        className="media"
+      >
+        <div
+          className="media-content"
+        >
+          <p
+            className="subtitle is-6"
+          >
+            Learn React from the ground up with some of the best tutorials online. A collection of tutorials from all over the web to help you on your React journey. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
