@@ -6,14 +6,14 @@ material:
   title: 'react'
   url: 'https://reactjs.org'
   github_url: 'https://github.com/facebook/react'
-  subscribers_count: '6632'
-  stargazers_count: '121854'
+  subscribers_count: '6631'
+  stargazers_count: '121853'
   tags: ['declarative','frontend','javascript','library','react','ui']
   subtitle: 'A declarative, efficient, and flexible JavaScript library for building user interfaces.'
   clone_url: 'https://github.com/facebook/react.git'
   ssh_url: 'git@github.com:facebook/react.git'
   pushed_at: '2019-02-08T15:51:21Z'
-  updated_at: '2019-02-08T16:23:36Z'
+  updated_at: '2019-02-08T16:52:22Z'
   author:
     name: 'facebook'
     avatar: 'https://avatars3.githubusercontent.com/u/69631?v=4'
