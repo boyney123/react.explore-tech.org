@@ -5,10 +5,11 @@ const path = require('path')
 const puppeteer = require('puppeteer')
 const fs = require('fs-extra')
 const chalk = require('chalk')
+const { commit } = require('../utils/git')
 
 const transformAndWriteToFile = require('json-to-frontmatter-markdown')
 
-import { siteMetadata } from '../../../gatsby-config'
+const { siteMetadata } = require('../../../gatsby-config')
 
 const buildGitHubRequest = (repo, path = '') => {
   const headers = {
@@ -180,6 +181,10 @@ const script = async _args => {
       path.join(newFilePath, `${name}.md`),
       converetedIntoSingleQuotes
     )
+
+    if (process.env.NODE_ENV !== 'test') {
+      commit({ url: repo })
+    }
   } catch (error) {
     console.log(error)
     console.log(chalk.red(`Failed to create material for ${category}: ${repo}`))

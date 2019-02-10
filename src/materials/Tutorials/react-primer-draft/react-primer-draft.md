@@ -7,13 +7,13 @@ material:
   url: 'https://github.com/mikechau/react-primer-draft'
   github_url: 'https://github.com/mikechau/react-primer-draft'
   subscribers_count: '140'
-  stargazers_count: '3718'
+  stargazers_count: '3719'
   tags: ['']
   subtitle: 'A primer for building web applications with React.'
   clone_url: 'https://github.com/mikechau/react-primer-draft.git'
   ssh_url: 'git@github.com:mikechau/react-primer-draft.git'
   pushed_at: '2016-10-27T19:52:14Z'
-  updated_at: '2019-01-29T19:34:55Z'
+  updated_at: '2019-02-10T04:21:29Z'
   author:
     name: 'mikechau'
     avatar: 'https://avatars2.githubusercontent.com/u/2453159?v=4'
