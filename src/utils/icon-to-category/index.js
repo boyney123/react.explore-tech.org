@@ -8,6 +8,7 @@ import tools from '../../icons/tools.svg'
 import library from '../../icons/library.svg'
 import routing from '../../icons/routing.svg'
 import styles from '../../icons/styles.svg'
+import example from '../../icons/example.svg'
 
 export default {
   Tutorials: tutorial,
@@ -18,5 +19,5 @@ export default {
   Routing: routing,
   Libraries: library,
   Testing: testing,
-  Examples: testing,
+  Examples: example,
 }
