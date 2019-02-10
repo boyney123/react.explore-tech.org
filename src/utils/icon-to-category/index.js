@@ -13,4 +13,5 @@ export default {
   Styles: testing,
   Boilerplates: tools,
   Routing: tools,
+  Libraries: tools,
 }

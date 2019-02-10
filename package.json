@@ -38,7 +38,8 @@
     "add:style": "node src/scripts/create-material/index.js Styles",
     "add:component": "node src/scripts/create-material/index.js Components",
     "add:boilerplate": "node src/scripts/create-material/index.js Boilerplates",
-    "add:router": "node src/scripts/create-material/index.js Routing"
+    "add:router": "node src/scripts/create-material/index.js Routing",
+    "add:lib": "node src/scripts/create-material/index.js Libraries"
   },
   "devDependencies": {
     "babel-jest": "^24.1.0",
