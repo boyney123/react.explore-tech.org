@@ -5,14 +5,15 @@ exports[`Template renders correctly 1`] = `
   className="blog-post-container"
   header={
     <Header
-      subtitle="react.openlist.io"
+      contribute={true}
+      subtitle="react.explore-tech.org"
     />
   }
 >
   <HelmetWrapper
     defer={true}
     encodeSpecialCharacters={true}
-    title="react.openlist.io"
+    title="react.explore-tech.org"
   >
     <script
       async={true}

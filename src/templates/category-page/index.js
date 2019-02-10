@@ -87,9 +87,11 @@ export default function Template({ data = {}, pageContext = {} }) {
   return (
     <Layout
       className="blog-post-container"
-      header={<Header title={category} subtitle="react.openlist.io" />}
+      header={
+        <Header title={category} subtitle="react.explore-tech.org" contribute />
+      }
     >
-      <Helmet title={`react.openlist.io`}>
+      <Helmet title={`react.explore-tech.org`}>
         <script
           async
           src="https://platform.twitter.com/widgets.js"

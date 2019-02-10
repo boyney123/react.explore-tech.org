@@ -2,7 +2,7 @@ module.exports = {
   /***
    * Title of the website
    */
-  title: 'react.openlist.io',
+  title: 'react.explore-tech.org',
   /**
    * Name of the resource
    */
@@ -10,8 +10,7 @@ module.exports = {
   /**
    * Description
    */
-  description:
-    'An open source list to help developers learn, explore and create React applications.',
+  description: 'An open source list to help developers learn & explore React.',
   /**
    * Url when clicking contribute button
    */

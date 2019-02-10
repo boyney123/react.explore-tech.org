@@ -2,7 +2,7 @@
 
 exports[`Header renders correctly with the given title and subtitle 1`] = `
 <section
-  className="main hero"
+  className="main hero section-header"
 >
   <div
     className="hero-body"

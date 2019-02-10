@@ -42,7 +42,7 @@ export default function Template({ data, ...test }) {
 
   return (
     <Layout header={<Header {...HeaderProps} />}>
-      <Helmet title={`react.openlist.io - ${frontmatter.title}`}>
+      <Helmet title={`react.explore-tech.org - ${frontmatter.title}`}>
         <link
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
