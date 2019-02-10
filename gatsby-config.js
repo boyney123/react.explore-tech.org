@@ -53,6 +53,9 @@ module.exports = {
         subtitle:
           'Explore some great React Libraries you can use in your projects.',
       },
+      Examples: {
+        subtitle: 'Example React Applications. Look here for some inspiration.',
+      },
     },
   },
   plugins: [

@@ -17,4 +17,6 @@ export default {
   Boilerplates: tools,
   Routing: routing,
   Libraries: library,
+  Testing: testing,
+  Examples: testing,
 }
