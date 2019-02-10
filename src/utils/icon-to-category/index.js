@@ -12,4 +12,5 @@ export default {
   Tools: hammer,
   Styles: testing,
   Boilerplates: tools,
+  Routing: tools,
 }

@@ -46,6 +46,9 @@ module.exports = {
         subtitle:
           'You might want to checkout some React tools to help your development workflows',
       },
+      Routing: {
+        subtitle: 'Routing your React project',
+      },
     },
   },
   plugins: [
