@@ -11,4 +11,5 @@ export default {
   Components: bricks,
   Tools: tools,
   Styles: hammer,
+  Boilerplates: tools,
 }
