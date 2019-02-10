@@ -26,11 +26,9 @@ const spawnGitCommand = pify((args, cb) => {
   })
 })
 
-function commit(options = {}, data = { url: 'test.com' }) {
+function commit(data = { url: 'test.com' }) {
   return spawnGitCommand(['add', '.']).then(async () => {
-    const commitMessage = _.template(options.commitTemplate || commitTemplate)(
-      data
-    )
+    const commitMessage = _.template(commitTemplate)(data)
 
     await spawnGitCommand(['commit', '-m', commitMessage])
 
