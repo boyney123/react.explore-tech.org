@@ -1,12 +1,12 @@
 import React from 'react'
 import { navigate } from 'gatsby'
-import siteConfig from '../../../siteConfig'
 import iconToCategoryMap from '../../utils/icon-to-category'
 import genericIcon from '../../icons/circle.svg'
 import './styles.css'
+import { siteMetadata } from '../../../gatsby-config'
 
 const Category = ({ name } = {}) => {
-  const { subtitle } = siteConfig.categories[name]
+  const { subtitle } = siteMetadata.categories[name]
   const icon = iconToCategoryMap[name] || genericIcon
 
   return (

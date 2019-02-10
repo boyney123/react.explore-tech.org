@@ -1,9 +1,9 @@
 import React from 'react'
-import siteConfig from '../../../siteConfig'
+import { siteMetadata } from '../../../gatsby-config'
 import logo from '../../../logo.svg'
 
 const SiteHeader = ({ count }) => {
-  const { title, description, content } = siteConfig
+  const { title, description, content } = siteMetadata
 
   return (
     <section className="main hero ">

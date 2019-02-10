@@ -8,7 +8,7 @@ const chalk = require('chalk')
 
 const transformAndWriteToFile = require('json-to-frontmatter-markdown')
 
-const siteConfig = require('../../../siteConfig')
+import { siteMetadata } from '../../../gatsby-config'
 
 const buildGitHubRequest = (repo, path = '') => {
   const headers = {
@@ -78,7 +78,7 @@ const script = async _args => {
     return process.exit(1)
   }
 
-  const { categories = {} } = siteConfig
+  const { categories = {} } = siteMetadata
 
   if (!categories[category]) {
     console.log(

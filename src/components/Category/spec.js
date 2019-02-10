@@ -1,11 +1,11 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { navigate } from 'gatsby'
-import siteConfig from '../../../siteConfig'
+import { siteMetadata } from '../../../gatsby-config'
 
 import Category from './'
 
-const { categories } = siteConfig
+const { categories } = siteMetadata
 
 describe('Category', () => {
   for (const category in categories) {
