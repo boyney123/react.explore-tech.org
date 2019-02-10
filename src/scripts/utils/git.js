@@ -6,6 +6,7 @@ const path = require('path')
 const spawn = require('child_process').spawn
 const _ = require('lodash/fp')
 const pify = require('pify')
+const chalk = require('chalk')
 
 const commitTemplate = 'Added new material: @<%= url %>'
 
@@ -26,20 +27,16 @@ const spawnGitCommand = pify((args, cb) => {
 })
 
 function commit(options = {}, data = { url: 'test.com' }) {
-  //   const files = options.files.concat(options.config)
-  //   const absolutePathFiles = files.map(file => {
-  //     return path.resolve(process.cwd(), file)
-  //   })
-  return spawnGitCommand(['add', '.']).then(() => {
+  return spawnGitCommand(['add', '.']).then(async () => {
     const commitMessage = _.template(options.commitTemplate || commitTemplate)(
       data
     )
 
-    return spawnGitCommand(['commit', '-m', commitMessage])
+    await spawnGitCommand(['commit', '-m', commitMessage])
+
+    console.log(chalk.green('Git message and commit generated.'))
   })
 }
-
-commit()
 
 module.exports = {
   commit,
