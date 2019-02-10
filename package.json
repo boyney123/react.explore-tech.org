@@ -34,6 +34,7 @@
     "test": "NODE_ENV=test jest --coverage",
     "test:watch": "NODE_ENV=test jest --silent --watch --notify --notifyMode=change",
     "add:tutorial": "node src/scripts/create-material/index.js Tutorials",
+    "add:test": "node src/scripts/create-material/index.js Testing",
     "add:tool": "node src/scripts/create-material/index.js Tools",
     "add:style": "node src/scripts/create-material/index.js Styles",
     "add:component": "node src/scripts/create-material/index.js Components",
