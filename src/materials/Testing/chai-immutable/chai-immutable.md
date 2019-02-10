@@ -9,7 +9,7 @@ material:
   subscribers_count: '4'
   stargazers_count: '157'
   tags: ['chai','immutablejs','javascript','test']
-  subtitle: 'Chai assertions for Facebook's Immutable library for JavaScript collections'
+  subtitle: 'Chai assertions for Facebooks Immutable library for JavaScript collections'
   clone_url: 'https://github.com/astorije/chai-immutable.git'
   ssh_url: 'git@github.com:astorije/chai-immutable.git'
   pushed_at: '2019-02-06T06:26:19Z'
