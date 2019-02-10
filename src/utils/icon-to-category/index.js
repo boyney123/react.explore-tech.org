@@ -5,13 +5,16 @@ import bricks from '../../icons/bricks.svg'
 import hammer from '../../icons/hammer.svg'
 import testing from '../../icons/testing.svg'
 import tools from '../../icons/tools.svg'
+import library from '../../icons/library.svg'
+import routing from '../../icons/routing.svg'
+import styles from '../../icons/styles.svg'
 
 export default {
   Tutorials: tutorial,
   Components: bricks,
   Tools: hammer,
-  Styles: testing,
+  Styles: styles,
   Boilerplates: tools,
-  Routing: tools,
-  Libraries: tools,
+  Routing: routing,
+  Libraries: library,
 }
