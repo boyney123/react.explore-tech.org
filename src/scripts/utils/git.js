@@ -7,7 +7,7 @@ const spawn = require('child_process').spawn
 const _ = require('lodash/fp')
 const pify = require('pify')
 
-const commitTemplate = 'Winner...'
+const commitTemplate = 'Added new material: @<%= url %>'
 
 const spawnGitCommand = pify((args, cb) => {
   const git = spawn('git', args)
@@ -25,7 +25,7 @@ const spawnGitCommand = pify((args, cb) => {
   })
 })
 
-function commit(options = {}, data = {}) {
+function commit(options = {}, data = { url: 'test.com' }) {
   //   const files = options.files.concat(options.config)
   //   const absolutePathFiles = files.map(file => {
   //     return path.resolve(process.cwd(), file)
