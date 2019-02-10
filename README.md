@@ -12,7 +12,7 @@
 
 <hr/>
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors) [![MIT License][license-badge]][license] [![PRs Welcome][prs-badge]][prs]
+[![MIT License][license-badge]][license] [![PRs Welcome][prs-badge]][prs]
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b8b80b61-4213-4bd8-ac48-831738e1ca1b/deploy-status)](https://app.netlify.com/sites/react-openlist/deploys)
 [![Join the community on Spectrum][spectrum-badge]][spectrum]
 
