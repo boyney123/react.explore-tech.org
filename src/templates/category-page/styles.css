@@ -17,6 +17,12 @@
   padding: 10px 0;
 }
 
+.category-side-bar__tags .category-side-bar__tag:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
 .category-side-bar__tags .category-side-bar__tag span {
   float: right;
   font-weight: bold;
