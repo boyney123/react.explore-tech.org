@@ -25,15 +25,16 @@ const spawnGitCommand = pify((args, cb) => {
   })
 })
 
-function commit(options, data = {}) {
+function commit(options = {}, data = {}) {
   //   const files = options.files.concat(options.config)
   //   const absolutePathFiles = files.map(file => {
   //     return path.resolve(process.cwd(), file)
   //   })
-  return spawnGitCommand(['add', '.'].concat(absolutePathFiles)).then(() => {
+  return spawnGitCommand(['add', '.']).then(() => {
     const commitMessage = _.template(options.commitTemplate || commitTemplate)(
       data
     )
+
     return spawnGitCommand(['commit', '-m', commitMessage])
   })
 }
