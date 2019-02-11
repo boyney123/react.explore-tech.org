@@ -42,6 +42,7 @@
     "add:component": "node src/scripts/create-material/index.js Components",
     "add:boilerplate": "node src/scripts/create-material/index.js Boilerplates",
     "add:router": "node src/scripts/create-material/index.js Routing",
+    "add:form": "node src/scripts/create-material/index.js Forms",
     "add:lib": "node src/scripts/create-material/index.js Libraries"
   },
   "devDependencies": {
