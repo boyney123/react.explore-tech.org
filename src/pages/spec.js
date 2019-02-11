@@ -24,12 +24,12 @@ const graphResult = {
 }
 
 describe('All Categories Page', () => {
-  it.only('should render a given list of categories', () => {
+  it('should render a given list of categories', () => {
     const wrapper = shallow(<Page data={graphResult} />)
     expect(wrapper).toMatchSnapshot()
   })
 
-  it.only('if the list of materials to render share a category the page only renders the category once (unique categories displayed)', () => {
+  it('if the list of materials to render share a category the page only renders the category once (unique categories displayed)', () => {
     const duplicatedData = {
       ...graphResult,
     }

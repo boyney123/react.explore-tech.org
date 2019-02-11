@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Template renders correctly 1`] = `
+exports[`Template matches the snapshot 1`] = `
 <Layout
   className="blog-post-container"
   header={
@@ -55,32 +55,50 @@ exports[`Template renders correctly 1`] = `
         </h5>
         <ul
           className="category-side-bar__tags"
-        />
+        >
+          <li
+            className="category-side-bar__tag"
+          >
+            random
+             
+            <span>
+              2
+            </span>
+          </li>
+          <li
+            className="category-side-bar__tag"
+          >
+            test
+             
+            <span>
+              2
+            </span>
+          </li>
+        </ul>
       </div>
       <div
         className="column pt0"
       >
-        <label>
-          Order by: 
-        </label>
-        <select
-          className="select is-small"
-          onChange={[Function]}
-        >
-          <option
-            value="title"
-          >
-            title
-          </option>
-          <option
-            value="stargazers_count"
-          >
-            Stars (High to low)
-          </option>
-        </select>
         <div
           className="columns is-multiline"
-        />
+        >
+          <Browser
+            author="David"
+            github_url="https://www.github.com/boyney123/testing"
+            image={Object {}}
+            path="/random"
+            subtitle="Random item on the website"
+            title="Random"
+          />
+          <Browser
+            author="David"
+            github_url="https://www.github.com/boyney123/testing"
+            image={Object {}}
+            path="/random-2"
+            subtitle="Another Random item on the website"
+            title="New Title 2"
+          />
+        </div>
       </div>
     </div>
   </div>

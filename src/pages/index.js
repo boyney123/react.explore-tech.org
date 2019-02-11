@@ -26,7 +26,7 @@ const IndexPage = props => {
       <div className="container is-fluid">
         <div className="columns is-multiline">
           {categories.map(item => {
-            return <Category name={item} />
+            return <Category key={item} name={item} />
           })}
         </div>
       </div>

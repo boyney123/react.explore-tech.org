@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Material Page matches the snapshot 1`] = `
+<Layout
+  header={
+    <Header
+      author={
+        Object {
+          "name": "David",
+        }
+      }
+      clone_url="https://www.github.com/boyney123/testing"
+      github_url="https://www.github.com/boyney123/testing"
+      img={
+        Object {
+          "childImageSharp": Object {
+            "fluid": "1",
+          },
+        }
+      }
+      latestRelease={
+        Object {
+          "name": "8.0",
+          "tag_name": "1.0",
+        }
+      }
+      material={
+        Object {
+          "author": Object {
+            "name": "David",
+          },
+          "clone_url": "https://www.github.com/boyney123/testing",
+          "github_url": "https://www.github.com/boyney123/testing",
+          "latestRelease": Object {
+            "name": "8.0",
+            "tag_name": "1.0",
+          },
+          "pushed_at": "20-12-2000",
+          "ssh_url": "https://www.github.com/boyney123/testing",
+          "stargazers_count": 1000,
+          "subscribers_count": 1000,
+          "subtitle": "Random item on the website",
+          "tags": Array [
+            "random",
+            "test",
+          ],
+          "title": "Random",
+          "url": "https://www.test.co.uk",
+        }
+      }
+      path="/"
+      pushed_at="20-12-2000"
+      ssh_url="https://www.github.com/boyney123/testing"
+      stargazers_count={1000}
+      subscribers_count={1000}
+      subtitle="by David"
+      tags={
+        Array [
+          "random",
+          "test",
+        ]
+      }
+      title="Random"
+      url="https://www.test.co.uk"
+    />
+  }
+>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+    title="react.explore-tech.org - undefined"
+  >
+    <link
+      crossorigin="anonymous"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
+      rel="stylesheet"
+    />
+    <html
+      lang="en"
+    />
+  </HelmetWrapper>
+  <div
+    className="container"
+  >
+    <div
+      className="material"
+    >
+      <div
+        className="columns"
+      >
+        <div
+          className="column is-one-quarter"
+        >
+          <div
+            className="side-bar"
+          >
+            <div
+              className="side-bar-item"
+            >
+              <Image
+                Tag="div"
+                alt=""
+                critical={false}
+                fadeIn={true}
+                fluid="1"
+              />
+              <p>
+                Developed by
+                 
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  David
+                </a>
+              </p>
+            </div>
+            <div
+              className="side-bar-item"
+            >
+              <h5>
+                Website
+              </h5>
+              <p>
+                <a
+                  href="https://www.test.co.uk"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  https://www.test.co.uk
+                </a>
+              </p>
+            </div>
+            <div
+              className="side-bar-item"
+            >
+              <h5>
+                Repository
+              </h5>
+              <p>
+                <a
+                  href="https://www.github.com/boyney123/testing"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  https://www.github.com/boyney123/testing
+                </a>
+              </p>
+              <p>
+                <i
+                  className="far fa-star"
+                />
+                 Star: 
+                1000
+              </p>
+              <p>
+                <i
+                  className="far fa-eye"
+                />
+                 Watchers: 
+                1000
+              </p>
+              <div>
+                <strong>
+                  Last Commit
+                </strong>
+                 
+                <p>
+                  20-12-2000
+                </p>
+              </div>
+            </div>
+            <div>
+              <h5>
+                Keywords 
+              </h5>
+              <p
+                className="is-size-6 tags"
+              >
+                <span
+                  className="side-bar-item__tag"
+                >
+                  random
+                </span>
+                <span
+                  className="side-bar-item__tag"
+                >
+                  test
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="column pt0 material__container"
+        >
+          <h1
+            className="is-size-1"
+          />
+          <p
+            className="is-size-4"
+          >
+            Random item on the website
+          </p>
+          <div
+            className="material__body"
+          >
+            <Image
+              Tag="div"
+              alt=""
+              className="material__screenshot"
+              critical={false}
+              fadeIn={true}
+              fluid="1"
+            />
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<div>test</div>",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+`;

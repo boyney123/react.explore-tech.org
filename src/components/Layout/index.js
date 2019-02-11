@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Navigation from './Navigation'
-import Footer from './Footer'
-import './layout.css'
+import Navigation from '../Navigation'
+import Footer from '../Footer'
+import './styles.css'
 
 const Layout = ({ children, count, header }) => (
   <StaticQuery

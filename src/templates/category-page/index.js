@@ -42,7 +42,9 @@ export default function Template({ data = {}, pageContext = {} }) {
   // TODO: Tidy up sorted tags....
   const sortedTags = []
   for (var item in allMaterialTagCount) {
-    sortedTags.push([item, allMaterialTagCount[item]])
+    if (item) {
+      sortedTags.push([item, allMaterialTagCount[item]])
+    }
   }
 
   sortedTags.sort(function(a, b) {
@@ -56,27 +58,6 @@ export default function Template({ data = {}, pageContext = {} }) {
   })
 
   const [materials, setMaterials] = useState(items)
-
-  const handleOrder = event => {
-    const { target: { value } = {} } = event
-    let orderedRepos = []
-
-    if (value === 'stargazers_count') {
-      orderedRepos = materials.sort((item1, item2) => {
-        if (item1[value] > item2[value]) return -1
-        if (item1[value] < item2[value]) return 1
-        return 0
-      })
-    } else {
-      orderedRepos = materials.sort((item1, item2) => {
-        if (item1[value] < item2[value]) return -1
-        if (item1[value] > item2[value]) return 1
-        return 0
-      })
-    }
-
-    setMaterials(orderedRepos)
-  }
 
   const handleFilter = event => {
     const { target: { value } = {} } = event
@@ -129,11 +110,6 @@ export default function Template({ data = {}, pageContext = {} }) {
             </ul>
           </div>
           <div className="column pt0">
-            <label>Order by: </label>
-            <select className="select is-small" onChange={handleOrder}>
-              <option value="title">title</option>
-              <option value="stargazers_count">Stars (High to low)</option>
-            </select>
             <div className="columns is-multiline">
               {materials.map(item => {
                 const {
