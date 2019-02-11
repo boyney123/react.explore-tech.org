@@ -8,21 +8,15 @@ exports[`Category when the name prop is set to "Boilerplates is reads the siteCo
     className="category"
     onClick={[Function]}
   >
+    <img
+      alt="icon"
+      src="test-file-stub"
+    />
     <h2
-      className="title  has-text-centered"
+      className=" has-text-centered"
     >
       Boilerplates
     </h2>
-    <div
-      className="category-image"
-    >
-      <figure>
-        <img
-          alt="icon"
-          src="test-file-stub"
-        />
-      </figure>
-    </div>
     <div
       className="category-content"
     >
@@ -35,7 +29,7 @@ exports[`Category when the name prop is set to "Boilerplates is reads the siteCo
           <p
             className="subtitle is-6"
           >
-            Get up and running as fast as possible. Checkout these boilerplates.
+            Get setup within minutes
           </p>
         </div>
       </div>
@@ -52,21 +46,15 @@ exports[`Category when the name prop is set to "Components is reads the siteConf
     className="category"
     onClick={[Function]}
   >
+    <img
+      alt="icon"
+      src="test-file-stub"
+    />
     <h2
-      className="title  has-text-centered"
+      className=" has-text-centered"
     >
       Components
     </h2>
-    <div
-      className="category-image"
-    >
-      <figure>
-        <img
-          alt="icon"
-          src="test-file-stub"
-        />
-      </figure>
-    </div>
     <div
       className="category-content"
     >
@@ -79,7 +67,7 @@ exports[`Category when the name prop is set to "Components is reads the siteConf
           <p
             className="subtitle is-6"
           >
-            List of React components to help you with almost anything, check them out for inspiration.
+            List of React components
           </p>
         </div>
       </div>
@@ -96,21 +84,15 @@ exports[`Category when the name prop is set to "Examples is reads the siteConfig
     className="category"
     onClick={[Function]}
   >
+    <img
+      alt="icon"
+      src="test-file-stub"
+    />
     <h2
-      className="title  has-text-centered"
+      className=" has-text-centered"
     >
       Examples
     </h2>
-    <div
-      className="category-image"
-    >
-      <figure>
-        <img
-          alt="icon"
-          src="test-file-stub"
-        />
-      </figure>
-    </div>
     <div
       className="category-content"
     >
@@ -123,7 +105,7 @@ exports[`Category when the name prop is set to "Examples is reads the siteConfig
           <p
             className="subtitle is-6"
           >
-            Example React Applications. Look here for some inspiration.
+            Explore example applications
           </p>
         </div>
       </div>
@@ -140,21 +122,15 @@ exports[`Category when the name prop is set to "Forms is reads the siteConfig an
     className="category"
     onClick={[Function]}
   >
+    <img
+      alt="icon"
+      src="test-file-stub"
+    />
     <h2
-      className="title  has-text-centered"
+      className=" has-text-centered"
     >
       Forms
     </h2>
-    <div
-      className="category-image"
-    >
-      <figure>
-        <img
-          alt="icon"
-          src="test-file-stub"
-        />
-      </figure>
-    </div>
     <div
       className="category-content"
     >
@@ -184,21 +160,15 @@ exports[`Category when the name prop is set to "Libraries is reads the siteConfi
     className="category"
     onClick={[Function]}
   >
+    <img
+      alt="icon"
+      src="test-file-stub"
+    />
     <h2
-      className="title  has-text-centered"
+      className=" has-text-centered"
     >
       Libraries
     </h2>
-    <div
-      className="category-image"
-    >
-      <figure>
-        <img
-          alt="icon"
-          src="test-file-stub"
-        />
-      </figure>
-    </div>
     <div
       className="category-content"
     >
@@ -211,7 +181,7 @@ exports[`Category when the name prop is set to "Libraries is reads the siteConfi
           <p
             className="subtitle is-6"
           >
-            Explore some great React Libraries you can use in your projects.
+            Integrate with great libraries
           </p>
         </div>
       </div>
@@ -228,21 +198,15 @@ exports[`Category when the name prop is set to "Routing is reads the siteConfig 
     className="category"
     onClick={[Function]}
   >
+    <img
+      alt="icon"
+      src="test-file-stub"
+    />
     <h2
-      className="title  has-text-centered"
+      className=" has-text-centered"
     >
       Routing
     </h2>
-    <div
-      className="category-image"
-    >
-      <figure>
-        <img
-          alt="icon"
-          src="test-file-stub"
-        />
-      </figure>
-    </div>
     <div
       className="category-content"
     >
@@ -255,7 +219,7 @@ exports[`Category when the name prop is set to "Routing is reads the siteConfig 
           <p
             className="subtitle is-6"
           >
-            Routing your React project
+            Routing with React
           </p>
         </div>
       </div>
@@ -272,21 +236,15 @@ exports[`Category when the name prop is set to "Styles is reads the siteConfig a
     className="category"
     onClick={[Function]}
   >
+    <img
+      alt="icon"
+      src="test-file-stub"
+    />
     <h2
-      className="title  has-text-centered"
+      className=" has-text-centered"
     >
       Styles
     </h2>
-    <div
-      className="category-image"
-    >
-      <figure>
-        <img
-          alt="icon"
-          src="test-file-stub"
-        />
-      </figure>
-    </div>
     <div
       className="category-content"
     >
@@ -299,7 +257,7 @@ exports[`Category when the name prop is set to "Styles is reads the siteConfig a
           <p
             className="subtitle is-6"
           >
-            CSS in JS? JS &gt; CSS, CSS &gt; JS? Who knows? Find out what people are building here!
+            Making your project look great
           </p>
         </div>
       </div>
@@ -316,21 +274,15 @@ exports[`Category when the name prop is set to "Testing is reads the siteConfig 
     className="category"
     onClick={[Function]}
   >
+    <img
+      alt="icon"
+      src="test-file-stub"
+    />
     <h2
-      className="title  has-text-centered"
+      className=" has-text-centered"
     >
       Testing
     </h2>
-    <div
-      className="category-image"
-    >
-      <figure>
-        <img
-          alt="icon"
-          src="test-file-stub"
-        />
-      </figure>
-    </div>
     <div
       className="category-content"
     >
@@ -343,7 +295,7 @@ exports[`Category when the name prop is set to "Testing is reads the siteConfig 
           <p
             className="subtitle is-6"
           >
-            Checkout how to test React, all the resources listed.
+            List of tools to help testing
           </p>
         </div>
       </div>
@@ -360,21 +312,15 @@ exports[`Category when the name prop is set to "Tools is reads the siteConfig an
     className="category"
     onClick={[Function]}
   >
+    <img
+      alt="icon"
+      src="test-file-stub"
+    />
     <h2
-      className="title  has-text-centered"
+      className=" has-text-centered"
     >
       Tools
     </h2>
-    <div
-      className="category-image"
-    >
-      <figure>
-        <img
-          alt="icon"
-          src="test-file-stub"
-        />
-      </figure>
-    </div>
     <div
       className="category-content"
     >
@@ -387,7 +333,7 @@ exports[`Category when the name prop is set to "Tools is reads the siteConfig an
           <p
             className="subtitle is-6"
           >
-            You might want to checkout some React tools to help your development workflows
+            Level up your React with tools
           </p>
         </div>
       </div>
@@ -404,21 +350,15 @@ exports[`Category when the name prop is set to "Tutorials is reads the siteConfi
     className="category"
     onClick={[Function]}
   >
+    <img
+      alt="icon"
+      src="test-file-stub"
+    />
     <h2
-      className="title  has-text-centered"
+      className=" has-text-centered"
     >
       Tutorials
     </h2>
-    <div
-      className="category-image"
-    >
-      <figure>
-        <img
-          alt="icon"
-          src="test-file-stub"
-        />
-      </figure>
-    </div>
     <div
       className="category-content"
     >
@@ -431,7 +371,7 @@ exports[`Category when the name prop is set to "Tutorials is reads the siteConfi
           <p
             className="subtitle is-6"
           >
-            Learn React from the ground up with some of the best tutorials online. A collection of tutorials from all over the web to help you on your React journey. 
+            Learn all things React
           </p>
         </div>
       </div>
