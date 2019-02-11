@@ -19,5 +19,6 @@ export default {
   Routing: routing,
   Libraries: library,
   Testing: testing,
+  Forms: form,
   Examples: example,
 }

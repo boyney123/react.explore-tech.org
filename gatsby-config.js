@@ -23,8 +23,7 @@ module.exports = {
         subtitle: 'List of React components',
       },
       Forms: {
-        subtitle:
-          'Checkout what tools, techniques have been developed to handle Forms.',
+        subtitle: 'Hands on with Forms',
       },
       Tutorials: {
         subtitle: 'Learn all things React',
