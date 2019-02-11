@@ -88,6 +88,50 @@ exports[`Category when the name prop is set to "Components is reads the siteConf
 </div>
 `;
 
+exports[`Category when the name prop is set to "Examples is reads the siteConfig and uses the configured icon and subtitle 1`] = `
+<div
+  className="category-container column is-one-third"
+>
+  <div
+    className="category"
+    onClick={[Function]}
+  >
+    <h2
+      className="title  has-text-centered"
+    >
+      Examples
+    </h2>
+    <div
+      className="category-image"
+    >
+      <figure>
+        <img
+          alt="icon"
+          src="test-file-stub"
+        />
+      </figure>
+    </div>
+    <div
+      className="category-content"
+    >
+      <div
+        className="media"
+      >
+        <div
+          className="media-content"
+        >
+          <p
+            className="subtitle is-6"
+          >
+            Example React Applications. Look here for some inspiration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Category when the name prop is set to "Forms is reads the siteConfig and uses the configured icon and subtitle 1`] = `
 <div
   className="category-container column is-one-third"
@@ -124,6 +168,94 @@ exports[`Category when the name prop is set to "Forms is reads the siteConfig an
             className="subtitle is-6"
           >
             Checkout what tools, techniques have been developed to handle Forms.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Category when the name prop is set to "Libraries is reads the siteConfig and uses the configured icon and subtitle 1`] = `
+<div
+  className="category-container column is-one-third"
+>
+  <div
+    className="category"
+    onClick={[Function]}
+  >
+    <h2
+      className="title  has-text-centered"
+    >
+      Libraries
+    </h2>
+    <div
+      className="category-image"
+    >
+      <figure>
+        <img
+          alt="icon"
+          src="test-file-stub"
+        />
+      </figure>
+    </div>
+    <div
+      className="category-content"
+    >
+      <div
+        className="media"
+      >
+        <div
+          className="media-content"
+        >
+          <p
+            className="subtitle is-6"
+          >
+            Explore some great React Libraries you can use in your projects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Category when the name prop is set to "Routing is reads the siteConfig and uses the configured icon and subtitle 1`] = `
+<div
+  className="category-container column is-one-third"
+>
+  <div
+    className="category"
+    onClick={[Function]}
+  >
+    <h2
+      className="title  has-text-centered"
+    >
+      Routing
+    </h2>
+    <div
+      className="category-image"
+    >
+      <figure>
+        <img
+          alt="icon"
+          src="test-file-stub"
+        />
+      </figure>
+    </div>
+    <div
+      className="category-content"
+    >
+      <div
+        className="media"
+      >
+        <div
+          className="media-content"
+        >
+          <p
+            className="subtitle is-6"
+          >
+            Routing your React project
           </p>
         </div>
       </div>

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`All Categories Page should render a given list of categories 1`] = `
+<Layout
+  header={
+    <SiteHeader
+      count={2}
+    />
+  }
+>
+  <div
+    className="container is-fluid"
+  >
+    <div
+      className="columns is-multiline"
+    >
+      <Category
+        name="Libraries"
+      />
+      <Category
+        name="Components"
+      />
+    </div>
+  </div>
+</Layout>
+`;

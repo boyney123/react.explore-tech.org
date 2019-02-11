@@ -32,7 +32,7 @@
     "dev": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "NODE_ENV=test jest --coverage",
-    "test:watch": "NODE_ENV=test jest --silent --watch --notify --notifyMode=change",
+    "test:watch": "NODE_ENV=test jest --watch --notify --notifyMode=change",
     "add:tutorial": "node src/scripts/create-material/index.js Tutorials",
     "add:test": "node src/scripts/create-material/index.js Testing",
     "add:example": "node src/scripts/create-material/index.js Examples",
