@@ -143,7 +143,7 @@ exports[`Category when the name prop is set to "Forms is reads the siteConfig an
           <p
             className="subtitle is-6"
           >
-            Checkout what tools, techniques have been developed to handle Forms.
+            Hands on with Forms
           </p>
         </div>
       </div>
