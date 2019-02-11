@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 
 import Header from '../../components/Header'
 
