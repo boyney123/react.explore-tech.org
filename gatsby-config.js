@@ -20,41 +20,35 @@ module.exports = {
 
     categories: {
       Components: {
-        subtitle:
-          'List of React components to help you with almost anything, check them out for inspiration.',
+        subtitle: 'List of React components',
       },
       Forms: {
         subtitle:
           'Checkout what tools, techniques have been developed to handle Forms.',
       },
       Tutorials: {
-        subtitle:
-          'Learn React from the ground up with some of the best tutorials online. A collection of tutorials from all over the web to help you on your React journey. ',
+        subtitle: 'Learn all things React',
       },
       Styles: {
-        subtitle:
-          'CSS in JS? JS > CSS, CSS > JS? Who knows? Find out what people are building here!',
+        subtitle: 'Making your project look great',
       },
       Boilerplates: {
-        subtitle:
-          'Get up and running as fast as possible. Checkout these boilerplates.',
+        subtitle: 'Get setup within minutes',
       },
       Testing: {
-        subtitle: 'Checkout how to test React, all the resources listed.',
+        subtitle: 'List of tools to help testing',
       },
       Tools: {
-        subtitle:
-          'You might want to checkout some React tools to help your development workflows',
+        subtitle: 'Level up your React with tools',
       },
       Routing: {
-        subtitle: 'Routing your React project',
+        subtitle: 'Routing with React',
       },
       Libraries: {
-        subtitle:
-          'Explore some great React Libraries you can use in your projects.',
+        subtitle: 'Integrate with great libraries',
       },
       Examples: {
-        subtitle: 'Example React Applications. Look here for some inspiration.',
+        subtitle: 'Explore example applications',
       },
     },
   },

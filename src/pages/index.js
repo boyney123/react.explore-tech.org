@@ -24,6 +24,7 @@ const IndexPage = props => {
   return (
     <Layout header={<SiteHeader count={edges.length} />}>
       <div className="container is-fluid">
+        <h1 className="container-title has-text-centered">Categories</h1>
         <div className="columns is-multiline">
           {categories.map(item => {
             return <Category key={item} name={item} />

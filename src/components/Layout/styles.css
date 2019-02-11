@@ -740,5 +740,9 @@ pre tt:after {
 }
 
 .container {
-  padding: 50px 0;
+  padding: 40px 0;
+}
+
+.content .container-title {
+  margin-bottom: 1rem;
 }

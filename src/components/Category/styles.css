@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  /* min-height: 300px; */
+
+  /* display: flex; */
+  /* justify-content: center; */
 }
 
 .category:hover {
@@ -16,9 +20,17 @@
 }
 
 .category img {
-  width: 150px;
+  width: 175px;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.content .category h2 {
+  margin-bottom: 10px;
 }
 
 .category .media-content .subtitle {
   line-height: 1.75;
+  text-align: center;
 }

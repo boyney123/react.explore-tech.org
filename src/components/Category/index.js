@@ -12,12 +12,9 @@ const Category = ({ name } = {}) => {
   return (
     <div className="category-container column is-one-third">
       <div className="category" onClick={() => navigate(name)}>
-        <h2 className="title  has-text-centered">{name}</h2>
-        <div className="category-image">
-          <figure>
-            <img src={icon} alt="icon" />
-          </figure>
-        </div>
+        <img src={icon} alt="icon" />
+        <h2 className=" has-text-centered">{name}</h2>
+
         <div className="category-content">
           <div className="media">
             <div className="media-content">
