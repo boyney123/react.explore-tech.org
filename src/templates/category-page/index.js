@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Fuse from 'fuse.js'
 
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 import Header from '../../components/Header'
 import Browser from '../../components/Browser'
 
