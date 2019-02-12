@@ -9,7 +9,7 @@ material:
   subscribers_count: '2'
   stargazers_count: '25'
   tags: ['']
-  subtitle: 'Simple demo of the React framework's power and flexibility.'
+  subtitle: 'Simple demo of the React frameworks power and flexibility.'
   clone_url: 'https://github.com/chenglou/react-lights-out.git'
   ssh_url: 'git@github.com:chenglou/react-lights-out.git'
   pushed_at: '2013-11-17T19:22:36Z'
@@ -24,6 +24,7 @@ material:
     url: null
     created_at: null
 ---
+
 # [React](http://facebook.github.io/react/)-lights-out
 
 Simple demo of the React framework's power and flexibility. [Result here](http://chenglou.github.io/react-lights-out/).

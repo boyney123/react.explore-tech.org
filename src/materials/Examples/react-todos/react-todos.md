@@ -8,8 +8,8 @@ material:
   github_url: 'https://github.com/ssorallen/react-todos'
   subscribers_count: '2'
   stargazers_count: '30'
-  tags: ['backbone','reactjs']
-  subtitle: 'Backbone's example TODO app with React Components for views'
+  tags: ['backbone', 'reactjs']
+  subtitle: 'Backbones example TODO app with React Components for views'
   clone_url: 'https://github.com/ssorallen/react-todos.git'
   ssh_url: 'git@github.com:ssorallen/react-todos.git'
   pushed_at: '2018-05-09T10:26:45Z'
@@ -24,6 +24,7 @@ material:
     url: null
     created_at: null
 ---
+
 # React Todos
 
 Backbone's example [TODO app](http://backbonejs.org/docs/todos.html) with React JS
@@ -39,14 +40,16 @@ like jQuery.
 
 ## Running Locally
 
-1. Clone this repository
-2. Install dependencies
+1.  Clone this repository
+2.  Install dependencies
 
         $ yarn install
-3. Run the local server
+
+3.  Run the local server
 
         $ yarn start
-4. See the running app at http://localhost:3000
+
+4.  See the running app at http://localhost:3000
 
 ### Favicon
 

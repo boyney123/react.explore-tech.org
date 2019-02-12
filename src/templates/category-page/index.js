@@ -65,6 +65,11 @@ export default function Template({ data = {}, pageContext = {} }) {
     setMaterials(results)
   }
 
+  // Sort by stars, can we do this with GraphQL?
+  const orderedRepos = materials.sort((item1, item2) => {
+    return item2['stargazers_count'] - item1['stargazers_count']
+  })
+
   return (
     <Layout
       className="blog-post-container"
@@ -111,7 +116,7 @@ export default function Template({ data = {}, pageContext = {} }) {
           </div>
           <div className="column pt0">
             <div className="columns is-multiline">
-              {materials.map(item => {
+              {orderedRepos.map(item => {
                 const {
                   title,
                   subtitle,
@@ -120,8 +125,6 @@ export default function Template({ data = {}, pageContext = {} }) {
                   img,
                   slug,
                 } = item
-
-                console.log('IMg', img)
 
                 return (
                   <Browser
