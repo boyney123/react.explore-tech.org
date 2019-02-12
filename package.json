@@ -39,6 +39,7 @@
     "add:example": "node src/scripts/create-material/index.js Examples",
     "add:tool": "node src/scripts/create-material/index.js Tools",
     "add:redux": "node src/scripts/create-material/index.js Redux",
+    "add:dev-experience": "node src/scripts/create-material/index.js DevExperience",
     "add:data": "node src/scripts/create-material/index.js Data",
     "add:style": "node src/scripts/create-material/index.js Styles",
     "add:component": "node src/scripts/create-material/index.js Components",
