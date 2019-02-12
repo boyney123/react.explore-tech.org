@@ -76,10 +76,6 @@ exports[`Material Page matches the snapshot 1`] = `
       integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
       rel="stylesheet"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
-      rel="stylesheet"
-    />
     <html
       lang="en"
     />

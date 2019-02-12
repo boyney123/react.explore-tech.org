@@ -89,10 +89,6 @@ export default function Template({ data = {}, pageContext = {} }) {
           integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
           crossorigin="anonymous"
         />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
-        />
         <html lang="en" />
       </Helmet>
       <div className="container">

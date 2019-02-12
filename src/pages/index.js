@@ -5,6 +5,8 @@ import Layout from '../components/Layout'
 import Category from '../components/Category'
 import SiteHeader from '../components/SiteHeader'
 
+import 'bulma/css/bulma.css'
+
 const IndexPage = props => {
   const { data: { allMarkdownRemark: { edges = [] } = {} } = {} } = props
 

@@ -16,7 +16,7 @@ const SiteHeader = ({ count }) => {
           <h2 className="subtitle">{description}</h2>
 
           <a
-            className="button is-large add-action"
+            className="button is-medium add-action"
             href="https://github.com/boyney123/react.explore-tech.org/blob/master/CONTRIBUTING.md#adding-a-material-to-the-website"
             target="_blank"
             rel="noopener noreferrer"
