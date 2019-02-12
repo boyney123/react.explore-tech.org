@@ -98,7 +98,7 @@ export default function Template({ data = {}, pageContext = {} }) {
               placeHolder="Filter by name, tags, etc..."
               onChange={handleFilter}
             />
-            <h5 className="mt20">Tags</h5>
+            <h5 className="category-side-bar__tags__title mt20">Tags</h5>
             <ul className="category-side-bar__tags">
               {sortedTags.map(tag => {
                 return (

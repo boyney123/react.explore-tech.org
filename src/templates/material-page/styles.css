@@ -2,6 +2,20 @@
   padding: 0 60px;
 }
 
+.material__container {
+  max-width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .material,
+  .material .side-bar {
+    padding: 0;
+  }
+  .material__container {
+    max-width: inherit;
+  }
+}
+
 .material hr {
   margin: 40px 0;
 }
@@ -29,10 +43,6 @@
   box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.28);
   margin-bottom: 32px;
   padding: 20px;
-}
-
-.material__container {
-  max-width: 80%;
 }
 
 .side-bar .side-bar-item {

@@ -61,7 +61,10 @@ export default function Template({ data, ...test }) {
             <div className="column is-one-quarter">
               <div className="side-bar">
                 <div className="side-bar-item">
-                  <Img fluid={author_avatar.childImageSharp.fluid} />
+                  <Img
+                    className="material__avatar"
+                    fluid={author_avatar.childImageSharp.fluid}
+                  />
                   <p>
                     Developed by{' '}
                     <a

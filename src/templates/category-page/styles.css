@@ -28,6 +28,13 @@
   font-weight: bold;
 }
 
+@media screen and (max-width: 768px) {
+  .category-side-bar__tags,
+  .category-side-bar__tags__title {
+    display: none;
+  }
+}
+
 .category__filter {
   padding: 20px;
 }

@@ -729,6 +729,15 @@ pre tt:after {
   margin-bottom: 0 !important;
 }
 
+@media screen and (max-width: 768px) {
+  .main .title {
+    font-size: 2em;
+  }
+  .main .subtitle {
+    font-size: 1.5em;
+  }
+}
+
 .no-results {
   text-align: center;
   width: 100%;
@@ -745,4 +754,10 @@ pre tt:after {
 
 .content .container-title {
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 40px;
+  }
 }
