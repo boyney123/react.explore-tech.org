@@ -4,3 +4,12 @@ nav.navbar {
   border-bottom: 1px solid #e8e8e8;
   border-bottom-color: #1a1b23;
 }
+
+.navbar a {
+  margin-top: 12px;
+}
+
+.navbar a,
+.navbar a:hover {
+  color: #bff4ff;
+}
