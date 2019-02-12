@@ -1,5 +1,5 @@
 <div align="center">
-<h1>react.explore-tech.org</h1>
+
 <img alt="header" src="./header.png" />
 
 <p>A community website to help people explore & learn React.</p>
