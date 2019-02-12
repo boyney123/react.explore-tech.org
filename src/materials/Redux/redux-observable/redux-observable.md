@@ -9,7 +9,7 @@ material:
   subscribers_count: '114'
   stargazers_count: '6168'
   tags: ['']
-  subtitle: 'RxJS middleware for action side effects in Redux using 'Epics''
+  subtitle: 'RxJS middleware for action side effects in Redux using Epics'
   clone_url: 'https://github.com/redux-observable/redux-observable.git'
   ssh_url: 'git@github.com:redux-observable/redux-observable.git'
   pushed_at: '2019-02-12T07:32:46Z'
@@ -24,6 +24,7 @@ material:
     url: null
     created_at: null
 ---
+
 <img title='logo' src='logo/logo-small.gif' width='16.5%'>
 <img title='redux-observable' src='logo/logo-text-small.png' width='72%'>
 
@@ -53,13 +54,14 @@ redux-observable is an independent project with ongoing development and support 
 # Sponsors
 
 [![This Dot](website/backers/thisdot.svg)](https://www.thisdot.co/labs?utm_source=redux-observable&utm_medium=docs&utm_campaign=v)
+
 <p align='center'><i>Get support, training, and project consulting by the people who created Redux Observable and RxJS!</i></p>
 
-***
+---
 
 > No Platinum or Gold sponsors yet. [Become one and your name or logo will be here!](https://www.patreon.com/jayphelps) Help keep Open Source sustainable.
 
-## Silver Sponsors ($100+ per month)
+## Silver Sponsors (\$100+ per month)
 
 - <span style='font-size: 23px; font-weight: bold;'>[Kyle Kelley](https://twitter.com/rgbkrk)</span>
 
@@ -85,11 +87,11 @@ We publish a UMD build inside our npm package. You can use it via the [unpkg](ht
 
 To see redux-observable in action, here's a very simple example to play around with:
 
-* [Using Raw HTML APIs](http://jsbin.com/birogu/edit?js,output)
-* [Using React](http://jsbin.com/jexomi/edit?js,output)
-* [Using Angular v1](http://jsbin.com/laviti/edit?js,output)
-* [Using Angular v2+](https://stackblitz.com/edit/angular-5o3zyo?file=app%2Fapp.component.ts)
-* [Using Ember](https://ember-twiddle.com/093ee4aa271123a84f4eb21f3670b655)
+- [Using Raw HTML APIs](http://jsbin.com/birogu/edit?js,output)
+- [Using React](http://jsbin.com/jexomi/edit?js,output)
+- [Using Angular v1](http://jsbin.com/laviti/edit?js,output)
+- [Using Angular v2+](https://stackblitz.com/edit/angular-5o3zyo?file=app%2Fapp.component.ts)
+- [Using Ember](https://ember-twiddle.com/093ee4aa271123a84f4eb21f3670b655)
 
 ## Documentation
 
@@ -109,8 +111,8 @@ Everyone is welcome on our [Gitter channel](https://gitter.im/redux-observable/r
 
 Add the redux-observable spinning logo to your Slack channel! [Slack Instructions](https://get.slack.help/hc/en-us/articles/206870177-Create-custom-emoji)
 
-***
+---
 
-*redux-observable is a community-driven, entirely volunteer project and is not officially affiliated with or sponsored by any company.
+\*redux-observable is a community-driven, entirely volunteer project and is not officially affiliated with or sponsored by any company.
 
 :shipit:

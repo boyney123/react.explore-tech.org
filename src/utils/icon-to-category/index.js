@@ -9,6 +9,7 @@ import library from '../../icons/library.svg'
 import routing from '../../icons/routing.svg'
 import styles from '../../icons/styles.svg'
 import example from '../../icons/example.svg'
+import redux from '../../icons/redux.svg'
 
 export default {
   Tutorials: tutorial,
@@ -17,7 +18,7 @@ export default {
   Styles: styles,
   Boilerplates: tools,
   Routing: routing,
-  Redux: routing,
+  Redux: redux,
   Libraries: library,
   Testing: testing,
   Forms: form,

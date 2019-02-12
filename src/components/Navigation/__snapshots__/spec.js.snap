@@ -5,5 +5,15 @@ exports[`Navigation renders correctly 1`] = `
   aria-label="main navigation"
   className="navbar"
   role="navigation"
-/>
+>
+  <div
+    class="navbar-brand"
+  >
+    <mockConstructor
+      to="/"
+    >
+      react.explore-tech.org
+    </mockConstructor>
+  </div>
+</nav>
 `;
