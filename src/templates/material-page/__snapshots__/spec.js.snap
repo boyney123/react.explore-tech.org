@@ -105,6 +105,7 @@ exports[`Material Page matches the snapshot 1`] = `
               <Image
                 Tag="div"
                 alt=""
+                className="material__avatar"
                 critical={false}
                 fadeIn={true}
                 fluid="1"

@@ -39,7 +39,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query CategoryIndex {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { order: ASC, fields: [fields___category] }) {
       edges {
         node {
           fields {

@@ -49,7 +49,7 @@ exports[`Template matches the snapshot 1`] = `
           placeHolder="Filter by name, tags, etc..."
         />
         <h5
-          className="mt20"
+          className="category-side-bar__tags__title mt20"
         >
           Tags
         </h5>
