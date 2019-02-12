@@ -13,6 +13,7 @@ import redux from '../../icons/redux.svg'
 import data from '../../icons/data.svg'
 import devtools from '../../icons/dev-tools.svg'
 import integration from '../../icons/integration.svg'
+import charts from '../../icons/charts.svg'
 
 import map from './'
 
@@ -26,6 +27,7 @@ describe('icon-to-category', () => {
     expect(map.Routing).toEqual(routing)
     expect(map.Libraries).toEqual(library)
     expect(map.Testing).toEqual(testing)
+    expect(map.Charts).toEqual(charts)
     expect(map.Examples).toEqual(example)
     expect(map.Data).toEqual(data)
     expect(map.Developer).toEqual(devtools)

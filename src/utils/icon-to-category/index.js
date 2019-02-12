@@ -13,6 +13,7 @@ import redux from '../../icons/redux.svg'
 import data from '../../icons/data.svg'
 import devtools from '../../icons/computer.svg'
 import integration from '../../icons/integration.svg'
+import charts from '../../icons/charts.svg'
 
 export default {
   Tutorials: tutorial,
@@ -23,6 +24,7 @@ export default {
   Data: data,
   Routing: routing,
   Redux: redux,
+  Charts: charts,
   Integration: integration,
   Developer: devtools,
   Libraries: library,
