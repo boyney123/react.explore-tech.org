@@ -1,0 +1,188 @@
+---
+path: '/materials/turbo-react'
+type: 'GitHub'
+img: './screenshot.png'
+material:
+  title: 'turbo-react'
+  url: 'https://turbo-react.herokuapp.com/'
+  github_url: 'https://github.com/ssorallen/turbo-react'
+  subscribers_count: '8'
+  stargazers_count: '266'
+  tags: ['javascript','react','turbolinks']
+  subtitle: 'A JavaScript library that transitions between static HTML pages on navigation; no app server required.'
+  clone_url: 'https://github.com/ssorallen/turbo-react.git'
+  ssh_url: 'git@github.com:ssorallen/turbo-react.git'
+  pushed_at: '2017-12-13T13:49:10Z'
+  updated_at: '2019-02-11T02:11:19Z'
+  author:
+    name: 'ssorallen'
+    avatar: 'https://avatars0.githubusercontent.com/u/29612?v=4'
+    github_url: 'https://github.com/ssorallen'
+  latestRelease:
+    tag_name: 'v0.9.0'
+    name: 'v0.9.0'
+    url: 'https://github.com/ssorallen/turbo-react/releases/tag/v0.9.0'
+    created_at: '2016-06-20T03:40:51Z'
+---
+# TurboReact
+
+TurboReact applies only the differences between two HTML pages when navigating
+with links rather than create a new document, which enables CSS transitions
+between pages without needing a server.
+
+## Installation & Usage
+
+TurboReact is a plugin for [Turbolinks](https://github.com/rails/turbolinks),
+which means Turbolinks is required. Include both Turbolinks and TurboReact in
+the `<head>` of every document on your site.
+
+### Ruby on Rails
+
+1. Add the [`turbo_react-rails`](https://github.com/ssorallen/turbo_react-rails)
+   gem to your Gemfile:
+
+    ```
+    gem 'turbo_react-rails'
+    ```
+
+2. Install the updated set of gems:
+
+    ```sh
+    $ bundle install
+    ```
+
+3. Require the 'turbo-react' library after 'turbolinks' on every page, for
+   example in 'application.js' if it is on every page:
+
+    ```js
+    //= require turbolinks
+    //= require turbo-react
+    ```
+
+### Plain HTML and Other Frameworks
+
+1. Get turbo-react via NPM or download the latest release from GitHub:
+
+    ```sh
+    $ yarn install turbo-react
+    ```
+
+   or
+
+    ```sh
+    $ curl https://raw.githubusercontent.com/ssorallen/turbo-react/v0.9.0/public/dist/turbo-react.min.js
+    ```
+
+2. Include turbo-react in the `<head>` of each page of the site after
+   Turbolinks:
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        ...
+        <script src='path/to/turbolinks.js'></script>
+        <script src='path/to/turbo-react.min.js'></script>
+      </head>
+      <body>
+        ...
+      </body>
+    </html>
+    ```
+
+### Opting out of Turbolinks & TurboReact
+
+Add a
+[`data-no-turbolink` attribute](https://github.com/rails/turbolinks#opting-out-of-turbolinks)
+to any link that should load normally without being intercepted by Turbolinks
+and TurboReact. This feature is inherited from TurboReacts's use of Turbolinks.
+
+```html
+<a href='/foo/bar.html' data-no-turbolink>
+  Skip Turbolinks and TurboReact
+</a>
+```
+
+## Examples
+
+### Transitioning Background Colors
+
+Navigating between page1 and page2 shows a skyblue background and a yellow
+background that changes at once. After putting TurboReact in the `<head>`,
+navigating between the pages will transition between the background colors
+because TurboReact will add and remove the class names rather than start a new
+document.
+
+```css
+/* style.css */
+
+body {
+  height: 100%;
+  margin: 0;
+  transition: background-color 0.5s;
+  width: 100%;
+}
+
+.bg-skyblue {
+  background-color: skyblue;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+```
+
+```html
+<!-- page1.html -->
+
+<body class='bg-skyblue'>
+  <a href='page2.html'>Page 2</a>
+</body>
+```
+
+```html
+<!-- page2.html -->
+
+<body class='bg-yellow'>
+  <a href='page1.html'>Page 1</a>
+</body>
+```
+
+### How it Works
+
+**Demo:** https://turbo-react.herokuapp.com/
+
+'Re-request this page' is just a link to the current page. When you click it,
+Turbolinks intercepts the GET request and fetchs the full page via XHR.
+
+The panel is rendered with a random panel- class on each request,
+and the progress bar gets a random widthX class.
+
+With Turbolinks alone, the entire `<body>` would be replaced, and transitions
+would not happen. In this little demo though, React adds and removes
+classes and text, and the attribute changes are animated with CSS transitions.
+The DOM is otherwise left in tact.
+
+### The Code
+
+TurboReact turns the `<body>` into a React element and re-renders it after
+Turbolinks intercepts link navigations via XMLHttpRequest:
+[turbo-react.js](https://github.com/ssorallen/turbo-react/blob/master/src/turbo-react.js)
+
+#### Running locally
+
+1. Clone this repo
+
+        $ git clone https://github.com/ssorallen/turbo-react.git
+
+2. Install dependencies
+
+        $ bundle install
+        $ yarn install
+
+3. Run the server and watch JS changes
+
+        $ bundle exec unicorn
+        $ yarn watch
+
+4. Visit the app: [http://localhost:9292](http://localhost:9292)
