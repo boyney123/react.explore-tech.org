@@ -37,6 +37,9 @@ module.exports = {
       Redux: {
         subtitle: 'All things Redux',
       },
+      Integration: {
+        subtitle: 'React integration with others',
+      },
       Styles: {
         subtitle: 'Making your project look great',
       },
