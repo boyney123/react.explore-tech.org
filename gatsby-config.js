@@ -31,8 +31,8 @@ module.exports = {
       Tutorials: {
         subtitle: 'Learn all things React',
       },
-      Devexperience: {
-        subtitle: 'React developer experience',
+      Developer: {
+        subtitle: 'React developer tools & experince',
       },
       Redux: {
         subtitle: 'All things Redux',

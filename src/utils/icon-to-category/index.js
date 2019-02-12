@@ -11,7 +11,7 @@ import styles from '../../icons/styles.svg'
 import example from '../../icons/example.svg'
 import redux from '../../icons/redux.svg'
 import data from '../../icons/data.svg'
-import devtools from '../../icons/devtools.svg'
+import devtools from '../../icons/computer.svg'
 
 export default {
   Tutorials: tutorial,
@@ -22,7 +22,7 @@ export default {
   Data: data,
   Routing: routing,
   Redux: redux,
-  DevExperience: devtools,
+  Developer: devtools,
   Libraries: library,
   Testing: testing,
   Forms: form,

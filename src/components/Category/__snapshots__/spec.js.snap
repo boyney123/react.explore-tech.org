@@ -114,6 +114,44 @@ exports[`Category when the name prop is set to "Data is reads the siteConfig and
 </div>
 `;
 
+exports[`Category when the name prop is set to "Devexperience is reads the siteConfig and uses the configured icon and subtitle 1`] = `
+<div
+  className="category-container column is-one-third"
+>
+  <div
+    className="category"
+    onClick={[Function]}
+  >
+    <img
+      alt="icon"
+      src="test-file-stub"
+    />
+    <h2
+      className=" has-text-centered"
+    >
+      Devexperience
+    </h2>
+    <div
+      className="category-content"
+    >
+      <div
+        className="media"
+      >
+        <div
+          className="media-content"
+        >
+          <p
+            className="subtitle is-6"
+          >
+            React developer experience
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Category when the name prop is set to "Examples is reads the siteConfig and uses the configured icon and subtitle 1`] = `
 <div
   className="category-container column is-one-third"
