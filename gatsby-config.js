@@ -28,6 +28,9 @@ module.exports = {
       Tutorials: {
         subtitle: 'Learn all things React',
       },
+      Redux: {
+        subtitle: 'All things Redux',
+      },
       Styles: {
         subtitle: 'Making your project look great',
       },

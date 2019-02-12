@@ -17,6 +17,7 @@ export default {
   Styles: styles,
   Boilerplates: tools,
   Routing: routing,
+  Redux: routing,
   Libraries: library,
   Testing: testing,
   Forms: form,
