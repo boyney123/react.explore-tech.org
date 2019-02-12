@@ -10,6 +10,7 @@ import routing from '../../icons/routing.svg'
 import styles from '../../icons/styles.svg'
 import example from '../../icons/example.svg'
 import redux from '../../icons/redux.svg'
+import data from '../../icons/data.svg'
 
 import map from './'
 
@@ -24,6 +25,6 @@ describe('icon-to-category', () => {
     expect(map.Libraries).toEqual(library)
     expect(map.Testing).toEqual(testing)
     expect(map.Examples).toEqual(example)
-    expect(map.Redux).toEqual(redux)
+    expect(map.Data).toEqual(data)
   })
 })

@@ -10,7 +10,7 @@ import routing from '../../icons/routing.svg'
 import styles from '../../icons/styles.svg'
 import example from '../../icons/example.svg'
 import redux from '../../icons/redux.svg'
-import data from '../../icons/redux.svg'
+import data from '../../icons/data.svg'
 
 export default {
   Tutorials: tutorial,
