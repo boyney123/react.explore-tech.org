@@ -22,11 +22,9 @@ const SiteHeader = ({ count }) => {
             rel="noopener noreferrer"
           >
             <i className="fab fa-github" />
-            Contribute Material
+            Contribute
           </a>
-          <p className="mt20">
-            {count} {content} materials to Explore & Learn...
-          </p>
+          <p className="mt20">Listing {count} projects to explore...</p>
           <div className="badges">
             <a
               href="https://github.com/boyney123/react.explore-tech.org"

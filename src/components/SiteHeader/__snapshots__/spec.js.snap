@@ -22,7 +22,7 @@ exports[`SiteHeader renders correctly 1`] = `
       <h2
         className="subtitle"
       >
-        An open source list to help developers learn & explore React.
+        An open source project to help developers learn, develop & explore.
       </h2>
       <a
         className="button is-large add-action"
@@ -33,15 +33,14 @@ exports[`SiteHeader renders correctly 1`] = `
         <i
           className="fab fa-github"
         />
-        Contribute Material
+        Contribute
       </a>
       <p
         className="mt20"
       >
+        Listing 
         1
-         
-        React
-         materials to Explore & Learn...
+         projects to explore...
       </p>
       <div
         className="badges"

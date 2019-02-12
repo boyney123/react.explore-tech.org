@@ -12,7 +12,7 @@ module.exports = {
      * Description
      */
     description:
-      'An open source list to help developers learn & explore React.',
+      'An open source project to help developers learn, develop & explore.',
     /**
      * Url when clicking contribute button
      */

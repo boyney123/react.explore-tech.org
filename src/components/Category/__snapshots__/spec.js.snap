@@ -38,6 +38,44 @@ exports[`Category when the name prop is set to "Boilerplates is reads the siteCo
 </div>
 `;
 
+exports[`Category when the name prop is set to "Charts is reads the siteConfig and uses the configured icon and subtitle 1`] = `
+<div
+  className="category-container column is-one-third"
+>
+  <div
+    className="category"
+    onClick={[Function]}
+  >
+    <img
+      alt="icon"
+      src="test-file-stub"
+    />
+    <h2
+      className=" has-text-centered"
+    >
+      Charts
+    </h2>
+    <div
+      className="category-content"
+    >
+      <div
+        className="media"
+      >
+        <div
+          className="media-content"
+        >
+          <p
+            className="subtitle is-6"
+          >
+            Visualise data with React
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Category when the name prop is set to "Components is reads the siteConfig and uses the configured icon and subtitle 1`] = `
 <div
   className="category-container column is-one-third"
@@ -144,44 +182,6 @@ exports[`Category when the name prop is set to "Developer is reads the siteConfi
             className="subtitle is-6"
           >
             React developer tools & experince
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Category when the name prop is set to "Devexperience is reads the siteConfig and uses the configured icon and subtitle 1`] = `
-<div
-  className="category-container column is-one-third"
->
-  <div
-    className="category"
-    onClick={[Function]}
-  >
-    <img
-      alt="icon"
-      src="test-file-stub"
-    />
-    <h2
-      className=" has-text-centered"
-    >
-      Devexperience
-    </h2>
-    <div
-      className="category-content"
-    >
-      <div
-        className="media"
-      >
-        <div
-          className="media-content"
-        >
-          <p
-            className="subtitle is-6"
-          >
-            React developer experience
           </p>
         </div>
       </div>
