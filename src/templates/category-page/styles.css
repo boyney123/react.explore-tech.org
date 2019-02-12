@@ -38,3 +38,8 @@
 .category__filter {
   padding: 20px;
 }
+
+.content .no-materials-found {
+  margin: 25px;
+  color: #5c5c5c;
+}

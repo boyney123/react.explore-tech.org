@@ -116,6 +116,10 @@ export default function Template({ data = {}, pageContext = {} }) {
           </div>
           <div className="column pt0">
             <div className="columns is-multiline">
+              {orderedRepos.length === 0 && (
+                <h4 className="no-materials-found">No material found</h4>
+              )}
+
               {orderedRepos.map(item => {
                 const {
                   title,
