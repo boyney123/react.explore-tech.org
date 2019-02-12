@@ -25,7 +25,7 @@ module.exports = {
       Forms: {
         subtitle: 'Hands on with Forms',
       },
-      DataManaging: {
+      Data: {
         subtitle: 'Managing data with React',
       },
       Tutorials: {

@@ -18,7 +18,7 @@ export default {
   Tools: hammer,
   Styles: styles,
   Boilerplates: tools,
-  DataManaging: data,
+  Data: data,
   Routing: routing,
   Redux: redux,
   Libraries: library,
