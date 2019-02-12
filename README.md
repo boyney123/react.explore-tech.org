@@ -10,11 +10,13 @@
 
 <hr/>
 
-[![MIT License][license-badge]][license] 
+
 [![Travis](https://img.shields.io/travis/boyney123/react.explore-tech.org/master.svg)](https://travis-ci.org/boyney123/react.explore-tech.org)
 [![CodeCov](https://codecov.io/gh/boyney123/react.explore-tech.org/branch/master/graph/badge.svg?token=AoXW3EFgMP)](https://codecov.io/gh/boyney123/react.explore-tech.org)
-[![PRs Welcome][prs-badge]][prs]
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b8b80b61-4213-4bd8-ac48-831738e1ca1b/deploy-status)](https://app.netlify.com/sites/react-openlist/deploys)
+[![MIT License][license-badge]][license] 
+[![PRs Welcome][prs-badge]][prs]
+
 [![Join the community on Spectrum][spectrum-badge]][spectrum]
 
 ## Motivation
