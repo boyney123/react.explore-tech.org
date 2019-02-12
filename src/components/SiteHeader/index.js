@@ -24,7 +24,9 @@ const SiteHeader = ({ count }) => {
             <i className="fab fa-github" />
             Contribute
           </a>
-          <p className="mt20">Listing {count} projects to explore...</p>
+          <p className="mt20">
+            We have {count} resource's for you to explore...
+          </p>
           <div className="badges">
             <a
               href="https://github.com/boyney123/react.explore-tech.org"

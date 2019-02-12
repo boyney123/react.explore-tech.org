@@ -38,9 +38,9 @@ exports[`SiteHeader renders correctly 1`] = `
       <p
         className="mt20"
       >
-        Listing 
+        We have 
         1
-         projects to explore...
+         resource's for you to explore...
       </p>
       <div
         className="badges"
