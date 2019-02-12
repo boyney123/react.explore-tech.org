@@ -2,7 +2,7 @@
 
 <img alt="header" src="./header.png" />
 
-<p>A community website to help people explore & learn React.</p>
+
 
 [react.explore-tech.org](https://react.explore-tech.org)
 
