@@ -1,8 +1,6 @@
 <div align="center">
 <h1>react.explore-tech.org</h1>
-<a href="https://www.emojione.com/emoji/1f3de">
-<img height="80" width="80" alt="goat" src="./logo.png" />
-</a>
+<img alt="header" src="./header.png" />
 
 <p>A community website to help people explore & learn React.</p>
 
