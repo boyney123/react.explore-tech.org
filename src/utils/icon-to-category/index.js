@@ -12,7 +12,7 @@ import example from '../../icons/example.svg'
 import redux from '../../icons/redux.svg'
 import data from '../../icons/data.svg'
 import devtools from '../../icons/computer.svg'
-import integration from '../../icons/computer.svg'
+import integration from '../../icons/integration.svg'
 
 export default {
   Tutorials: tutorial,

@@ -31,7 +31,7 @@
     "start": "npm run develop",
     "dev": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "npm run generate:materials-test-file && NODE_ENV=test jest --coverage ",
+    "test": "npm run generate:materials-test-file && NODE_ENV=test jest --coverage --silent",
     "test:watch": "npm run generate:materials-test-file && NODE_ENV=test jest --watch --notify --notifyMode=change",
     "generate:materials-test-file": "node src/scripts/utils/generate-material-test-file.js",
     "add:tutorial": "node src/scripts/create-material/index.js Tutorials",
