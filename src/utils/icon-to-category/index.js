@@ -10,6 +10,7 @@ import routing from '../../icons/routing.svg'
 import styles from '../../icons/styles.svg'
 import example from '../../icons/example.svg'
 import redux from '../../icons/redux.svg'
+import data from '../../icons/redux.svg'
 
 export default {
   Tutorials: tutorial,
@@ -17,6 +18,7 @@ export default {
   Tools: hammer,
   Styles: styles,
   Boilerplates: tools,
+  DataManaging: data,
   Routing: routing,
   Redux: redux,
   Libraries: library,
