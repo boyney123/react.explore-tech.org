@@ -32,7 +32,7 @@ module.exports = {
         subtitle: 'Learn all things React',
       },
       Developer: {
-        subtitle: 'React developer tools & experince',
+        subtitle: 'React developer tools & experience',
       },
       Redux: {
         subtitle: 'All things Redux',
