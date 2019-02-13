@@ -7,6 +7,8 @@ import Layout from '../../components/Layout'
 import Header from '../../components/Header'
 import Browser from '../../components/Browser'
 
+import 'bulma/css/bulma.css'
+
 import './styles.css'
 import '../material-page/styles.css'
 

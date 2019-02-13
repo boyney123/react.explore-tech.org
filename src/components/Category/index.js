@@ -6,7 +6,6 @@ import './styles.css'
 import { siteMetadata } from '../../../gatsby-config'
 
 const Category = ({ name } = {}) => {
-  console.log(name)
   const { subtitle } = siteMetadata.categories[name]
   const icon = iconToCategoryMap[name] || genericIcon
 

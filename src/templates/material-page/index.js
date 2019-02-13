@@ -7,6 +7,8 @@ import Layout from '../../components/Layout'
 
 import Header from '../../components/Header'
 
+import 'bulma/css/bulma.css'
+
 import './styles.css'
 
 export default function Template({ data, ...test }) {
