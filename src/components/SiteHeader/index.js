@@ -27,7 +27,7 @@ const SiteHeader = ({ count }) => {
           <p className="mt20">
             We have {count} resource's for you to explore...
           </p>
-          <div className="badges">
+          {/* <div className="badges">
             <a
               href="https://github.com/boyney123/react.explore-tech.org"
               target="_blank"
@@ -39,7 +39,7 @@ const SiteHeader = ({ count }) => {
                 alt="github badge"
               />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
