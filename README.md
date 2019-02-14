@@ -33,7 +33,17 @@ This website was built based on three main points:
 Using this template to design other websites, for example, have a GraphQL, Node, react-native websites to help people explore and learn that tech too. This is all non-profit work, just inspired to help others develop.
 
 # Contributing
-If you are interested in helping out please get in touch or start to raises Pull Requests or Issues. 
+Adding material to the website is super easy!
+
+For example to add a new component `npm run add:component https://github.com/airbnb/react-dates`. Thats it.
+
+- This would add the component the to the website
+- Take a screenshot
+- Commit for you
+
+Please read the [Contributing](CONTRIBUTING.md) document for more details.
+
+
 
 
 [spectrum-badge]: https://withspectrum.github.io/badge/badge.svg
