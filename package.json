@@ -50,7 +50,7 @@
     "add:router": "node src/scripts/create-material/index.js Routing",
     "add:form": "node src/scripts/create-material/index.js Forms",
     "add:lib": "node src/scripts/create-material/index.js Libraries",
-    "add:uiframeworks": "node src/scripts/create-material/index.js UIFrameworks"
+    "add:frameworks": "node src/scripts/create-material/index.js Frameworks"
   },
   "devDependencies": {
     "babel-jest": "^24.1.0",
