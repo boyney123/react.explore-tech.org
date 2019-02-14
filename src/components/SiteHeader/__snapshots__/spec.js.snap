@@ -42,6 +42,21 @@ exports[`SiteHeader renders correctly 1`] = `
         1
          resource's for you to explore...
       </p>
+      <div
+        className="badges"
+      >
+        <a
+          href="https://github.com/boyney123/react.explore-tech.org"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="github badge"
+            className="badges__github"
+            src="https://img.shields.io/github/stars/boyney123/react.explore-tech.org.svg?style=social"
+          />
+        </a>
+      </div>
     </div>
   </div>
 </section>
