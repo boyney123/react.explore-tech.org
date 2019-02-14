@@ -6,14 +6,14 @@ material:
   title: 'reactjs-popup'
   url: 'https://react-popup.elazizi.com/'
   github_url: 'https://github.com/yjose/reactjs-popup'
-  subscribers_count: '14'
-  stargazers_count: '430'
+  subscribers_count: '15'
+  stargazers_count: '437'
   tags: ['component','modal','react','react-component','react-modal','react-popup','tooltip','tooltip-library']
   subtitle: 'React Popup Component - Modals,Tooltips and Menus —  All in one'
   clone_url: 'https://github.com/yjose/reactjs-popup.git'
   ssh_url: 'git@github.com:yjose/reactjs-popup.git'
-  pushed_at: '2019-02-03T20:01:09Z'
-  updated_at: '2019-02-07T22:29:57Z'
+  pushed_at: '2019-02-13T15:12:27Z'
+  updated_at: '2019-02-14T11:45:39Z'
   author:
     name: 'yjose'
     avatar: 'https://avatars0.githubusercontent.com/u/11137944?v=4'
