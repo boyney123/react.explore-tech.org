@@ -181,7 +181,7 @@ exports[`Category when the name prop is set to "Developer is reads the siteConfi
           <p
             className="subtitle is-6"
           >
-            React developer tools & experince
+            React developer tools & experience
           </p>
         </div>
       </div>
