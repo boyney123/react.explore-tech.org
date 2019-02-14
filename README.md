@@ -35,7 +35,7 @@ Using this template to design other websites, for example, have a GraphQL, Node,
 # Contributing
 Adding material to the website is super easy!
 
-For example to add a new component:
+For example to add a new component you would checkout the project and run this command:
 
 `npm run add:component https://github.com/airbnb/react-dates`.
 
