@@ -28,6 +28,8 @@ You can easily add a material to the website. Here is a small list of things to 
 - Testing
 - Styles
 
+Take a look at the commands you can run https://github.com/boyney123/react.explore-tech.org/blob/0b246c86909894e858c4125c6f159b75b9c0953a/package.json#L38
+
 ### Adding a new Category
 
 If you would like to add a new Category you will need to do two things:
