@@ -31,4 +31,5 @@ export default {
   Testing: testing,
   Forms: form,
   Examples: example,
+  UIFrameworks: tools,
 }

@@ -64,6 +64,9 @@ module.exports = {
       Examples: {
         subtitle: 'Explore example applications',
       },
+      UIFrameworks: {
+        subtitle: 'UI Frameworks',
+      },
     },
   },
   plugins: [

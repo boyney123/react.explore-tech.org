@@ -49,7 +49,8 @@
     "add:boilerplate": "node src/scripts/create-material/index.js Boilerplates",
     "add:router": "node src/scripts/create-material/index.js Routing",
     "add:form": "node src/scripts/create-material/index.js Forms",
-    "add:lib": "node src/scripts/create-material/index.js Libraries"
+    "add:lib": "node src/scripts/create-material/index.js Libraries",
+    "add:uiframework": "node src/scripts/create-material/index.js UIFrameworks"
   },
   "devDependencies": {
     "babel-jest": "^24.1.0",
