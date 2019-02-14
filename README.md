@@ -45,7 +45,7 @@ Thats it.
 - Take a screenshot
 - Commit for you
 
-Please read the [Contributing](CONTRIBUTING.md) document for more details.
+Please read the [Contributing](CONTRIBUTING.md) document for more details. 
 
 
 
