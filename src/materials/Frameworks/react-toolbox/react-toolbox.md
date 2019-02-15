@@ -8,8 +8,8 @@ material:
   github_url: 'https://github.com/react-toolbox/react-toolbox'
   subscribers_count: '195'
   stargazers_count: '8308'
-  tags: ['css-modules','material-design','react','ui-kits']
-  subtitle: 'A set of React components implementing Google's Material Design specification with the power of CSS Modules'
+  tags: ['css-modules', 'material-design', 'react', 'ui-kits']
+  subtitle: 'A set of React components implementing Googles Material Design specification with the power of CSS Modules'
   clone_url: 'https://github.com/react-toolbox/react-toolbox.git'
   ssh_url: 'git@github.com:react-toolbox/react-toolbox.git'
   pushed_at: '2019-02-13T21:50:02Z'
@@ -24,14 +24,15 @@ material:
     url: 'https://github.com/react-toolbox/react-toolbox/releases/tag/1.3.0'
     created_at: '2016-11-25T20:27:06Z'
 ---
+
 # <a href='http://react-toolbox.io'><img src='http://i.imgur.com/VCSElQX.png' height='50'></a>
 
-[![npm version](https://img.shields.io/npm/v/react-toolbox.svg?style=flat-square)](https://www.npmjs.com/package/react-toolbox) [![Build Status](http://img.shields.io/travis/react-toolbox/react-toolbox/master.svg?style=flat-square)](https://travis-ci.org/react-toolbox/react-toolbox) [![NPM Status](http://img.shields.io/npm/dm/react-toolbox.svg?style=flat-square)](https://www.npmjs.org/package/react-toolbox) [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/javivelasco) [![OpenCollective](https://opencollective.com/react-toolbox/backers/badge.svg)](#backers) 
+[![npm version](https://img.shields.io/npm/v/react-toolbox.svg?style=flat-square)](https://www.npmjs.com/package/react-toolbox) [![Build Status](http://img.shields.io/travis/react-toolbox/react-toolbox/master.svg?style=flat-square)](https://travis-ci.org/react-toolbox/react-toolbox) [![NPM Status](http://img.shields.io/npm/dm/react-toolbox.svg?style=flat-square)](https://www.npmjs.org/package/react-toolbox) [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/javivelasco) [![OpenCollective](https://opencollective.com/react-toolbox/backers/badge.svg)](#backers)
 [![OpenCollective](https://opencollective.com/react-toolbox/sponsors/badge.svg)](#sponsors)
 
 React Toolbox is a set of [React](http://facebook.github.io/react/) components that implement [Google's Material Design specification](https://material.google.com/). It's powered by [CSS Modules](https://github.com/css-modules/css-modules) and harmoniously integrates with your [webpack](http://webpack.github.io/) workflow, although you can use any other module bundler. You can take a tour through our documentation website and try the components live!
 
-**Note:**  ⚠️ This source code refers to the [future version](https://github.com/react-toolbox/react-toolbox/blob/dev/ROADMAP.md). To check the source for `1.x` go to `master` branch. There is a [migration guide](https://github.com/react-toolbox/react-toolbox/wiki/Migrating-from-version-1.3-to-2.0) so you can start working with 2.0-beta.x now!
+**Note:** ⚠️ This source code refers to the [future version](https://github.com/react-toolbox/react-toolbox/blob/dev/ROADMAP.md). To check the source for `1.x` go to `master` branch. There is a [migration guide](https://github.com/react-toolbox/react-toolbox/wiki/Migrating-from-version-1.3-to-2.0) so you can start working with 2.0-beta.x now!
 
 ## Installation
 
@@ -55,7 +56,7 @@ Of course this is a set of React components so you should be familiar with [Reac
 
 Follow [these instructions](https://github.com/react-toolbox/react-toolbox-themr) to add `react-toolbox` to a project created with Create React App.
 
-### Usage in Webpack Projects (*Not* Create React App)
+### Usage in Webpack Projects (_Not_ Create React App)
 
 ```bash
 npm install postcss-loader --save-dev
@@ -63,6 +64,7 @@ npm install postcss postcss-preset-env postcss-calc --save
 ```
 
 Configure webpack 1.x loader for .css files to use postcss:
+
 ```js
       {
         test: /\.css$/,
@@ -72,7 +74,9 @@ Configure webpack 1.x loader for .css files to use postcss:
         ],
       },
 ```
+
 Declare plugins to be used by postcss (as part of webpack's config object):
+
 ```js
   // webpack.config.js
   postcss: () => {
@@ -94,6 +98,7 @@ Declare plugins to be used by postcss (as part of webpack's config object):
 ```
 
 Configure webpack 2.x or 3.x loader for .css files to use postcss:
+
 ```js
   // webpack.config.js
   {
@@ -119,22 +124,19 @@ Configure webpack 2.x or 3.x loader for .css files to use postcss:
 In this minimal example, we import a `Button` with styles already bundled:
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Button } from 'react-toolbox/lib/button';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Button } from 'react-toolbox/lib/button'
 
-ReactDOM.render(
-  <Button label='Hello World!' />,
-  document.getElementById('app')
-);
+ReactDOM.render(<Button label="Hello World!" />, document.getElementById('app'))
 ```
 
->**Note:** if you use it with Create React App, you need to make this additional change:
+> **Note:** if you use it with Create React App, you need to make this additional change:
 >
->```diff
->- import {Button} from 'react-toolbox/lib/button';
->+ import Button from 'react-toolbox/lib/button/Button';
->```
+> ```diff
+> - import {Button} from 'react-toolbox/lib/button';
+> + import Button from 'react-toolbox/lib/button/Button';
+> ```
 
 Take into account that any required style will be included in the final CSS so your final CSS would include `Button` styles in this case. It's more efficient to import components this way (`from 'react-toolbox/lib/button'`) (or with raw imports) because if you require from the project root (i.e. `from 'react-toolbox'`), every stylesheet of React Toolbox will be included, even if you don't use it.
 
@@ -158,7 +160,7 @@ As you can see in the previous block, each folder includes: a Javascript file fo
 If you import from the index file, the imported component comes with all dependencies and themes already required and injected for you. This means that the CSS for each dependency will be bundled in your final CSS automatically and the component markup includes the classnames to be styled. For example:
 
 ```js
-import { AppBar } from 'react-toolbox/lib/app_bar';
+import { AppBar } from 'react-toolbox/lib/app_bar'
 ```
 
 ### Raw component
@@ -166,26 +168,23 @@ import { AppBar } from 'react-toolbox/lib/app_bar';
 If you import from the component definition, the imported component is bundled with its dependencies, but it does not include any styles. This means no CSS will be bundled, and the component markup will **not** include any classname. It's your responsibility to provide a theme to the component to be properly styled. You can do so via properties or context. For example:
 
 ```js
-import { AppBar } from 'react-toolbox/lib/app_bar/AppBar.js';
+import { AppBar } from 'react-toolbox/lib/app_bar/AppBar.js'
 ```
 
 ## Customizing components
 
-Every component accepts a `theme` property intended to provide a [CSS Module import object](https://github.com/css-modules/css-modules) that will be used by the component to assign local classnames to its DOM nodes. Therefore, each one implements a documented **classname API**. So if you want to customize a component, you just need to provide a theme object with the appropriate classname mapping.  
+Every component accepts a `theme` property intended to provide a [CSS Module import object](https://github.com/css-modules/css-modules) that will be used by the component to assign local classnames to its DOM nodes. Therefore, each one implements a documented **classname API**. So if you want to customize a component, you just need to provide a theme object with the appropriate classname mapping.
 
 If the component already has a theme injected, the properties you pass will be merged with the injected theme. In this way, you can **add** classnames to the nodes of a specific component and use them to add or to override styles. For example, if you want to customize the `AppBar` to be purple:
 
 ```js
-import React from 'react';
-import { AppBar } from 'react-toolbox/lib/app_bar';
-import theme from './PurpleAppBar.css';
+import React from 'react'
+import { AppBar } from 'react-toolbox/lib/app_bar'
+import theme from './PurpleAppBar.css'
 
-const PurpleAppBar = (props) => (
-  <AppBar {...props} theme={theme} />
-);
+const PurpleAppBar = props => <AppBar {...props} theme={theme} />
 
-export default PurpleAppBar;
-
+export default PurpleAppBar
 ```
 
 ```css
@@ -205,9 +204,7 @@ Install [react-css-themr](https://github.com/javivelasco/react-css-themr) with `
 Create a CSS Module theme style file for each component type, for example for `Button`:
 
 ```css
-# /css/button.css
-
-.button {
+# /css/button.css .button {
   text-transform: uppercase;
 }
 ```
@@ -228,22 +225,20 @@ export default {
 Wrap your component tree with ThemeProvider at the desired level in your component hierarchy. You can maintain different themes, each importing differently styled css files \(i.e. `import RTButton from './css/adminAreaButton.css'`\) and can provide each one at different points in the tree.
 
 ```js
-import React from 'react';
-import { ThemeProvider } from 'react-css-themr';
-import theme from './theme';
+import React from 'react'
+import { ThemeProvider } from 'react-css-themr'
+import theme from './theme'
 
 class App extends React.Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <div>
-          ...
-        </div>
+        <div>...</div>
       </ThemeProvider>
-    );
+    )
   }
 }
-export default App;
+export default App
 ```
 
 ## Theming (configuration variables)
@@ -256,7 +251,7 @@ You can override both the global and component-specific CSS Custom Properties at
 
 ```js
 // This can also be stored in a separate file:
-const reactToolboxVariables = { 
+const reactToolboxVariables = {
   'color-text': '#444548',
   /* Note that you can use global colors and variables */
   'color-primary': 'var(--palette-blue-500)',
@@ -295,13 +290,11 @@ Instead of using a JavaScript object for variables, you can use [CSS Module Valu
 CSS Module Values also offer the advantage that importing a css file with @value declarations makes these values properties of the imported style object, i.e.:
 
 ```css
-# variables.css
-
-@value buttonPrimaryBackgroundColor: #9c3990;
+#variables.css @value buttonPrimaryBackgroundColor: #9c3990;
 ```
 
 ```js
-import styleVariables from './css/variables.css';
+import styleVariables from './css/variables.css'
 
 styleVariables.buttonPrimaryBackgroundColor
 ```
@@ -330,7 +323,7 @@ Another 2.x demo project is https://github.com/alexhisen/mobx-forms-demo
 
 TypeScript external module definition files are included, and should not require any manual steps to utilize. They will be picked up by the TypeScript compiler when importing from the npm package.
 
-Note that to comply with the official recommendation for npm typings, a triple-slash reference to `react.d.ts` is *NOT included*. You will need to reference [react.d.ts](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/react/react.d.ts) somewhere in your project.
+Note that to comply with the official recommendation for npm typings, a triple-slash reference to `react.d.ts` is _NOT included_. You will need to reference [react.d.ts](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/react/react.d.ts) somewhere in your project.
 
 ## Authors and Contributors
 
@@ -362,6 +355,7 @@ Form generation and validation using React-Toolbox form widgets - [mobx-schema-f
 ## Support
 
 ### Backers
+
 Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/react-toolbox#backer)]
 
 <a href='https://opencollective.com/react-toolbox/backer/0/website' target='_blank'><img src='https://opencollective.com/react-toolbox/backer/0/avatar.svg'></a>
@@ -395,8 +389,8 @@ Support us with a monthly donation and help us continue our activities. [[Become
 <a href='https://opencollective.com/react-toolbox/backer/28/website' target='_blank'><img src='https://opencollective.com/react-toolbox/backer/28/avatar.svg'></a>
 <a href='https://opencollective.com/react-toolbox/backer/29/website' target='_blank'><img src='https://opencollective.com/react-toolbox/backer/29/avatar.svg'></a>
 
-
 ### Sponsors
+
 Become a sponsor and get your logo on our README on Github with a link to your site. [[Become a sponsor](https://opencollective.com/react-toolbox#sponsor)]
 
 <a href='https://opencollective.com/react-toolbox/sponsor/0/website' target='_blank'><img src='https://opencollective.com/react-toolbox/sponsor/0/avatar.svg'></a>
