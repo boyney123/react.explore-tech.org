@@ -14,6 +14,7 @@ import data from '../../icons/data.svg'
 import devtools from '../../icons/computer.svg'
 import integration from '../../icons/integration.svg'
 import charts from '../../icons/charts.svg'
+import frameworks from '../../icons/ui-frameworks.svg'
 
 export default {
   Tutorials: tutorial,
@@ -31,4 +32,5 @@ export default {
   Testing: testing,
   Forms: form,
   Examples: example,
+  Frameworks: frameworks,
 }
