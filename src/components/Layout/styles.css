@@ -648,6 +648,10 @@ pre tt:after {
   margin-right: 5px;
 }
 
+.main.hero .twitter {
+  margin-right: 10px;
+}
+
 @media (max-width: 500px) {
   .main .title {
     font-size: 2rem;
@@ -668,6 +672,11 @@ pre tt:after {
 
   .main .button.is-large {
     font-size: 1.2rem;
+  }
+
+  .main.hero .button {
+    margin: 20px 0;
+    width: 100%;
   }
 }
 
