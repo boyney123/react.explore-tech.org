@@ -5,12 +5,22 @@ import './styles.css'
 
 const Navigation = () => {
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
+    <nav
+      className="nav is-clearfix"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="is-pulled-left site-brand">
         <Link to="/">react.explore-tech.org</Link>
-        {/* <a class="navbar-item" href="/"> */}
-        {/* react.explore-tech.org */}
-        {/* </a> */}
+      </div>
+      <div>
+        <a
+          className="is-pulled-right"
+          href="https://github.com/boyney123/react.explore-tech.org"
+          target="_blank"
+        >
+          GitHub
+        </a>
       </div>
     </nav>
   )

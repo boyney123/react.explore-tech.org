@@ -3,17 +3,26 @@
 exports[`Navigation renders correctly 1`] = `
 <nav
   aria-label="main navigation"
-  className="navbar"
+  className="nav is-clearfix"
   role="navigation"
 >
   <div
-    class="navbar-brand"
+    class="is-pulled-left site-brand"
   >
     <mockConstructor
       to="/"
     >
       react.explore-tech.org
     </mockConstructor>
+  </div>
+  <div>
+    <a
+      className="is-pulled-right"
+      href="https://github.com/boyney123/react.explore-tech.org"
+      target="_blank"
+    >
+      GitHub
+    </a>
   </div>
 </nav>
 `;

@@ -53,6 +53,8 @@ export default function Template({ data = {}, pageContext = {} }) {
     return b[1] - a[1]
   })
 
+  console.log('tag', sortedTags)
+
   const fuse = new Fuse(items, {
     keys: ['title', 'tags'],
     shouldSort: true,

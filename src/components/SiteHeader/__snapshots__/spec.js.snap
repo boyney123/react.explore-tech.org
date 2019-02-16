@@ -2,7 +2,7 @@
 
 exports[`SiteHeader renders correctly 1`] = `
 <section
-  className="main hero "
+  className="main hero site-header"
 >
   <div
     className="hero-body"
@@ -10,10 +10,6 @@ exports[`SiteHeader renders correctly 1`] = `
     <div
       className="container has-text-centered"
     >
-      <img
-        alt="logo"
-        src="test-file-stub"
-      />
       <h1
         className="title"
       >
@@ -25,6 +21,17 @@ exports[`SiteHeader renders correctly 1`] = `
         An open source project to help developers learn, develop & explore.
       </h2>
       <a
+        className="button is-medium add-action contribute"
+        href="https://github.com/boyney123/react.explore-tech.org/blob/master/CONTRIBUTING.md#adding-a-material-to-the-website"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <i
+          className="fab fa-github"
+        />
+        Add Resource
+      </a>
+      <a
         className="button is-medium add-action twitter"
         href="https://twitter.com/intent/tweet?text=An%20open%20source%20project%20that%20lists%20resources%20to%20help%20developers%20explore%20React%20%F0%9F%91%8D.%0A%0A%20https%3A%2F%2Freact.explore-tech.org"
         rel="noopener noreferrer"
@@ -35,23 +42,11 @@ exports[`SiteHeader renders correctly 1`] = `
         />
         Share with others
       </a>
-      <a
-        className="button is-medium add-action"
-        href="https://github.com/boyney123/react.explore-tech.org/blob/master/CONTRIBUTING.md#adding-a-material-to-the-website"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <i
-          className="fab fa-github"
-        />
-        Contribute
-      </a>
       <p
         className="mt20"
       >
-        We have 
         1
-         resource's for you to explore...
+         resource's for you to explore!
       </p>
       <div
         className="badges"

@@ -1,15 +1,25 @@
-nav.navbar {
-  padding: 0 70px;
-  background-color: #2f3241;
+.nav {
+  /* padding: 0 70px; */
+  background-color: #20232a;
   border-bottom: 1px solid #e8e8e8;
   border-bottom-color: #1a1b23;
+  padding: 15px 80px;
+  color: white;
 }
 
-.navbar a {
+.nav a {
+  color: white;
+}
+
+.nav a:hover {
+  color: #61dafb;
+}
+
+/* .navbar a {
   margin-top: 12px;
-}
+} */
 
-.navbar a,
+/* .navbar a,
 .navbar a:hover {
-  color: #bff4ff;
-}
+  color: white;
+} */
