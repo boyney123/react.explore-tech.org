@@ -46,10 +46,10 @@
 
 .content ul.pagination-list {
   list-style: none;
-  margin: 0;
 }
 
-.content ul.pagination-list li + li {
+.content ul.pagination-list,
+.content ul.pagination-list li {
   margin: 0;
 }
 
