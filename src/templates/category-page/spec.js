@@ -56,9 +56,15 @@ const graphResult = {
   },
 }
 
+const pageContext = {
+  category: 'random',
+  currentPage: 2,
+  numPages: 3
+}
+
 describe('Template', () => {
   it('matches the snapshot', () => {
-    const wrapper = shallow(<Template data={graphResult} />)
+    const wrapper = shallow(<Template data={graphResult} pageContext={pageContext} />)
     expect(wrapper).toMatchSnapshot()
   })
 })
