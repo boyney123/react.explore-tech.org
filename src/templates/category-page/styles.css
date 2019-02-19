@@ -43,3 +43,16 @@
   margin: 25px;
   color: #5c5c5c;
 }
+
+.content ul.pagination-list {
+  list-style: none;
+  margin: 0;
+}
+
+.content ul.pagination-list li + li {
+  margin: 0;
+}
+
+.content ul.pagination-list li *:last-child {
+  margin: .25rem;
+}
