@@ -95,6 +95,21 @@ exports[`Template matches the snapshot 1`] = `
             title="New Title 2"
           />
         </div>
+        <nav
+          aria-label="pagination"
+          className="pagination"
+          role="navigation"
+        >
+          <mockConstructor
+            className="pagination-previous"
+            to="/undefined/NaN"
+          >
+            ← Previous Page
+          </mockConstructor>
+          <ul
+            className="pagination-list"
+          />
+        </nav>
       </div>
     </div>
   </div>
