@@ -53,6 +53,7 @@
     "add:framework": "node src/scripts/create-material/index.js Frameworks"
   },
   "devDependencies": {
+    "all-contributors-cli": "^6.3.0",
     "babel-jest": "^24.1.0",
     "babel-preset-gatsby": "^0.1.7",
     "dotenv": "^6.2.0",
