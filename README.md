@@ -1,5 +1,5 @@
 <div align="center">
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 <img alt="header" src="./header.png" />
 
@@ -62,7 +62,7 @@ Please read the [Contributing](CONTRIBUTING.md) document for more details.
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://medium.com/@boyney123"><img src="https://avatars1.githubusercontent.com/u/3268013?v=4" width="100px;" alt="David Boyne"/><br /><sub><b>David Boyne</b></sub></a><br /><a href="https://github.com/boyney123/react.explore-tech.org/commits?author=boyney123" title="Code">💻</a></td></tr></table>
+<table><tr><td align="center"><a href="https://medium.com/@boyney123"><img src="https://avatars1.githubusercontent.com/u/3268013?v=4" width="100px;" alt="David Boyne"/><br /><sub><b>David Boyne</b></sub></a><br /><a href="https://github.com/boyney123/react.explore-tech.org/commits?author=boyney123" title="Code">💻</a></td><td align="center"><a href="https://www.tyroprogrammer.com"><img src="https://avatars0.githubusercontent.com/u/11688166?v=4" width="100px;" alt="Ganesh Bhattarai"/><br /><sub><b>Ganesh Bhattarai</b></sub></a><br /><a href="https://github.com/boyney123/react.explore-tech.org/commits?author=tyroprogrammer" title="Documentation">📖</a></td></tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
