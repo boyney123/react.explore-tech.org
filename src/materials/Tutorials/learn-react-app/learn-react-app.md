@@ -9,7 +9,7 @@ material:
   subscribers_count: '54'
   stargazers_count: '3140'
   tags: ['exercise','guided-exercises','javascript','learn','learn-react','learn-reactjs','react','react-fundamentals','reactjs','tutorial','tutorial-exercises']
-  subtitle: 'Application that will help you learn React fundamentals. Install this application locally - there's tutorial, code snippets and exercises. The main objective of this project is to help you get off the ground with React!'
+  subtitle: 'Application that will help you learn React fundamentals. Install this application locally - theres tutorial, code snippets and exercises. The main objective of this project is to help you get off the ground with React!'
   clone_url: 'https://github.com/tyroprogrammer/learn-react-app.git'
   ssh_url: 'git@github.com:tyroprogrammer/learn-react-app.git'
   pushed_at: '2019-03-28T18:27:33Z'
