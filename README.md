@@ -1,5 +1,4 @@
 <div align="center">
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 <img alt="header" src="./header.png" />
 
@@ -11,7 +10,7 @@
 
 <hr/>
 
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 [![Travis](https://img.shields.io/travis/boyney123/react.explore-tech.org/master.svg)](https://travis-ci.org/boyney123/react.explore-tech.org)
 [![CodeCov](https://codecov.io/gh/boyney123/react.explore-tech.org/branch/master/graph/badge.svg?token=AoXW3EFgMP)](https://codecov.io/gh/boyney123/react.explore-tech.org)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b8b80b61-4213-4bd8-ac48-831738e1ca1b/deploy-status)](https://app.netlify.com/sites/react-openlist/deploys)
