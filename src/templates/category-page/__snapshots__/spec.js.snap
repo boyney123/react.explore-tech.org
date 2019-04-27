@@ -7,6 +7,7 @@ exports[`Template matches the snapshot 1`] = `
     <Header
       contribute={true}
       subtitle="react.explore-tech.org"
+      title="random"
     />
   }
 >
@@ -95,6 +96,55 @@ exports[`Template matches the snapshot 1`] = `
             title="New Title 2"
           />
         </div>
+        <nav
+          aria-label="pagination"
+          className="pagination"
+          role="navigation"
+        >
+          <mockConstructor
+            className="pagination-previous"
+            to="/random"
+          >
+            ← Previous Page
+          </mockConstructor>
+          <mockConstructor
+            className="pagination-next"
+            to="/random/3"
+          >
+            Next Page →
+          </mockConstructor>
+          <ul
+            className="pagination-list"
+          >
+            <li>
+              <mockConstructor
+                aria-label="Goto page 1"
+                className="pagination-link"
+                to="/random"
+              >
+                1
+              </mockConstructor>
+            </li>
+            <li>
+              <mockConstructor
+                aria-label="Goto page 2"
+                className="pagination-link is-current"
+                to="/random/2"
+              >
+                2
+              </mockConstructor>
+            </li>
+            <li>
+              <mockConstructor
+                aria-label="Goto page 3"
+                className="pagination-link"
+                to="/random/3"
+              >
+                3
+              </mockConstructor>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </div>

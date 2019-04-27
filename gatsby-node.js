@@ -94,6 +94,28 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
+    const categories = result.data.allMarkdownRemark.edges.reduce((acc, { node: { fields: { category }}}) => ({
+      ...acc,
+      [category]: acc.hasOwnProperty(category) ? acc[category] + 1 : 1
+    }), {})
+    const postsPerPage = 9
+    for (let cat in categories) {
+      const numPages = Math.ceil(categories[cat] / postsPerPage)
+      for (let i of Array(numPages).keys()) {
+        createPage({
+          path: i === 0 ? `/${cat}` : `/${cat}/${i + 1}`,
+          component: categoryTemplate,
+          context: {
+            category: cat,
+            skip: i * postsPerPage,
+            limit: postsPerPage,
+            numPages,
+            currentPage: i + 1
+          }
+        })
+      }
+    }
+
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       const {
         fields: { category, slug } = {},
@@ -101,14 +123,6 @@ exports.createPages = ({ actions, graphql }) => {
       } = node
 
       const url = path.join('/', category.toLowerCase(), pathToMaterial)
-
-      createPage({
-        path: category,
-        component: categoryTemplate,
-        context: {
-          category,
-        },
-      })
 
       createPage({
         path: slug,

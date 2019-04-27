@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Fuse from 'fuse.js'
 
 import Layout from '../../components/Layout'
@@ -13,7 +13,11 @@ import './styles.css'
 import '../material-page/styles.css'
 
 export default function Template({ data = {}, pageContext = {} }) {
-  const { category } = pageContext
+  const { category, currentPage, numPages } = pageContext
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const prevPage = currentPage - 1 <= 1 ? `/${category}` : `/${category}/${(currentPage - 1).toString()}`
+  const nextPage = `/${category}/${(currentPage + 1).toString()}`
 
   const { allMarkdownRemark: { edges = [] } = {} } = data
 
@@ -142,6 +146,29 @@ export default function Template({ data = {}, pageContext = {} }) {
                 )
               })}
             </div>
+            <nav
+              className="pagination"
+              role="navigation"
+              aria-label="pagination"
+            >
+              {!isFirst && (
+                <Link to={prevPage} className="pagination-previous">← Previous Page</Link>
+              )}
+              {!isLast && (
+                <Link to={nextPage} className="pagination-next">Next Page →</Link>
+              )}
+              <ul className="pagination-list">
+                {Array.from({ length: numPages }, (_, i) => (
+                  <li>
+                    <Link
+                      to={`/${category}${i === 0 ? '' : '/' + (i + 1)}`}
+                      className={`pagination-link${currentPage === i + 1 ? ' is-current' : ''}`}
+                      aria-label={`Goto page ${i + 1}`}
+                    >{`${i + 1}`}</Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -150,8 +177,12 @@ export default function Template({ data = {}, pageContext = {} }) {
 }
 
 export const pageQuery = graphql`
-  query MaterialsByCategory($category: String!) {
-    allMarkdownRemark(filter: { fields: { category: { eq: $category } } }) {
+  query MaterialsByCategory($category: String!, $skip: Int!, $limit: Int!) {
+    allMarkdownRemark(
+      filter: { fields: { category: { eq: $category } } }
+      limit: $limit
+      skip: $skip
+    ) {
       edges {
         node {
           fields {
